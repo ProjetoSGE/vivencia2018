@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(561, 352);
+            this.Size = new System.Drawing.Size(752, 540);
             this.ResumeLayout(false);
 
         }
