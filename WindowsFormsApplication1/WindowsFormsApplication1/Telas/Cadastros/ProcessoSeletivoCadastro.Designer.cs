@@ -1,16 +1,16 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace WindowsFormsApplication1.Telas.Cadastros
 {
-    partial class UserControl1
+    partial class ProcessoSeletivoCadastro
     {
         /// <summary> 
-        /// Required designer variable.
+        /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary> 
-        /// Clean up any resources being used.
+        /// Limpar os recursos que estão sendo usados.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,21 +20,21 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Código gerado pelo Designer de Componentes
 
         /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
+        /// Método necessário para suporte ao Designer - não modifique 
+        /// o conteúdo deste método com o editor de código.
         /// </summary>
         private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
-            // UserControl1
+            // ProcessoSeletivoCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControl1";
+            this.Name = "ProcessoSeletivoCadastro";
             this.Size = new System.Drawing.Size(752, 540);
             this.ResumeLayout(false);
 

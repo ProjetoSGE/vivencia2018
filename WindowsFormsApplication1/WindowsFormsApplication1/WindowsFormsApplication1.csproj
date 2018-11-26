@@ -54,11 +54,65 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs">
+    <Compile Include="Telas\Cadastros\AlunosCadastro.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Telas\Cadastros\AlunosCadastro.Designer.cs">
+      <DependentUpon>AlunosCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\EmpresaCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\EmpresaCadastro.Designer.cs">
+      <DependentUpon>EmpresaCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\EstagioCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\EstagioCadastro.Designer.cs">
+      <DependentUpon>EstagioCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\ProcessoSeletivoCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\ProcessoSeletivoCadastro.Designer.cs">
+      <DependentUpon>ProcessoSeletivoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastros\VagasCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\VagasCadastro.Designer.cs">
+      <DependentUpon>VagasCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultas\AlunosConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultas\AlunosConsulta.Designer.cs">
+      <DependentUpon>AlunosConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultas\EmpresaConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultas\EmpresaConsulta.Designer.cs">
+      <DependentUpon>EmpresaConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultas\EstagioConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultas\EstagioConsulta.Designer.cs">
+      <DependentUpon>EstagioConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultas\ProcessoSeletivoConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultas\ProcessoSeletivoConsulta.Designer.cs">
+      <DependentUpon>ProcessoSeletivoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Consultas\VagasConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Consultas\VagasConsulta.Designer.cs">
+      <DependentUpon>VagasConsulta.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -73,8 +127,35 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\Cadastros\AlunosCadastro.resx">
+      <DependentUpon>AlunosCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\EmpresaCadastro.resx">
+      <DependentUpon>EmpresaCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\EstagioCadastro.resx">
+      <DependentUpon>EstagioCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\ProcessoSeletivoCadastro.resx">
+      <DependentUpon>ProcessoSeletivoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\VagasCadastro.resx">
+      <DependentUpon>VagasCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultas\AlunosConsulta.resx">
+      <DependentUpon>AlunosConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultas\EmpresaConsulta.resx">
+      <DependentUpon>EmpresaConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultas\EstagioConsulta.resx">
+      <DependentUpon>EstagioConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultas\ProcessoSeletivoConsulta.resx">
+      <DependentUpon>ProcessoSeletivoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Consultas\VagasConsulta.resx">
+      <DependentUpon>VagasConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
