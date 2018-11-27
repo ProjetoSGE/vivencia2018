@@ -40,7 +40,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(21, 85);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(710, 435);
+            this.dataGridView1.Size = new System.Drawing.Size(690, 403);
             this.dataGridView1.TabIndex = 0;
             // 
             // Pesquisar
@@ -72,12 +72,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Pesquisar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "VagasConsulta";
-            this.Size = new System.Drawing.Size(752, 540);
+            this.Size = new System.Drawing.Size(728, 502);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

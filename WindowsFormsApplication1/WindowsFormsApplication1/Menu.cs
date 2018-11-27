@@ -11,9 +11,9 @@ using WindowsFormsApplication1.Telas.Cadastros;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -42,6 +42,16 @@ namespace WindowsFormsApplication1
         private void alunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void registroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+                
         }
     }
 }

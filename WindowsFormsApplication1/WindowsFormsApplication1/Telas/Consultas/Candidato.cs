@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Telas.Consultas
 {
-    public partial class ProcessoSeletivoConsulta : UserControl
+    public partial class Candidato : UserControl
     {
-        public ProcessoSeletivoConsulta()
+        public Candidato()
         {
             InitializeComponent();
         }

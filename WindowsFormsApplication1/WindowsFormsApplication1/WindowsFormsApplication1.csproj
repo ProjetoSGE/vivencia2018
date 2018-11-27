@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,18 +65,6 @@
     </Compile>
     <Compile Include="Telas\Cadastros\EmpresaCadastro.Designer.cs">
       <DependentUpon>EmpresaCadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Cadastros\EstagioCadastro.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Telas\Cadastros\EstagioCadastro.Designer.cs">
-      <DependentUpon>EstagioCadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Cadastros\ProcessoSeletivoCadastro.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Telas\Cadastros\ProcessoSeletivoCadastro.Designer.cs">
-      <DependentUpon>ProcessoSeletivoCadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Cadastros\VagasCadastro.cs">
       <SubType>UserControl</SubType>
@@ -96,17 +84,11 @@
     <Compile Include="Telas\Consultas\EmpresaConsulta.Designer.cs">
       <DependentUpon>EmpresaConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Consultas\EstagioConsulta.cs">
+    <Compile Include="Telas\Consultas\Candidato.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Telas\Consultas\EstagioConsulta.Designer.cs">
-      <DependentUpon>EstagioConsulta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Consultas\ProcessoSeletivoConsulta.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Telas\Consultas\ProcessoSeletivoConsulta.Designer.cs">
-      <DependentUpon>ProcessoSeletivoConsulta.cs</DependentUpon>
+    <Compile Include="Telas\Consultas\Candidato.Designer.cs">
+      <DependentUpon>Candidato.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Consultas\VagasConsulta.cs">
       <SubType>UserControl</SubType>
@@ -114,8 +96,8 @@
     <Compile Include="Telas\Consultas\VagasConsulta.Designer.cs">
       <DependentUpon>VagasConsulta.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,12 +115,6 @@
     <EmbeddedResource Include="Telas\Cadastros\EmpresaCadastro.resx">
       <DependentUpon>EmpresaCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Cadastros\EstagioCadastro.resx">
-      <DependentUpon>EstagioCadastro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Cadastros\ProcessoSeletivoCadastro.resx">
-      <DependentUpon>ProcessoSeletivoCadastro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Cadastros\VagasCadastro.resx">
       <DependentUpon>VagasCadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,11 +124,8 @@
     <EmbeddedResource Include="Telas\Consultas\EmpresaConsulta.resx">
       <DependentUpon>EmpresaConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Consultas\EstagioConsulta.resx">
-      <DependentUpon>EstagioConsulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Consultas\ProcessoSeletivoConsulta.resx">
-      <DependentUpon>ProcessoSeletivoConsulta.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\Consultas\Candidato.resx">
+      <DependentUpon>Candidato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Consultas\VagasConsulta.resx">
       <DependentUpon>VagasConsulta.cs</DependentUpon>

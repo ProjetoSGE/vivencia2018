@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Telas.Consultas
 {
-    partial class EstagioConsulta
+    partial class Candidato
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -65,19 +65,20 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 79);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(710, 435);
+            this.dataGridView1.Size = new System.Drawing.Size(690, 411);
             this.dataGridView1.TabIndex = 4;
             // 
             // EstagioConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Pesquisar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "EstagioConsulta";
-            this.Size = new System.Drawing.Size(752, 540);
+            this.Size = new System.Drawing.Size(728, 502);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

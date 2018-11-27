@@ -16,5 +16,15 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         {
             InitializeComponent();
         }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
