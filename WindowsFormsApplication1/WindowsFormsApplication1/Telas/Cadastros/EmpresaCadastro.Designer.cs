@@ -37,7 +37,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.txtEmai = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.mktTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -130,12 +130,12 @@
             this.maskedTextBox2.Size = new System.Drawing.Size(17, 20);
             this.maskedTextBox2.TabIndex = 9;
             // 
-            // txtEmai
+            // txtEmail
             // 
-            this.txtEmai.Location = new System.Drawing.Point(327, 137);
-            this.txtEmai.Name = "txtEmai";
-            this.txtEmai.Size = new System.Drawing.Size(100, 20);
-            this.txtEmai.TabIndex = 13;
+            this.txtEmail.Location = new System.Drawing.Point(327, 137);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 13;
             // 
             // txtEndereco
             // 
@@ -185,6 +185,7 @@
             this.btnCadastrar.TabIndex = 19;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // EmpresaCadastro
             // 
@@ -197,7 +198,7 @@
             this.Controls.Add(this.mktTelefone);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtEmai);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label7);
@@ -225,7 +226,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox txtEmai;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.MaskedTextBox mktTelefone;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Classes.Classes.Empresa;
 
 namespace WindowsFormsApplication1.Telas.Consultas
 {
@@ -16,5 +17,66 @@ namespace WindowsFormsApplication1.Telas.Consultas
         {
             InitializeComponent();
         }
+
+        public void CarregarGrid()
+        {
+            try
+            {
+                EmpresaBusiness business = new EmpresaBusiness();
+                List<EmpresaDTO> dto = business.Consultar(textBox1.Text.Trim());
+
+                dgvEmpresa.AutoGenerateColumns = false;
+                dgvEmpresa.DataSource = dto;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao consultar a empresa: " + ex.Message, "SGE",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Error);
+
+            }
+
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CarregarGrid();
+        }
+
+        private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 7)
+            {
+                EmpresaDTO produto = dgvEmpresa.CurrentRow.DataBoundItem as EmpresaDTO;
+
+                // this.Hide();
+                // AlterarProduto tela = new AlterarProduto();
+                // tela.LoadScreen(produto);
+
+                // tela.Show();
+
+            }
+
+            if (e.ColumnIndex == 8)
+            {
+                EmpresaDTO empresa = dgvEmpresa.CurrentRow.DataBoundItem as EmpresaDTO;
+
+                DialogResult r = MessageBox.Show("Deseja excluir a empresa?", "SGE",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Question);
+
+                if (r == DialogResult.Yes)
+                {
+                    EmpresaBusiness business = new EmpresaBusiness();
+                    business.Remover(empresa.ID);
+
+                    CarregarGrid();
+
+                }
+            }
+        }
+
     }
 }
