@@ -31,8 +31,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Pesquisar = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvEmpresa = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -60,13 +60,13 @@
             this.Pesquisar.TabIndex = 5;
             this.Pesquisar.Text = "Nome";
             // 
-            // dataGridView1
+            // dgvEmpresa
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 79);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(690, 408);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpresa.Location = new System.Drawing.Point(23, 79);
+            this.dgvEmpresa.Name = "dgvEmpresa";
+            this.dgvEmpresa.Size = new System.Drawing.Size(690, 408);
+            this.dgvEmpresa.TabIndex = 4;
             // 
             // EmpresaConsulta
             // 
@@ -76,10 +76,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Pesquisar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvEmpresa);
             this.Name = "EmpresaConsulta";
             this.Size = new System.Drawing.Size(728, 502);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,6 +90,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Pesquisar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEmpresa;
     }
 }

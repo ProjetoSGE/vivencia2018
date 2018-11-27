@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvVaga = new System.Windows.Forms.DataGridView();
             this.Pesquisar = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVaga)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvVaga
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 85);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(690, 403);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvVaga.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVaga.Location = new System.Drawing.Point(21, 85);
+            this.dgvVaga.Name = "dgvVaga";
+            this.dgvVaga.Size = new System.Drawing.Size(690, 403);
+            this.dgvVaga.TabIndex = 0;
             // 
             // Pesquisar
             // 
@@ -76,10 +76,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Pesquisar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvVaga);
             this.Name = "VagasConsulta";
             this.Size = new System.Drawing.Size(728, 502);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVaga)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,7 +87,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvVaga;
         private System.Windows.Forms.Label Pesquisar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;

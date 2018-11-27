@@ -31,8 +31,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Pesquisar = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvCandidato = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCandidato)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -60,15 +60,15 @@
             this.Pesquisar.TabIndex = 5;
             this.Pesquisar.Text = "Nome";
             // 
-            // dataGridView1
+            // dgvCandidato
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 79);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(690, 411);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvCandidato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCandidato.Location = new System.Drawing.Point(23, 79);
+            this.dgvCandidato.Name = "dgvCandidato";
+            this.dgvCandidato.Size = new System.Drawing.Size(690, 411);
+            this.dgvCandidato.TabIndex = 4;
             // 
-            // EstagioConsulta
+            // Candidato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -76,10 +76,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Pesquisar);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "EstagioConsulta";
+            this.Controls.Add(this.dgvCandidato);
+            this.Name = "Candidato";
             this.Size = new System.Drawing.Size(728, 502);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCandidato)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,6 +90,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Pesquisar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCandidato;
     }
 }

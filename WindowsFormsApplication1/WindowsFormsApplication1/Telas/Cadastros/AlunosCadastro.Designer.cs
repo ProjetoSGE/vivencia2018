@@ -42,22 +42,23 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCurso = new System.Windows.Forms.TextBox();
+            this.txtAno = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtIdade = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtN = new System.Windows.Forms.TextBox();
+            this.txtQualCurso = new System.Windows.Forms.TextBox();
+            this.txtExperiencia = new System.Windows.Forms.TextBox();
+            this.mskNascimento = new System.Windows.Forms.MaskedTextBox();
+            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
+            this.mskRes = new System.Windows.Forms.MaskedTextBox();
+            this.mskRecado = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtPreferencia = new System.Windows.Forms.TextBox();
+            this.cboEstuda = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -200,100 +201,100 @@
             this.label15.TabIndex = 14;
             this.label15.Text = "N°";
             // 
-            // textBox1
+            // txtCurso
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 20);
-            this.textBox1.TabIndex = 19;
+            this.txtCurso.Location = new System.Drawing.Point(173, 66);
+            this.txtCurso.Name = "txtCurso";
+            this.txtCurso.Size = new System.Drawing.Size(164, 20);
+            this.txtCurso.TabIndex = 19;
             // 
-            // textBox2
+            // txtAno
             // 
-            this.textBox2.Location = new System.Drawing.Point(549, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 20;
+            this.txtAno.Location = new System.Drawing.Point(549, 66);
+            this.txtAno.Name = "txtAno";
+            this.txtAno.Size = new System.Drawing.Size(100, 20);
+            this.txtAno.TabIndex = 20;
             // 
-            // textBox3
+            // txtNome
             // 
-            this.textBox3.Location = new System.Drawing.Point(173, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 20);
-            this.textBox3.TabIndex = 21;
+            this.txtNome.Location = new System.Drawing.Point(173, 107);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(164, 20);
+            this.txtNome.TabIndex = 21;
             // 
-            // textBox4
+            // txtIdade
             // 
-            this.textBox4.Location = new System.Drawing.Point(466, 135);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 22;
+            this.txtIdade.Location = new System.Drawing.Point(466, 135);
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.Size = new System.Drawing.Size(100, 20);
+            this.txtIdade.TabIndex = 22;
             // 
-            // textBox5
+            // txtEndereco
             // 
-            this.textBox5.Location = new System.Drawing.Point(192, 168);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(164, 20);
-            this.textBox5.TabIndex = 23;
+            this.txtEndereco.Location = new System.Drawing.Point(192, 168);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(164, 20);
+            this.txtEndereco.TabIndex = 23;
             // 
-            // textBox6
+            // txtBairro
             // 
-            this.textBox6.Location = new System.Drawing.Point(192, 207);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(164, 20);
-            this.textBox6.TabIndex = 24;
+            this.txtBairro.Location = new System.Drawing.Point(192, 207);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(164, 20);
+            this.txtBairro.TabIndex = 24;
             // 
-            // textBox7
+            // txtN
             // 
-            this.textBox7.Location = new System.Drawing.Point(466, 174);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 25;
+            this.txtN.Location = new System.Drawing.Point(466, 174);
+            this.txtN.Name = "txtN";
+            this.txtN.Size = new System.Drawing.Size(100, 20);
+            this.txtN.TabIndex = 25;
             // 
-            // textBox9
+            // txtQualCurso
             // 
-            this.textBox9.Location = new System.Drawing.Point(503, 291);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 27;
+            this.txtQualCurso.Location = new System.Drawing.Point(503, 291);
+            this.txtQualCurso.Name = "txtQualCurso";
+            this.txtQualCurso.Size = new System.Drawing.Size(100, 20);
+            this.txtQualCurso.TabIndex = 27;
             // 
-            // textBox10
+            // txtExperiencia
             // 
-            this.textBox10.Location = new System.Drawing.Point(90, 394);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(546, 20);
-            this.textBox10.TabIndex = 28;
+            this.txtExperiencia.Location = new System.Drawing.Point(90, 394);
+            this.txtExperiencia.Name = "txtExperiencia";
+            this.txtExperiencia.Size = new System.Drawing.Size(546, 20);
+            this.txtExperiencia.TabIndex = 28;
             // 
-            // maskedTextBox1
+            // mskNascimento
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(243, 138);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(66, 20);
-            this.maskedTextBox1.TabIndex = 29;
+            this.mskNascimento.Location = new System.Drawing.Point(243, 138);
+            this.mskNascimento.Mask = "00/00/0000";
+            this.mskNascimento.Name = "mskNascimento";
+            this.mskNascimento.Size = new System.Drawing.Size(66, 20);
+            this.mskNascimento.TabIndex = 29;
             // 
-            // maskedTextBox2
+            // mskCEP
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(466, 207);
-            this.maskedTextBox2.Mask = "00000-000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(60, 20);
-            this.maskedTextBox2.TabIndex = 30;
+            this.mskCEP.Location = new System.Drawing.Point(466, 207);
+            this.mskCEP.Mask = "00000-000";
+            this.mskCEP.Name = "mskCEP";
+            this.mskCEP.Size = new System.Drawing.Size(60, 20);
+            this.mskCEP.TabIndex = 30;
             // 
-            // maskedTextBox3
+            // mskRes
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(197, 253);
-            this.maskedTextBox3.Mask = "0000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(56, 20);
-            this.maskedTextBox3.TabIndex = 31;
+            this.mskRes.Location = new System.Drawing.Point(197, 253);
+            this.mskRes.Mask = "0000-0000";
+            this.mskRes.Name = "mskRes";
+            this.mskRes.Size = new System.Drawing.Size(56, 20);
+            this.mskRes.TabIndex = 31;
             // 
-            // maskedTextBox4
+            // mskRecado
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(561, 253);
-            this.maskedTextBox4.Mask = "00000-0000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(56, 20);
-            this.maskedTextBox4.TabIndex = 32;
+            this.mskRecado.Location = new System.Drawing.Point(561, 253);
+            this.mskRecado.Mask = "00000-0000";
+            this.mskRecado.Name = "mskRecado";
+            this.mskRecado.Size = new System.Drawing.Size(56, 20);
+            this.mskRecado.TabIndex = 32;
             // 
             // button1
             // 
@@ -315,34 +316,43 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Área de Preferencia";
             // 
-            // textBox8
+            // txtPreferencia
             // 
-            this.textBox8.Location = new System.Drawing.Point(238, 322);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(113, 20);
-            this.textBox8.TabIndex = 35;
+            this.txtPreferencia.Location = new System.Drawing.Point(238, 322);
+            this.txtPreferencia.Name = "txtPreferencia";
+            this.txtPreferencia.Size = new System.Drawing.Size(113, 20);
+            this.txtPreferencia.TabIndex = 35;
+            // 
+            // cboEstuda
+            // 
+            this.cboEstuda.FormattingEnabled = true;
+            this.cboEstuda.Location = new System.Drawing.Point(173, 287);
+            this.cboEstuda.Name = "cboEstuda";
+            this.cboEstuda.Size = new System.Drawing.Size(121, 21);
+            this.cboEstuda.TabIndex = 36;
             // 
             // AlunosCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.cboEstuda);
+            this.Controls.Add(this.txtPreferencia);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.maskedTextBox4);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.mskRecado);
+            this.Controls.Add(this.mskRes);
+            this.Controls.Add(this.mskCEP);
+            this.Controls.Add(this.mskNascimento);
+            this.Controls.Add(this.txtExperiencia);
+            this.Controls.Add(this.txtQualCurso);
+            this.Controls.Add(this.txtN);
+            this.Controls.Add(this.txtBairro);
+            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.txtIdade);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtAno);
+            this.Controls.Add(this.txtCurso);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -380,21 +390,22 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.TextBox txtCurso;
+        private System.Windows.Forms.TextBox txtAno;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtIdade;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtN;
+        private System.Windows.Forms.TextBox txtQualCurso;
+        private System.Windows.Forms.TextBox txtExperiencia;
+        private System.Windows.Forms.MaskedTextBox mskNascimento;
+        private System.Windows.Forms.MaskedTextBox mskCEP;
+        private System.Windows.Forms.MaskedTextBox mskRes;
+        private System.Windows.Forms.MaskedTextBox mskRecado;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtPreferencia;
+        private System.Windows.Forms.ComboBox cboEstuda;
     }
 }
