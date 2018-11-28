@@ -55,7 +55,7 @@
             this.mskCEP = new System.Windows.Forms.MaskedTextBox();
             this.mskRes = new System.Windows.Forms.MaskedTextBox();
             this.mskRecado = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnsalvar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPreferencia = new System.Windows.Forms.TextBox();
             this.cboEstuda = new System.Windows.Forms.ComboBox();
@@ -296,15 +296,16 @@
             this.mskRecado.Size = new System.Drawing.Size(56, 20);
             this.mskRecado.TabIndex = 32;
             // 
-            // button1
+            // btnsalvar
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(310, 441);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsalvar.Location = new System.Drawing.Point(310, 441);
+            this.btnsalvar.Name = "btnsalvar";
+            this.btnsalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnsalvar.TabIndex = 33;
+            this.btnsalvar.Text = "Cadastrar";
+            this.btnsalvar.UseVisualStyleBackColor = true;
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
             // label9
             // 
@@ -339,7 +340,7 @@
             this.Controls.Add(this.cboEstuda);
             this.Controls.Add(this.txtPreferencia);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.mskRecado);
             this.Controls.Add(this.mskRes);
             this.Controls.Add(this.mskCEP);
@@ -403,7 +404,7 @@
         private System.Windows.Forms.MaskedTextBox mskCEP;
         private System.Windows.Forms.MaskedTextBox mskRes;
         private System.Windows.Forms.MaskedTextBox mskRecado;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtPreferencia;
         private System.Windows.Forms.ComboBox cboEstuda;

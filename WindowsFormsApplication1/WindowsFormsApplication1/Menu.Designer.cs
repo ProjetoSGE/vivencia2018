@@ -32,8 +32,8 @@
             this.pnlCentro = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -81,15 +81,6 @@
             this.panel4.Size = new System.Drawing.Size(739, 17);
             this.panel4.TabIndex = 11;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(186)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(739, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(11, 567);
-            this.panel1.TabIndex = 10;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(186)))));
@@ -98,6 +89,15 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(739, 17);
             this.panel6.TabIndex = 12;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(186)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(739, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(11, 567);
+            this.panel1.TabIndex = 10;
             // 
             // panel3
             // 
