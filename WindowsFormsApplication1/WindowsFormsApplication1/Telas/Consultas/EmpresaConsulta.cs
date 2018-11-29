@@ -21,11 +21,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
         {
             try
             {
-                EmpresaBusiness business = new EmpresaBusiness();
-                List<EmpresaDTO> dto = business.Consultar(textBox1.Text.Trim());
-
-                dgvEmpresa.AutoGenerateColumns = false;
-                dgvEmpresa.DataSource = dto;
+               
 
             }
             catch (Exception ex)
