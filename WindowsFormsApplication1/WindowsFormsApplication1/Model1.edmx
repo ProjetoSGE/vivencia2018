@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Vivenciadb.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tb_alunos">
+          <Key>
+            <PropertyRef Name="id_aluno" />
+          </Key>
+          <Property Name="id_aluno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nm_aluno" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nm_curso" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ds_anoEstudo" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="dt_nascimento" Type="date" Nullable="false" />
+          <Property Name="ds_idade" Type="int" Nullable="false" />
+          <Property Name="ds_endereco" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_numero" Type="int" Nullable="false" />
+          <Property Name="ds_bairro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_cep" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="nr_fixo" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="nr_celular" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="ds_seEstuda" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="ds_qualCurso" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_turno" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="ds_expProfissional" Type="text" Nullable="false" />
+          <Property Name="ds_areaPreferencia" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_candidato">
+          <Key>
+            <PropertyRef Name="id_candidato" />
+          </Key>
+          <Property Name="id_candidato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_aluno" Type="int" Nullable="false" />
+          <Property Name="id_vaga" Type="int" Nullable="false" />
+          <Property Name="ds_status" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_empresas">
+          <Key>
+            <PropertyRef Name="id_empresa" />
+          </Key>
+          <Property Name="id_empresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nm_empresa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nr_telefone" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="ds_email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ds_cep" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="ds_bairro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_endereco" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_pontoReferencia" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_vagas">
+          <Key>
+            <PropertyRef Name="id_vaga" />
+          </Key>
+          <Property Name="id_vaga" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nm_vaga" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nm_area" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="qtd_vaga" Type="int" Nullable="false" />
+          <Property Name="dt_inicioEstagio" Type="date" Nullable="false" />
+          <Property Name="ds_sexo" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="id_empresa" Type="int" Nullable="false" />
+          <Property Name="ds_horario" Type="datetime" Nullable="false" />
+          <Property Name="ds_intervalo" Type="datetime" Nullable="false" />
+          <Property Name="op_seguroDeVida" Type="bit" Nullable="false" />
+          <Property Name="op_auxTransporte" Type="bit" Nullable="false" />
+          <Property Name="op_recRemunerado" Type="bit" Nullable="false" />
+          <Property Name="op_valeRefeicao" Type="bit" Nullable="false" />
+          <Property Name="op_cestaBasica" Type="bit" Nullable="false" />
+          <Property Name="op_refLocal" Type="bit" Nullable="false" />
+          <Property Name="op_assisMedica" Type="bit" Nullable="false" />
+          <Property Name="nvl_ingles" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="op_infoOffice" Type="bit" Nullable="false" />
+          <Property Name="op_infoAutoCAD" Type="bit" Nullable="false" />
+          <Property Name="op_infoCorel" Type="bit" Nullable="false" />
+          <Property Name="op_infoPhotoShop" Type="bit" Nullable="false" />
+          <Property Name="op_infoProgramacao" Type="bit" Nullable="false" />
+          <Property Name="op_outros" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_observacao" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_compPessoal" Type="text" Nullable="false" />
+          <Property Name="ds_tarefas" Type="text" Nullable="false" />
+        </EntityType>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="VivenciadbStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_alunos" EntityType="Self.tb_alunos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_candidato" EntityType="Self.tb_candidato" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_empresas" EntityType="Self.tb_empresas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_vagas" EntityType="Self.tb_vagas" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Vivenciadb" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tb_alunos">
+          <Key>
+            <PropertyRef Name="id_aluno" />
+          </Key>
+          <Property Name="id_aluno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_aluno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_curso" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_anoEstudo" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dt_nascimento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ds_idade" Type="Int32" Nullable="false" />
+          <Property Name="ds_endereco" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_numero" Type="Int32" Nullable="false" />
+          <Property Name="ds_bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_fixo" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_celular" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_seEstuda" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_qualCurso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_turno" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_expProfissional" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_areaPreferencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_candidato">
+          <Key>
+            <PropertyRef Name="id_candidato" />
+          </Key>
+          <Property Name="id_candidato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_aluno" Type="Int32" Nullable="false" />
+          <Property Name="id_vaga" Type="Int32" Nullable="false" />
+          <Property Name="ds_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_empresas">
+          <Key>
+            <PropertyRef Name="id_empresa" />
+          </Key>
+          <Property Name="id_empresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_telefone" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_endereco" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_pontoReferencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_vagas">
+          <Key>
+            <PropertyRef Name="id_vaga" />
+          </Key>
+          <Property Name="id_vaga" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_vaga" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qtd_vaga" Type="Int32" Nullable="false" />
+          <Property Name="dt_inicioEstagio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ds_sexo" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_empresa" Type="Int32" Nullable="false" />
+          <Property Name="ds_horario" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ds_intervalo" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="op_seguroDeVida" Type="Boolean" Nullable="false" />
+          <Property Name="op_auxTransporte" Type="Boolean" Nullable="false" />
+          <Property Name="op_recRemunerado" Type="Boolean" Nullable="false" />
+          <Property Name="op_valeRefeicao" Type="Boolean" Nullable="false" />
+          <Property Name="op_cestaBasica" Type="Boolean" Nullable="false" />
+          <Property Name="op_refLocal" Type="Boolean" Nullable="false" />
+          <Property Name="op_assisMedica" Type="Boolean" Nullable="false" />
+          <Property Name="nvl_ingles" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="op_infoOffice" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoAutoCAD" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoCorel" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoPhotoShop" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoProgramacao" Type="Boolean" Nullable="false" />
+          <Property Name="op_outros" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_observacao" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_compPessoal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_tarefas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="VivenciaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="tb_alunos" EntityType="Self.tb_alunos" />
+          <EntitySet Name="tb_candidato" EntityType="Self.tb_candidato" />
+          <EntitySet Name="tb_empresas" EntityType="Self.tb_empresas" />
+          <EntitySet Name="tb_vagas" EntityType="Self.tb_vagas" />
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Vivenciadb.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Vivenciadb.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VivenciadbStoreContainer" CdmEntityContainer="VivenciaEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Vivenciadb.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_alunos">
+            <EntityTypeMapping TypeName="Vivenciadb.tb_alunos">
+              <MappingFragment StoreEntitySet="tb_alunos">
+                <ScalarProperty Name="id_aluno" ColumnName="id_aluno" />
+                <ScalarProperty Name="nm_aluno" ColumnName="nm_aluno" />
+                <ScalarProperty Name="nm_curso" ColumnName="nm_curso" />
+                <ScalarProperty Name="ds_anoEstudo" ColumnName="ds_anoEstudo" />
+                <ScalarProperty Name="dt_nascimento" ColumnName="dt_nascimento" />
+                <ScalarProperty Name="ds_idade" ColumnName="ds_idade" />
+                <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
+                <ScalarProperty Name="ds_numero" ColumnName="ds_numero" />
+                <ScalarProperty Name="ds_bairro" ColumnName="ds_bairro" />
+                <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
+                <ScalarProperty Name="nr_fixo" ColumnName="nr_fixo" />
+                <ScalarProperty Name="nr_celular" ColumnName="nr_celular" />
+                <ScalarProperty Name="ds_seEstuda" ColumnName="ds_seEstuda" />
+                <ScalarProperty Name="ds_qualCurso" ColumnName="ds_qualCurso" />
+                <ScalarProperty Name="ds_turno" ColumnName="ds_turno" />
+                <ScalarProperty Name="ds_expProfissional" ColumnName="ds_expProfissional" />
+                <ScalarProperty Name="ds_areaPreferencia" ColumnName="ds_areaPreferencia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_candidato">
+            <EntityTypeMapping TypeName="Vivenciadb.tb_candidato">
+              <MappingFragment StoreEntitySet="tb_candidato">
+                <ScalarProperty Name="id_candidato" ColumnName="id_candidato" />
+                <ScalarProperty Name="id_aluno" ColumnName="id_aluno" />
+                <ScalarProperty Name="id_vaga" ColumnName="id_vaga" />
+                <ScalarProperty Name="ds_status" ColumnName="ds_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_empresas">
+            <EntityTypeMapping TypeName="Vivenciadb.tb_empresas">
+              <MappingFragment StoreEntitySet="tb_empresas">
+                <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
+                <ScalarProperty Name="nm_empresa" ColumnName="nm_empresa" />
+                <ScalarProperty Name="nr_telefone" ColumnName="nr_telefone" />
+                <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+                <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
+                <ScalarProperty Name="ds_bairro" ColumnName="ds_bairro" />
+                <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
+                <ScalarProperty Name="ds_pontoReferencia" ColumnName="ds_pontoReferencia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_vagas">
+            <EntityTypeMapping TypeName="Vivenciadb.tb_vagas">
+              <MappingFragment StoreEntitySet="tb_vagas">
+                <ScalarProperty Name="id_vaga" ColumnName="id_vaga" />
+                <ScalarProperty Name="nm_vaga" ColumnName="nm_vaga" />
+                <ScalarProperty Name="nm_area" ColumnName="nm_area" />
+                <ScalarProperty Name="qtd_vaga" ColumnName="qtd_vaga" />
+                <ScalarProperty Name="dt_inicioEstagio" ColumnName="dt_inicioEstagio" />
+                <ScalarProperty Name="ds_sexo" ColumnName="ds_sexo" />
+                <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
+                <ScalarProperty Name="ds_horario" ColumnName="ds_horario" />
+                <ScalarProperty Name="ds_intervalo" ColumnName="ds_intervalo" />
+                <ScalarProperty Name="op_seguroDeVida" ColumnName="op_seguroDeVida" />
+                <ScalarProperty Name="op_auxTransporte" ColumnName="op_auxTransporte" />
+                <ScalarProperty Name="op_recRemunerado" ColumnName="op_recRemunerado" />
+                <ScalarProperty Name="op_valeRefeicao" ColumnName="op_valeRefeicao" />
+                <ScalarProperty Name="op_cestaBasica" ColumnName="op_cestaBasica" />
+                <ScalarProperty Name="op_refLocal" ColumnName="op_refLocal" />
+                <ScalarProperty Name="op_assisMedica" ColumnName="op_assisMedica" />
+                <ScalarProperty Name="nvl_ingles" ColumnName="nvl_ingles" />
+                <ScalarProperty Name="op_infoOffice" ColumnName="op_infoOffice" />
+                <ScalarProperty Name="op_infoAutoCAD" ColumnName="op_infoAutoCAD" />
+                <ScalarProperty Name="op_infoCorel" ColumnName="op_infoCorel" />
+                <ScalarProperty Name="op_infoPhotoShop" ColumnName="op_infoPhotoShop" />
+                <ScalarProperty Name="op_infoProgramacao" ColumnName="op_infoProgramacao" />
+                <ScalarProperty Name="op_outros" ColumnName="op_outros" />
+                <ScalarProperty Name="ds_observacao" ColumnName="ds_observacao" />
+                <ScalarProperty Name="ds_compPessoal" ColumnName="ds_compPessoal" />
+                <ScalarProperty Name="ds_tarefas" ColumnName="ds_tarefas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Vivenciadb.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Vivenciadb.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Vivenciadb.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Vivenciadb.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Vivenciadb.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Vivenciadb.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Vivenciadb.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Vivenciadb.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Vivenciadb.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
