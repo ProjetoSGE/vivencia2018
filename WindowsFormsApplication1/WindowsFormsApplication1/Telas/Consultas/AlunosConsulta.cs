@@ -35,7 +35,12 @@ namespace WindowsFormsApplication1.Telas.Consultas
             CarregarGrid();
            
         }
-
+        public void OpenScreen(UserControl control)
+        {
+            if (pnlCentro.Controls.Count == 1)
+                pnlCentro.Controls.RemoveAt(0);
+            pnlCentro.Controls.Add(control);
+        }
         private void dgvAluno_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 4)
