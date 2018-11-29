@@ -46,5 +46,10 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         {
 
         }
+
+        private void btnCadatrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

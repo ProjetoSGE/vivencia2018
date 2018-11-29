@@ -80,10 +80,11 @@
             this.btnCadatrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadatrar.Location = new System.Drawing.Point(337, 452);
             this.btnCadatrar.Name = "btnCadatrar";
-            this.btnCadatrar.Size = new System.Drawing.Size(85, 31);
+            this.btnCadatrar.Size = new System.Drawing.Size(89, 31);
             this.btnCadatrar.TabIndex = 20;
             this.btnCadatrar.Text = "Cadastrar";
             this.btnCadatrar.UseVisualStyleBackColor = true;
+            this.btnCadatrar.Click += new System.EventHandler(this.btnCadatrar_Click);
             // 
             // label1
             // 
