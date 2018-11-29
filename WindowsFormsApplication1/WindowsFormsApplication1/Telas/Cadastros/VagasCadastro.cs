@@ -26,5 +26,25 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         {
 
         }
+
+        private void VagasCadastro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtObs_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTarefa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

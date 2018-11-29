@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Telas;
 using WindowsFormsApplication1.Telas.Cadastros;
+using WindowsFormsApplication1.Telas.Consultas;
 
 namespace WindowsFormsApplication1
 {
@@ -54,6 +56,52 @@ namespace WindowsFormsApplication1
                 
         }
 
-       
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home frm = new Home();
+            OpenScreen(frm);
+        }
+
+        private void alunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlunosCadastro frm = new AlunosCadastro();
+            OpenScreen(frm);
+        }
+
+        private void empresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmpresaCadastro frm = new EmpresaCadastro();
+            OpenScreen(frm);
+        }
+
+        private void vagasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VagasCadastro frm = new VagasCadastro();
+            OpenScreen(frm);
+        }
+
+        private void alunosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AlunosConsulta frm = new AlunosConsulta();
+            OpenScreen(frm);
+        }
+
+        private void candidatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Candidato frm = new Candidato();
+            OpenScreen(frm);
+        }
+
+        private void empresasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EmpresaConsulta frm = new EmpresaConsulta();
+            OpenScreen(frm);
+        }
+
+        private void vagasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            VagasConsulta frm = new VagasConsulta();
+            OpenScreen(frm);
+        }
     }
 }

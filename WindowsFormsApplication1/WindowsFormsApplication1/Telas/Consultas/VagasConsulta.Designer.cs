@@ -38,7 +38,7 @@
             // dgvVaga
             // 
             this.dgvVaga.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVaga.Location = new System.Drawing.Point(21, 85);
+            this.dgvVaga.Location = new System.Drawing.Point(32, 84);
             this.dgvVaga.Name = "dgvVaga";
             this.dgvVaga.Size = new System.Drawing.Size(690, 403);
             this.dgvVaga.TabIndex = 0;
@@ -46,24 +46,26 @@
             // Pesquisar
             // 
             this.Pesquisar.AutoSize = true;
-            this.Pesquisar.Location = new System.Drawing.Point(18, 37);
+            this.Pesquisar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pesquisar.Location = new System.Drawing.Point(31, 41);
             this.Pesquisar.Name = "Pesquisar";
-            this.Pesquisar.Size = new System.Drawing.Size(32, 13);
+            this.Pesquisar.Size = new System.Drawing.Size(45, 21);
             this.Pesquisar.TabIndex = 1;
             this.Pesquisar.Text = "Vaga";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 34);
+            this.textBox1.Location = new System.Drawing.Point(88, 41);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(553, 20);
             this.textBox1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(636, 32);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(647, 33);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 3;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
@@ -78,7 +80,7 @@
             this.Controls.Add(this.Pesquisar);
             this.Controls.Add(this.dgvVaga);
             this.Name = "VagasConsulta";
-            this.Size = new System.Drawing.Size(728, 502);
+            this.Size = new System.Drawing.Size(755, 507);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVaga)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

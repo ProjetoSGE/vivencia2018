@@ -209,7 +209,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EmpresaCadastro";
-            this.Size = new System.Drawing.Size(728, 502);
+            this.Size = new System.Drawing.Size(755, 507);
             this.ResumeLayout(false);
             this.PerformLayout();
 

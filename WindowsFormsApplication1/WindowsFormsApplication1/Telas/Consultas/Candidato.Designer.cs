@@ -37,16 +37,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(638, 26);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(643, 26);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(85, 33);
             this.button1.TabIndex = 7;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 28);
+            this.textBox1.Location = new System.Drawing.Point(89, 34);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(553, 20);
             this.textBox1.TabIndex = 6;
@@ -54,16 +55,17 @@
             // Pesquisar
             // 
             this.Pesquisar.AutoSize = true;
-            this.Pesquisar.Location = new System.Drawing.Point(20, 31);
+            this.Pesquisar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pesquisar.Location = new System.Drawing.Point(25, 31);
             this.Pesquisar.Name = "Pesquisar";
-            this.Pesquisar.Size = new System.Drawing.Size(35, 13);
+            this.Pesquisar.Size = new System.Drawing.Size(53, 21);
             this.Pesquisar.TabIndex = 5;
             this.Pesquisar.Text = "Nome";
             // 
             // dgvCandidato
             // 
             this.dgvCandidato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCandidato.Location = new System.Drawing.Point(23, 79);
+            this.dgvCandidato.Location = new System.Drawing.Point(33, 76);
             this.dgvCandidato.Name = "dgvCandidato";
             this.dgvCandidato.Size = new System.Drawing.Size(690, 411);
             this.dgvCandidato.TabIndex = 4;
@@ -78,7 +80,7 @@
             this.Controls.Add(this.Pesquisar);
             this.Controls.Add(this.dgvCandidato);
             this.Name = "Candidato";
-            this.Size = new System.Drawing.Size(728, 502);
+            this.Size = new System.Drawing.Size(755, 507);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCandidato)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

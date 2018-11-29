@@ -73,5 +73,15 @@ namespace WindowsFormsApplication1.Telas.Consultas
             dgvAluno.AutoGenerateColumns = false;
             dgvAluno.DataSource = lista;
         }
+
+        private void Pesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

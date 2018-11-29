@@ -111,6 +111,12 @@
     <Compile Include="Telas\Consultas\VagasConsulta.Designer.cs">
       <DependentUpon>VagasConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Consultas\VagasConsulta.resx">
       <DependentUpon>VagasConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

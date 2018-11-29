@@ -43,9 +43,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(638, 26);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(646, 32);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(84, 34);
             this.button1.TabIndex = 7;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
@@ -53,19 +54,22 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 28);
+            this.textBox1.Location = new System.Drawing.Point(87, 34);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(553, 20);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Pesquisar
             // 
             this.Pesquisar.AutoSize = true;
-            this.Pesquisar.Location = new System.Drawing.Point(20, 31);
+            this.Pesquisar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pesquisar.Location = new System.Drawing.Point(28, 37);
             this.Pesquisar.Name = "Pesquisar";
-            this.Pesquisar.Size = new System.Drawing.Size(35, 13);
+            this.Pesquisar.Size = new System.Drawing.Size(53, 21);
             this.Pesquisar.TabIndex = 5;
             this.Pesquisar.Text = "Nome";
+            this.Pesquisar.Click += new System.EventHandler(this.Pesquisar_Click);
             // 
             // dgvAluno
             // 
@@ -77,7 +81,7 @@
             this.Column3,
             this.Column5,
             this.Column6});
-            this.dgvAluno.Location = new System.Drawing.Point(23, 79);
+            this.dgvAluno.Location = new System.Drawing.Point(33, 80);
             this.dgvAluno.Name = "dgvAluno";
             this.dgvAluno.Size = new System.Drawing.Size(690, 408);
             this.dgvAluno.TabIndex = 4;
@@ -134,7 +138,7 @@
             this.Controls.Add(this.Pesquisar);
             this.Controls.Add(this.dgvAluno);
             this.Name = "AlunosConsulta";
-            this.Size = new System.Drawing.Size(728, 502);
+            this.Size = new System.Drawing.Size(755, 507);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
