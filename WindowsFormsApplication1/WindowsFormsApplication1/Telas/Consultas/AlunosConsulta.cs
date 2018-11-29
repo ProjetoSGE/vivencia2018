@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Classes.Classes.Aluno;
 using WindowsFormsApplication1.Telas.Cadastros;
 
 namespace WindowsFormsApplication1.Telas.Consultas
@@ -18,34 +19,25 @@ namespace WindowsFormsApplication1.Telas.Consultas
             InitializeComponent();
             AutoCarregar();
         }
-
-        VivenciaEntities db = new VivenciaEntities();
-
         void AutoCarregar()
         {
-           
-            var get_data = from c in db.tb_alunos select c;
-             
-           
+            AlunoBussiness buss = new AlunoBussiness();
+            List<AlunoDTO> lista = buss.Listar();
+
             dgvAluno.AutoGenerateColumns = false;
-            dgvAluno.DataSource = get_data;
+            dgvAluno.DataSource = lista;
         }
         private void button1_Click(object sender, EventArgs e)
         {
             CarregarGrid();
            
         }
-        public void OpenScreen(UserControl control)
-        {
-            if (pnlCentro.Controls.Count == 1)
-                pnlCentro.Controls.RemoveAt(0);
-            pnlCentro.Controls.Add(control);
-        }
+
         private void dgvAluno_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 4)
             {
-                tb_alunos aluno = dgvAluno.Rows[e.RowIndex].DataBoundItem as tb_alunos;
+                AlunoDTO aluno = dgvAluno.Rows[e.RowIndex].DataBoundItem as AlunoDTO;
 
 
                 AlunosCadastro tela = new AlunosCadastro();
@@ -57,7 +49,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
 
             if (e.ColumnIndex == 5)
             {
-                tb_alunos produtoss = dgvAluno.CurrentRow.DataBoundItem as tb_alunos;
+                AlunoDTO produtoss = dgvAluno.CurrentRow.DataBoundItem as AlunoDTO;
 
                 DialogResult r = MessageBox.Show("Deseja excluir o aluno ?", "Realce Sua Beleza",
                                     MessageBoxButtons.YesNo,
@@ -65,13 +57,8 @@ namespace WindowsFormsApplication1.Telas.Consultas
 
                 if (r == DialogResult.Yes)
                 {
-                   
-
-
-                    db.tb_alunos.Remove(produtoss);
-                    db.SaveChanges();
-
-
+                    AlunoBussiness business = new AlunoBussiness();
+                    business.Remover(produtoss.ID);
 
                     CarregarGrid();
                 }
@@ -80,13 +67,11 @@ namespace WindowsFormsApplication1.Telas.Consultas
 
         private void CarregarGrid()
         {
-            var get_data = from c in db.tb_alunos select c;
-
+            AlunoBussiness business = new AlunoBussiness();
+            List<AlunoDTO> lista = business.Consultar(textBox1.Text);
 
             dgvAluno.AutoGenerateColumns = false;
-            dgvAluno.DataSource = get_data;
-
-           
+            dgvAluno.DataSource = lista;
         }
     }
 }

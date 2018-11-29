@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Classes.Classes.Empresa;
 
 namespace WindowsFormsApplication1.Telas.Consultas
 {
@@ -21,7 +22,11 @@ namespace WindowsFormsApplication1.Telas.Consultas
         {
             try
             {
-               
+                EmpresaBusiness business = new EmpresaBusiness();
+                List<EmpresaDTO> dto = business.Consultar(textBox1.Text.Trim());
+
+                dgvEmpresa.AutoGenerateColumns = false;
+                dgvEmpresa.DataSource = dto;
 
             }
             catch (Exception ex)

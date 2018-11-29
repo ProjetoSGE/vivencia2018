@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApplication1.Classes.Classes.Empresa;
 
 namespace WindowsFormsApplication1
 {
@@ -32,20 +32,17 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                EmpresaDTO dto = new EmpresaDTO();
+                dto.Empresa = txtNome.Text.Trim();
+                dto.Email = txtEmail.Text.Trim();
+                dto.CEP = mktCep.Text.Trim();
+                dto.Bairro = txtBairro.Text.Trim();
+                dto.Endereço = txtEndereco.Text.Trim();
+                dto.Telefone = mktTelefone.Text.Trim();
+                dto.PontoDeReferencia = txtPontoRef.Text.Trim();
 
-               tb_empresas dto = new tb_empresas();
-                dto.nm_empresa = txtNome.Text.Trim();
-                dto.ds_email = txtEmail.Text.Trim();
-                dto.ds_cep = mktCep.Text.Trim();
-                dto.ds_bairro = txtBairro.Text.Trim();
-                dto.ds_endereco = txtEndereco.Text.Trim();
-                dto.nr_telefone = mktTelefone.Text.Trim();
-                dto.ds_pontoReferencia= txtPontoRef.Text.Trim();
-
-                VivenciaEntities db = new VivenciaEntities();
-                db.tb_empresas.Add(dto);
-
-                db.SaveChanges();
+                EmpresaBusiness business = new EmpresaBusiness();
+                business.Salvar(dto);
 
                 MessageBox.Show("Empresa cadastrada com sucesso", "SGE");
 
