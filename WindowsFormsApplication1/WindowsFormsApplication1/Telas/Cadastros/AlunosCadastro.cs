@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApplication1.Classes.Classes.Aluno;
+
 
 namespace WindowsFormsApplication1.Telas.Cadastros
 {
@@ -20,11 +20,13 @@ namespace WindowsFormsApplication1.Telas.Cadastros
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
-            AlunoDTO dto = new AlunoDTO();
-            dto.Nome = txtNome.Text; 
-            dto.NomeCurso = txtCurso.Text;
-            dto.Idade = Convert.ToInt32(txtIdade.Text);
-            dto.Nascimento = Convert.ToDateTime(mskNascimento.Text);
+            VivenciaEntities db = new VivenciaEntities();
+
+            tb_alunos dto = new tb_alunos();
+            dto.nm_aluno = txtNome.Text; 
+            dto.nm_curso = txtCurso.Text;
+            dto.ds_idade = Convert.ToInt32(txtIdade.Text);
+            dto.dt_nascimento = Convert.ToDateTime(mskNascimento.Text);
             dto.Numero = Convert.ToInt32(txtN.Text);
             dto.QualCurso = txtQualCurso.Text;
             dto.SeEstuda = cboEstuda.Text;
@@ -38,8 +40,8 @@ namespace WindowsFormsApplication1.Telas.Cadastros
             dto.CEP = mskCEP.Text;
             dto.ExpProfissional = txtExperiencia.Text;
 
-            AlunoBussiness bussiness = new AlunoBussiness();
-            bussiness.Salvar(dto);
+            db.tb_alunos.Add(dto);
+            db.SaveChanges();
 
             MessageBox.Show("Aluno salvo com sucesso");
 
