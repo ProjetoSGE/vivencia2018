@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         void CarregarImagem()
         {
             var aux = new Auxiliares();
-            panel1.BackgroundImage = aux.BotaoFechar;
+            pnFechar.BackgroundImage = aux.BotaoFechar;
             
         }
     }

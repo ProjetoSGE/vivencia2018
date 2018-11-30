@@ -57,16 +57,16 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnFechar = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnMinimizar = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnVoltar = new System.Windows.Forms.Panel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnFechar.SuspendLayout();
+            this.pnMinimizar.SuspendLayout();
+            this.pnVoltar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -329,13 +329,13 @@
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // pnFechar
             // 
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(736, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(23, 23);
-            this.panel1.TabIndex = 43;
+            this.pnFechar.Controls.Add(this.flowLayoutPanel1);
+            this.pnFechar.Location = new System.Drawing.Point(736, 0);
+            this.pnFechar.Name = "pnFechar";
+            this.pnFechar.Size = new System.Drawing.Size(23, 23);
+            this.pnFechar.TabIndex = 43;
             // 
             // flowLayoutPanel1
             // 
@@ -344,13 +344,13 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel2
+            // pnMinimizar
             // 
-            this.panel2.Controls.Add(this.flowLayoutPanel2);
-            this.panel2.Location = new System.Drawing.Point(713, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(23, 23);
-            this.panel2.TabIndex = 44;
+            this.pnMinimizar.Controls.Add(this.flowLayoutPanel2);
+            this.pnMinimizar.Location = new System.Drawing.Point(713, 0);
+            this.pnMinimizar.Name = "pnMinimizar";
+            this.pnMinimizar.Size = new System.Drawing.Size(23, 23);
+            this.pnMinimizar.TabIndex = 44;
             // 
             // flowLayoutPanel2
             // 
@@ -359,13 +359,13 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
-            // panel3
+            // pnVoltar
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel3);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(23, 23);
-            this.panel3.TabIndex = 45;
+            this.pnVoltar.Controls.Add(this.flowLayoutPanel3);
+            this.pnVoltar.Location = new System.Drawing.Point(0, 0);
+            this.pnVoltar.Name = "pnVoltar";
+            this.pnVoltar.Size = new System.Drawing.Size(23, 23);
+            this.pnVoltar.TabIndex = 45;
             // 
             // flowLayoutPanel3
             // 
@@ -379,9 +379,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnVoltar);
+            this.Controls.Add(this.pnMinimizar);
+            this.Controls.Add(this.pnFechar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
@@ -414,9 +414,9 @@
             this.Name = "AlunosCadastro";
             this.Size = new System.Drawing.Size(759, 473);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.pnFechar.ResumeLayout(false);
+            this.pnMinimizar.ResumeLayout(false);
+            this.pnVoltar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,11 +453,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnFechar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnMinimizar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnVoltar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }

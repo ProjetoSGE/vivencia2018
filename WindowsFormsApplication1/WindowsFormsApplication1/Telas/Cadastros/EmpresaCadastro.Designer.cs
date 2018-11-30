@@ -55,17 +55,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnVoltar = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnMinimizar = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnFechar = new System.Windows.Forms.Panel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnVoltar.SuspendLayout();
+            this.pnMinimizar.SuspendLayout();
+            this.pnFechar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -326,13 +326,13 @@
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             // 
-            // panel1
+            // pnVoltar
             // 
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(23, 23);
-            this.panel1.TabIndex = 44;
+            this.pnVoltar.Controls.Add(this.flowLayoutPanel1);
+            this.pnVoltar.Location = new System.Drawing.Point(0, 0);
+            this.pnVoltar.Name = "pnVoltar";
+            this.pnVoltar.Size = new System.Drawing.Size(23, 23);
+            this.pnVoltar.TabIndex = 44;
             // 
             // flowLayoutPanel1
             // 
@@ -341,13 +341,13 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel2
+            // pnMinimizar
             // 
-            this.panel2.Controls.Add(this.flowLayoutPanel2);
-            this.panel2.Location = new System.Drawing.Point(715, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(23, 23);
-            this.panel2.TabIndex = 45;
+            this.pnMinimizar.Controls.Add(this.flowLayoutPanel2);
+            this.pnMinimizar.Location = new System.Drawing.Point(715, 0);
+            this.pnMinimizar.Name = "pnMinimizar";
+            this.pnMinimizar.Size = new System.Drawing.Size(23, 23);
+            this.pnMinimizar.TabIndex = 45;
             // 
             // flowLayoutPanel2
             // 
@@ -356,13 +356,13 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
-            // panel3
+            // pnFechar
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel3);
-            this.panel3.Location = new System.Drawing.Point(738, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(23, 23);
-            this.panel3.TabIndex = 46;
+            this.pnFechar.Controls.Add(this.flowLayoutPanel3);
+            this.pnFechar.Location = new System.Drawing.Point(738, 0);
+            this.pnFechar.Name = "pnFechar";
+            this.pnFechar.Size = new System.Drawing.Size(23, 23);
+            this.pnFechar.TabIndex = 46;
             // 
             // flowLayoutPanel3
             // 
@@ -376,9 +376,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnFechar);
+            this.Controls.Add(this.pnMinimizar);
+            this.Controls.Add(this.pnVoltar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCadastrar);
@@ -395,9 +395,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.pnVoltar.ResumeLayout(false);
+            this.pnMinimizar.ResumeLayout(false);
+            this.pnFechar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,11 +431,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnVoltar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnMinimizar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnFechar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }
