@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="infodModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_alunos">
+          <Key>
+            <PropertyRef Name="id_aluno" />
+          </Key>
+          <Property Name="id_aluno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nm_aluno" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nm_curso" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ds_anoEstudo" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="dt_nascimento" Type="date" Nullable="false" />
+          <Property Name="ds_idade" Type="int" Nullable="false" />
+          <Property Name="ds_endereco" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_numero" Type="int" Nullable="false" />
+          <Property Name="ds_bairro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_cep" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="nr_fixo" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="nr_celular" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="ds_seEstuda" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="ds_qualCurso" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_turno" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="ds_expProfissional" Type="text" Nullable="false" />
+          <Property Name="ds_areaPreferencia" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_candidato">
+          <Key>
+            <PropertyRef Name="id_candidato" />
+          </Key>
+          <Property Name="id_candidato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_aluno" Type="int" Nullable="false" />
+          <Property Name="id_vaga" Type="int" Nullable="false" />
+          <Property Name="ds_status" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_empresas">
+          <Key>
+            <PropertyRef Name="id_empresa" />
+          </Key>
+          <Property Name="id_empresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nm_empresa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nr_telefone" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="ds_email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ds_cep" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="ds_bairro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_endereco" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_pontoReferencial" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_vagas">
+          <Key>
+            <PropertyRef Name="id_vaga" />
+          </Key>
+          <Property Name="id_vaga" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nm_vaga" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nm_area" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="qtd_vaga" Type="int" Nullable="false" />
+          <Property Name="dt_inicioEstagio" Type="date" Nullable="false" />
+          <Property Name="ds_sexo" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="id_empresa" Type="int" Nullable="false" />
+          <Property Name="ds_horario" Type="time" Precision="7" Nullable="false" />
+          <Property Name="ds_intervalo" Type="time" Precision="7" Nullable="false" />
+          <Property Name="op_seguroDeVida" Type="bit" Nullable="false" />
+          <Property Name="op_auxTransporte" Type="bit" Nullable="false" />
+          <Property Name="op_recRemunerado" Type="bit" Nullable="false" />
+          <Property Name="op_valeRefeicao" Type="bit" Nullable="false" />
+          <Property Name="op_cestaBasica" Type="bit" Nullable="false" />
+          <Property Name="op_refLocal" Type="bit" Nullable="false" />
+          <Property Name="op_assisMedica" Type="bit" Nullable="false" />
+          <Property Name="nvl_ingles" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="op_infoOffice" Type="bit" Nullable="false" />
+          <Property Name="op_infoAutoCAD" Type="bit" Nullable="false" />
+          <Property Name="op_infoCorel" Type="bit" Nullable="false" />
+          <Property Name="op_infoPhotoShop" Type="bit" Nullable="false" />
+          <Property Name="op_infoProgramacao" Type="bit" Nullable="false" />
+          <Property Name="op_outros" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_observacao" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_compPessoal" Type="text" Nullable="false" />
+          <Property Name="ds_tarefas" Type="text" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'infod.dbo.vw_candidato' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_candidato">
+          <Key>
+            <PropertyRef Name="id_candidato" />
+            <PropertyRef Name="nm_aluno" />
+            <PropertyRef Name="nm_vaga" />
+            <PropertyRef Name="ds_status" />
+          </Key>
+          <Property Name="id_candidato" Type="int" Nullable="false" />
+          <Property Name="nm_aluno" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nm_vaga" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_status" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_vagas">
+          <Key>
+            <PropertyRef Name="id_vaga" />
+            <PropertyRef Name="nm_vaga" />
+            <PropertyRef Name="nm_area" />
+            <PropertyRef Name="qtd_vaga" />
+            <PropertyRef Name="dt_inicioEstagio" />
+            <PropertyRef Name="ds_sexo" />
+            <PropertyRef Name="nm_empresa" />
+            <PropertyRef Name="ds_horario" />
+            <PropertyRef Name="ds_intervalo" />
+            <PropertyRef Name="op_seguroDeVida" />
+            <PropertyRef Name="op_auxTransporte" />
+            <PropertyRef Name="op_recRemunerado" />
+            <PropertyRef Name="op_valeRefeicao" />
+            <PropertyRef Name="op_cestaBasica" />
+            <PropertyRef Name="op_refLocal" />
+            <PropertyRef Name="op_assisMedica" />
+            <PropertyRef Name="nvl_ingles" />
+            <PropertyRef Name="op_infoOffice" />
+            <PropertyRef Name="op_infoAutoCAD" />
+            <PropertyRef Name="op_infoCorel" />
+            <PropertyRef Name="op_infoPhotoShop" />
+            <PropertyRef Name="op_infoProgramacao" />
+            <PropertyRef Name="op_outros" />
+            <PropertyRef Name="ds_observacao" />
+            <PropertyRef Name="ds_compPessoal" />
+            <PropertyRef Name="ds_tarefas" />
+          </Key>
+          <Property Name="id_vaga" Type="int" Nullable="false" />
+          <Property Name="nm_vaga" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nm_area" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="qtd_vaga" Type="int" Nullable="false" />
+          <Property Name="dt_inicioEstagio" Type="date" Nullable="false" />
+          <Property Name="ds_sexo" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="nm_empresa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_horario" Type="time" Precision="7" Nullable="false" />
+          <Property Name="ds_intervalo" Type="time" Precision="7" Nullable="false" />
+          <Property Name="op_seguroDeVida" Type="bit" Nullable="false" />
+          <Property Name="op_auxTransporte" Type="bit" Nullable="false" />
+          <Property Name="op_recRemunerado" Type="bit" Nullable="false" />
+          <Property Name="op_valeRefeicao" Type="bit" Nullable="false" />
+          <Property Name="op_cestaBasica" Type="bit" Nullable="false" />
+          <Property Name="op_refLocal" Type="bit" Nullable="false" />
+          <Property Name="op_assisMedica" Type="bit" Nullable="false" />
+          <Property Name="nvl_ingles" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="op_infoOffice" Type="bit" Nullable="false" />
+          <Property Name="op_infoAutoCAD" Type="bit" Nullable="false" />
+          <Property Name="op_infoCorel" Type="bit" Nullable="false" />
+          <Property Name="op_infoPhotoShop" Type="bit" Nullable="false" />
+          <Property Name="op_infoProgramacao" Type="bit" Nullable="false" />
+          <Property Name="op_outros" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_observacao" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="ds_compPessoal" Type="text" Nullable="false" />
+          <Property Name="ds_tarefas" Type="text" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__tb_candid__id_al__1BC821DD">
+          <End Role="tb_alunos" Type="Self.tb_alunos" Multiplicity="1" />
+          <End Role="tb_candidato" Type="Self.tb_candidato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_alunos">
+              <PropertyRef Name="id_aluno" />
+            </Principal>
+            <Dependent Role="tb_candidato">
+              <PropertyRef Name="id_aluno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tb_candid__id_va__1CBC4616">
+          <End Role="tb_vagas" Type="Self.tb_vagas" Multiplicity="1" />
+          <End Role="tb_candidato" Type="Self.tb_candidato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_vagas">
+              <PropertyRef Name="id_vaga" />
+            </Principal>
+            <Dependent Role="tb_candidato">
+              <PropertyRef Name="id_vaga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tb_vagas__id_emp__18EBB532">
+          <End Role="tb_empresas" Type="Self.tb_empresas" Multiplicity="1" />
+          <End Role="tb_vagas" Type="Self.tb_vagas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_empresas">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="tb_vagas">
+              <PropertyRef Name="id_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="infodModelStoreContainer">
+          <EntitySet Name="tb_alunos" EntityType="Self.tb_alunos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_candidato" EntityType="Self.tb_candidato" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_empresas" EntityType="Self.tb_empresas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_vagas" EntityType="Self.tb_vagas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_candidato" EntityType="Self.vw_candidato" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_candidato].[id_candidato] AS [id_candidato], 
+    [vw_candidato].[nm_aluno] AS [nm_aluno], 
+    [vw_candidato].[nm_vaga] AS [nm_vaga], 
+    [vw_candidato].[ds_status] AS [ds_status]
+    FROM [dbo].[vw_candidato] AS [vw_candidato]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_vagas" EntityType="Self.vw_vagas" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_vagas].[id_vaga] AS [id_vaga], 
+    [vw_vagas].[nm_vaga] AS [nm_vaga], 
+    [vw_vagas].[nm_area] AS [nm_area], 
+    [vw_vagas].[qtd_vaga] AS [qtd_vaga], 
+    [vw_vagas].[dt_inicioEstagio] AS [dt_inicioEstagio], 
+    [vw_vagas].[ds_sexo] AS [ds_sexo], 
+    [vw_vagas].[nm_empresa] AS [nm_empresa], 
+    [vw_vagas].[ds_horario] AS [ds_horario], 
+    [vw_vagas].[ds_intervalo] AS [ds_intervalo], 
+    [vw_vagas].[op_seguroDeVida] AS [op_seguroDeVida], 
+    [vw_vagas].[op_auxTransporte] AS [op_auxTransporte], 
+    [vw_vagas].[op_recRemunerado] AS [op_recRemunerado], 
+    [vw_vagas].[op_valeRefeicao] AS [op_valeRefeicao], 
+    [vw_vagas].[op_cestaBasica] AS [op_cestaBasica], 
+    [vw_vagas].[op_refLocal] AS [op_refLocal], 
+    [vw_vagas].[op_assisMedica] AS [op_assisMedica], 
+    [vw_vagas].[nvl_ingles] AS [nvl_ingles], 
+    [vw_vagas].[op_infoOffice] AS [op_infoOffice], 
+    [vw_vagas].[op_infoAutoCAD] AS [op_infoAutoCAD], 
+    [vw_vagas].[op_infoCorel] AS [op_infoCorel], 
+    [vw_vagas].[op_infoPhotoShop] AS [op_infoPhotoShop], 
+    [vw_vagas].[op_infoProgramacao] AS [op_infoProgramacao], 
+    [vw_vagas].[op_outros] AS [op_outros], 
+    [vw_vagas].[ds_observacao] AS [ds_observacao], 
+    [vw_vagas].[ds_compPessoal] AS [ds_compPessoal], 
+    [vw_vagas].[ds_tarefas] AS [ds_tarefas]
+    FROM [dbo].[vw_vagas] AS [vw_vagas]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__tb_candid__id_al__1BC821DD" Association="Self.FK__tb_candid__id_al__1BC821DD">
+            <End Role="tb_alunos" EntitySet="tb_alunos" />
+            <End Role="tb_candidato" EntitySet="tb_candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tb_candid__id_va__1CBC4616" Association="Self.FK__tb_candid__id_va__1CBC4616">
+            <End Role="tb_vagas" EntitySet="tb_vagas" />
+            <End Role="tb_candidato" EntitySet="tb_candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tb_vagas__id_emp__18EBB532" Association="Self.FK__tb_vagas__id_emp__18EBB532">
+            <End Role="tb_empresas" EntitySet="tb_empresas" />
+            <End Role="tb_vagas" EntitySet="tb_vagas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="infodModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tb_alunos">
+          <Key>
+            <PropertyRef Name="id_aluno" />
+          </Key>
+          <Property Name="id_aluno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_aluno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_curso" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_anoEstudo" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dt_nascimento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ds_idade" Type="Int32" Nullable="false" />
+          <Property Name="ds_endereco" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_numero" Type="Int32" Nullable="false" />
+          <Property Name="ds_bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_fixo" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_celular" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_seEstuda" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_qualCurso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_turno" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_expProfissional" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_areaPreferencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_candidato" Relationship="Self.FK__tb_candid__id_al__1BC821DD" FromRole="tb_alunos" ToRole="tb_candidato" />
+        </EntityType>
+        <EntityType Name="tb_candidato">
+          <Key>
+            <PropertyRef Name="id_candidato" />
+          </Key>
+          <Property Name="id_candidato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_aluno" Type="Int32" Nullable="false" />
+          <Property Name="id_vaga" Type="Int32" Nullable="false" />
+          <Property Name="ds_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_alunos" Relationship="Self.FK__tb_candid__id_al__1BC821DD" FromRole="tb_candidato" ToRole="tb_alunos" />
+          <NavigationProperty Name="tb_vagas" Relationship="Self.FK__tb_candid__id_va__1CBC4616" FromRole="tb_candidato" ToRole="tb_vagas" />
+        </EntityType>
+        <EntityType Name="tb_empresas">
+          <Key>
+            <PropertyRef Name="id_empresa" />
+          </Key>
+          <Property Name="id_empresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_telefone" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_endereco" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_pontoReferencial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_vagas" Relationship="Self.FK__tb_vagas__id_emp__18EBB532" FromRole="tb_empresas" ToRole="tb_vagas" />
+        </EntityType>
+        <EntityType Name="tb_vagas">
+          <Key>
+            <PropertyRef Name="id_vaga" />
+          </Key>
+          <Property Name="id_vaga" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_vaga" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qtd_vaga" Type="Int32" Nullable="false" />
+          <Property Name="dt_inicioEstagio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ds_sexo" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_empresa" Type="Int32" Nullable="false" />
+          <Property Name="ds_horario" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="ds_intervalo" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="op_seguroDeVida" Type="Boolean" Nullable="false" />
+          <Property Name="op_auxTransporte" Type="Boolean" Nullable="false" />
+          <Property Name="op_recRemunerado" Type="Boolean" Nullable="false" />
+          <Property Name="op_valeRefeicao" Type="Boolean" Nullable="false" />
+          <Property Name="op_cestaBasica" Type="Boolean" Nullable="false" />
+          <Property Name="op_refLocal" Type="Boolean" Nullable="false" />
+          <Property Name="op_assisMedica" Type="Boolean" Nullable="false" />
+          <Property Name="nvl_ingles" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="op_infoOffice" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoAutoCAD" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoCorel" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoPhotoShop" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoProgramacao" Type="Boolean" Nullable="false" />
+          <Property Name="op_outros" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_observacao" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_compPessoal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_tarefas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_candidato" Relationship="Self.FK__tb_candid__id_va__1CBC4616" FromRole="tb_vagas" ToRole="tb_candidato" />
+          <NavigationProperty Name="tb_empresas" Relationship="Self.FK__tb_vagas__id_emp__18EBB532" FromRole="tb_vagas" ToRole="tb_empresas" />
+        </EntityType>
+        <EntityType Name="vw_candidato">
+          <Key>
+            <PropertyRef Name="id_candidato" />
+            <PropertyRef Name="nm_aluno" />
+            <PropertyRef Name="nm_vaga" />
+            <PropertyRef Name="ds_status" />
+          </Key>
+          <Property Name="id_candidato" Type="Int32" Nullable="false" />
+          <Property Name="nm_aluno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_vaga" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_vagas">
+          <Key>
+            <PropertyRef Name="id_vaga" />
+            <PropertyRef Name="nm_vaga" />
+            <PropertyRef Name="nm_area" />
+            <PropertyRef Name="qtd_vaga" />
+            <PropertyRef Name="dt_inicioEstagio" />
+            <PropertyRef Name="ds_sexo" />
+            <PropertyRef Name="nm_empresa" />
+            <PropertyRef Name="ds_horario" />
+            <PropertyRef Name="ds_intervalo" />
+            <PropertyRef Name="op_seguroDeVida" />
+            <PropertyRef Name="op_auxTransporte" />
+            <PropertyRef Name="op_recRemunerado" />
+            <PropertyRef Name="op_valeRefeicao" />
+            <PropertyRef Name="op_cestaBasica" />
+            <PropertyRef Name="op_refLocal" />
+            <PropertyRef Name="op_assisMedica" />
+            <PropertyRef Name="nvl_ingles" />
+            <PropertyRef Name="op_infoOffice" />
+            <PropertyRef Name="op_infoAutoCAD" />
+            <PropertyRef Name="op_infoCorel" />
+            <PropertyRef Name="op_infoPhotoShop" />
+            <PropertyRef Name="op_infoProgramacao" />
+            <PropertyRef Name="op_outros" />
+            <PropertyRef Name="ds_observacao" />
+            <PropertyRef Name="ds_compPessoal" />
+            <PropertyRef Name="ds_tarefas" />
+          </Key>
+          <Property Name="id_vaga" Type="Int32" Nullable="false" />
+          <Property Name="nm_vaga" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qtd_vaga" Type="Int32" Nullable="false" />
+          <Property Name="dt_inicioEstagio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ds_sexo" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_horario" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="ds_intervalo" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="op_seguroDeVida" Type="Boolean" Nullable="false" />
+          <Property Name="op_auxTransporte" Type="Boolean" Nullable="false" />
+          <Property Name="op_recRemunerado" Type="Boolean" Nullable="false" />
+          <Property Name="op_valeRefeicao" Type="Boolean" Nullable="false" />
+          <Property Name="op_cestaBasica" Type="Boolean" Nullable="false" />
+          <Property Name="op_refLocal" Type="Boolean" Nullable="false" />
+          <Property Name="op_assisMedica" Type="Boolean" Nullable="false" />
+          <Property Name="nvl_ingles" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="op_infoOffice" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoAutoCAD" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoCorel" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoPhotoShop" Type="Boolean" Nullable="false" />
+          <Property Name="op_infoProgramacao" Type="Boolean" Nullable="false" />
+          <Property Name="op_outros" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_observacao" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_compPessoal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_tarefas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__tb_candid__id_al__1BC821DD">
+          <End Role="tb_alunos" Type="Self.tb_alunos" Multiplicity="1" />
+          <End Role="tb_candidato" Type="Self.tb_candidato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_alunos">
+              <PropertyRef Name="id_aluno" />
+            </Principal>
+            <Dependent Role="tb_candidato">
+              <PropertyRef Name="id_aluno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tb_candid__id_va__1CBC4616">
+          <End Role="tb_vagas" Type="Self.tb_vagas" Multiplicity="1" />
+          <End Role="tb_candidato" Type="Self.tb_candidato" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_vagas">
+              <PropertyRef Name="id_vaga" />
+            </Principal>
+            <Dependent Role="tb_candidato">
+              <PropertyRef Name="id_vaga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tb_vagas__id_emp__18EBB532">
+          <End Role="tb_empresas" Type="Self.tb_empresas" Multiplicity="1" />
+          <End Role="tb_vagas" Type="Self.tb_vagas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_empresas">
+              <PropertyRef Name="id_empresa" />
+            </Principal>
+            <Dependent Role="tb_vagas">
+              <PropertyRef Name="id_empresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EstagiosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_alunos" EntityType="Self.tb_alunos" />
+          <EntitySet Name="tb_candidato" EntityType="Self.tb_candidato" />
+          <EntitySet Name="tb_empresas" EntityType="Self.tb_empresas" />
+          <EntitySet Name="tb_vagas" EntityType="Self.tb_vagas" />
+          <EntitySet Name="vw_candidato" EntityType="Self.vw_candidato" />
+          <EntitySet Name="vw_vagas" EntityType="Self.vw_vagas" />
+          <AssociationSet Name="FK__tb_candid__id_al__1BC821DD" Association="Self.FK__tb_candid__id_al__1BC821DD">
+            <End Role="tb_alunos" EntitySet="tb_alunos" />
+            <End Role="tb_candidato" EntitySet="tb_candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tb_candid__id_va__1CBC4616" Association="Self.FK__tb_candid__id_va__1CBC4616">
+            <End Role="tb_vagas" EntitySet="tb_vagas" />
+            <End Role="tb_candidato" EntitySet="tb_candidato" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tb_vagas__id_emp__18EBB532" Association="Self.FK__tb_vagas__id_emp__18EBB532">
+            <End Role="tb_empresas" EntitySet="tb_empresas" />
+            <End Role="tb_vagas" EntitySet="tb_vagas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="infodModelStoreContainer" CdmEntityContainer="EstagiosEntities">
+          <EntitySetMapping Name="tb_alunos">
+            <EntityTypeMapping TypeName="infodModel.tb_alunos">
+              <MappingFragment StoreEntitySet="tb_alunos">
+                <ScalarProperty Name="id_aluno" ColumnName="id_aluno" />
+                <ScalarProperty Name="nm_aluno" ColumnName="nm_aluno" />
+                <ScalarProperty Name="nm_curso" ColumnName="nm_curso" />
+                <ScalarProperty Name="ds_anoEstudo" ColumnName="ds_anoEstudo" />
+                <ScalarProperty Name="dt_nascimento" ColumnName="dt_nascimento" />
+                <ScalarProperty Name="ds_idade" ColumnName="ds_idade" />
+                <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
+                <ScalarProperty Name="ds_numero" ColumnName="ds_numero" />
+                <ScalarProperty Name="ds_bairro" ColumnName="ds_bairro" />
+                <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
+                <ScalarProperty Name="nr_fixo" ColumnName="nr_fixo" />
+                <ScalarProperty Name="nr_celular" ColumnName="nr_celular" />
+                <ScalarProperty Name="ds_seEstuda" ColumnName="ds_seEstuda" />
+                <ScalarProperty Name="ds_qualCurso" ColumnName="ds_qualCurso" />
+                <ScalarProperty Name="ds_turno" ColumnName="ds_turno" />
+                <ScalarProperty Name="ds_expProfissional" ColumnName="ds_expProfissional" />
+                <ScalarProperty Name="ds_areaPreferencia" ColumnName="ds_areaPreferencia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_candidato">
+            <EntityTypeMapping TypeName="infodModel.tb_candidato">
+              <MappingFragment StoreEntitySet="tb_candidato">
+                <ScalarProperty Name="id_candidato" ColumnName="id_candidato" />
+                <ScalarProperty Name="id_aluno" ColumnName="id_aluno" />
+                <ScalarProperty Name="id_vaga" ColumnName="id_vaga" />
+                <ScalarProperty Name="ds_status" ColumnName="ds_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_empresas">
+            <EntityTypeMapping TypeName="infodModel.tb_empresas">
+              <MappingFragment StoreEntitySet="tb_empresas">
+                <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
+                <ScalarProperty Name="nm_empresa" ColumnName="nm_empresa" />
+                <ScalarProperty Name="nr_telefone" ColumnName="nr_telefone" />
+                <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+                <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
+                <ScalarProperty Name="ds_bairro" ColumnName="ds_bairro" />
+                <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
+                <ScalarProperty Name="ds_pontoReferencial" ColumnName="ds_pontoReferencial" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_vagas">
+            <EntityTypeMapping TypeName="infodModel.tb_vagas">
+              <MappingFragment StoreEntitySet="tb_vagas">
+                <ScalarProperty Name="id_vaga" ColumnName="id_vaga" />
+                <ScalarProperty Name="nm_vaga" ColumnName="nm_vaga" />
+                <ScalarProperty Name="nm_area" ColumnName="nm_area" />
+                <ScalarProperty Name="qtd_vaga" ColumnName="qtd_vaga" />
+                <ScalarProperty Name="dt_inicioEstagio" ColumnName="dt_inicioEstagio" />
+                <ScalarProperty Name="ds_sexo" ColumnName="ds_sexo" />
+                <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
+                <ScalarProperty Name="ds_horario" ColumnName="ds_horario" />
+                <ScalarProperty Name="ds_intervalo" ColumnName="ds_intervalo" />
+                <ScalarProperty Name="op_seguroDeVida" ColumnName="op_seguroDeVida" />
+                <ScalarProperty Name="op_auxTransporte" ColumnName="op_auxTransporte" />
+                <ScalarProperty Name="op_recRemunerado" ColumnName="op_recRemunerado" />
+                <ScalarProperty Name="op_valeRefeicao" ColumnName="op_valeRefeicao" />
+                <ScalarProperty Name="op_cestaBasica" ColumnName="op_cestaBasica" />
+                <ScalarProperty Name="op_refLocal" ColumnName="op_refLocal" />
+                <ScalarProperty Name="op_assisMedica" ColumnName="op_assisMedica" />
+                <ScalarProperty Name="nvl_ingles" ColumnName="nvl_ingles" />
+                <ScalarProperty Name="op_infoOffice" ColumnName="op_infoOffice" />
+                <ScalarProperty Name="op_infoAutoCAD" ColumnName="op_infoAutoCAD" />
+                <ScalarProperty Name="op_infoCorel" ColumnName="op_infoCorel" />
+                <ScalarProperty Name="op_infoPhotoShop" ColumnName="op_infoPhotoShop" />
+                <ScalarProperty Name="op_infoProgramacao" ColumnName="op_infoProgramacao" />
+                <ScalarProperty Name="op_outros" ColumnName="op_outros" />
+                <ScalarProperty Name="ds_observacao" ColumnName="ds_observacao" />
+                <ScalarProperty Name="ds_compPessoal" ColumnName="ds_compPessoal" />
+                <ScalarProperty Name="ds_tarefas" ColumnName="ds_tarefas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_candidato">
+            <EntityTypeMapping TypeName="infodModel.vw_candidato">
+              <MappingFragment StoreEntitySet="vw_candidato">
+                <ScalarProperty Name="id_candidato" ColumnName="id_candidato" />
+                <ScalarProperty Name="nm_aluno" ColumnName="nm_aluno" />
+                <ScalarProperty Name="nm_vaga" ColumnName="nm_vaga" />
+                <ScalarProperty Name="ds_status" ColumnName="ds_status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_vagas">
+            <EntityTypeMapping TypeName="infodModel.vw_vagas">
+              <MappingFragment StoreEntitySet="vw_vagas">
+                <ScalarProperty Name="id_vaga" ColumnName="id_vaga" />
+                <ScalarProperty Name="nm_vaga" ColumnName="nm_vaga" />
+                <ScalarProperty Name="nm_area" ColumnName="nm_area" />
+                <ScalarProperty Name="qtd_vaga" ColumnName="qtd_vaga" />
+                <ScalarProperty Name="dt_inicioEstagio" ColumnName="dt_inicioEstagio" />
+                <ScalarProperty Name="ds_sexo" ColumnName="ds_sexo" />
+                <ScalarProperty Name="nm_empresa" ColumnName="nm_empresa" />
+                <ScalarProperty Name="ds_horario" ColumnName="ds_horario" />
+                <ScalarProperty Name="ds_intervalo" ColumnName="ds_intervalo" />
+                <ScalarProperty Name="op_seguroDeVida" ColumnName="op_seguroDeVida" />
+                <ScalarProperty Name="op_auxTransporte" ColumnName="op_auxTransporte" />
+                <ScalarProperty Name="op_recRemunerado" ColumnName="op_recRemunerado" />
+                <ScalarProperty Name="op_valeRefeicao" ColumnName="op_valeRefeicao" />
+                <ScalarProperty Name="op_cestaBasica" ColumnName="op_cestaBasica" />
+                <ScalarProperty Name="op_refLocal" ColumnName="op_refLocal" />
+                <ScalarProperty Name="op_assisMedica" ColumnName="op_assisMedica" />
+                <ScalarProperty Name="nvl_ingles" ColumnName="nvl_ingles" />
+                <ScalarProperty Name="op_infoOffice" ColumnName="op_infoOffice" />
+                <ScalarProperty Name="op_infoAutoCAD" ColumnName="op_infoAutoCAD" />
+                <ScalarProperty Name="op_infoCorel" ColumnName="op_infoCorel" />
+                <ScalarProperty Name="op_infoPhotoShop" ColumnName="op_infoPhotoShop" />
+                <ScalarProperty Name="op_infoProgramacao" ColumnName="op_infoProgramacao" />
+                <ScalarProperty Name="op_outros" ColumnName="op_outros" />
+                <ScalarProperty Name="ds_observacao" ColumnName="ds_observacao" />
+                <ScalarProperty Name="ds_compPessoal" ColumnName="ds_compPessoal" />
+                <ScalarProperty Name="ds_tarefas" ColumnName="ds_tarefas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

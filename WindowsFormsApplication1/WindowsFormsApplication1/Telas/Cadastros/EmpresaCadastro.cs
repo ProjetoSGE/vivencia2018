@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 EmpresaDTO dto = new EmpresaDTO();
                 dto.Empresa = txtNome.Text.Trim();
@@ -51,7 +51,11 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show(ex.Message, "SGE",
                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
+
+
+
+
 
         }
     }

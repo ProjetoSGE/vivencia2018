@@ -24,14 +24,14 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         {
             AlunoDTO dto = new AlunoDTO();
             dto.Nome = txtNome.Text; 
-            dto.NomeCurso = txtCurso.Text;
+           // dto.NomeCurso = txtCurso.Text;
             dto.Idade = Convert.ToInt32(txtIdade.Text);
-            dto.Nascimento = Convert.ToDateTime(mskNascimento.Text);
+           // dto.Nascimento = Convert.ToDateTime(mskNascimento.Text);
             dto.Numero = Convert.ToInt32(txtN.Text);
-            dto.QualCurso = txtQualCurso.Text;
-            dto.SeEstuda = cboEstuda.Text;
+           // dto.QualCurso = txtQualCurso.Text;
+           // dto.SeEstuda = cboEstuda.Text;
             // turno faltando
-            dto.AnoDeEstudo = txtAno.Text;
+           // dto.AnoDeEstudo = txtAno.Text;
             dto.AreaPreferencial = txtExperiencia.Text;
             dto.Bairro = txtBairro.Text;
             dto.Celular = mskRecado.Text;
@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         {
          
         }
-        CarregarImagem()
+        void CarregarImagem()
         {
             var aux = new Auxiliares();
             panel1.BackgroundImage = aux.BotaoFechar;

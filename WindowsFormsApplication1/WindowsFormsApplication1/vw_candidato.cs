@@ -12,14 +12,11 @@ namespace WindowsFormsApplication1
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_candidato
+    public partial class vw_candidato
     {
         public int id_candidato { get; set; }
-        public int id_aluno { get; set; }
-        public int id_vaga { get; set; }
+        public string nm_aluno { get; set; }
+        public string nm_vaga { get; set; }
         public string ds_status { get; set; }
-    
-        public virtual tb_alunos tb_alunos { get; set; }
-        public virtual tb_vagas tb_vagas { get; set; }
     }
 }

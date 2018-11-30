@@ -14,6 +14,12 @@ namespace WindowsFormsApplication1
     
     public partial class tb_alunos
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_alunos()
+        {
+            this.tb_candidato = new HashSet<tb_candidato>();
+        }
+    
         public int id_aluno { get; set; }
         public string nm_aluno { get; set; }
         public string nm_curso { get; set; }
@@ -31,5 +37,8 @@ namespace WindowsFormsApplication1
         public string ds_turno { get; set; }
         public string ds_expProfissional { get; set; }
         public string ds_areaPreferencia { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_candidato> tb_candidato { get; set; }
     }
 }
