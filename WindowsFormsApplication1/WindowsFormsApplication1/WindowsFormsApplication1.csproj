@@ -52,6 +52,7 @@
     <Compile Include="Classes\Classes\Aluno\AlunoBussiness.cs" />
     <Compile Include="Classes\Classes\Aluno\AlunoDataBase.cs" />
     <Compile Include="Classes\Classes\Aluno\AlunoDTO.cs" />
+    <Compile Include="Classes\Classes\Auxiliares\Auxiliares.cs" />
     <Compile Include="Classes\Classes\Candidato\CandidatoBusiness.cs" />
     <Compile Include="Classes\Classes\Candidato\CandidatoDataBase.cs" />
     <Compile Include="Classes\Classes\Candidato\CandidatoDTO.cs" />

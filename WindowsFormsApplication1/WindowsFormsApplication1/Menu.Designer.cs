@@ -33,7 +33,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlCentro = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +46,7 @@
             this.candidatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vagasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlCentro = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -96,14 +96,6 @@
             this.panel1.Size = new System.Drawing.Size(755, 32);
             this.panel1.TabIndex = 2;
             // 
-            // pnlCentro
-            // 
-            this.pnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCentro.Location = new System.Drawing.Point(10, 54);
-            this.pnlCentro.Name = "pnlCentro";
-            this.pnlCentro.Size = new System.Drawing.Size(755, 507);
-            this.pnlCentro.TabIndex = 3;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
@@ -129,14 +121,14 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // cadastrosToolStripMenuItem
@@ -152,21 +144,21 @@
             // alunosToolStripMenuItem
             // 
             this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
-            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.alunosToolStripMenuItem.Text = "Alunos";
             this.alunosToolStripMenuItem.Click += new System.EventHandler(this.alunosToolStripMenuItem_Click);
             // 
             // empresasToolStripMenuItem
             // 
             this.empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.empresasToolStripMenuItem.Text = "Empresas";
             this.empresasToolStripMenuItem.Click += new System.EventHandler(this.empresasToolStripMenuItem_Click);
             // 
             // vagasToolStripMenuItem
             // 
             this.vagasToolStripMenuItem.Name = "vagasToolStripMenuItem";
-            this.vagasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vagasToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.vagasToolStripMenuItem.Text = "Vagas";
             this.vagasToolStripMenuItem.Click += new System.EventHandler(this.vagasToolStripMenuItem_Click);
             // 
@@ -178,8 +170,8 @@
             this.empresasToolStripMenuItem1,
             this.vagasToolStripMenuItem1});
             this.consutasToolStripMenuItem.Name = "consutasToolStripMenuItem";
-            this.consutasToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.consutasToolStripMenuItem.Text = "Consutas";
+            this.consutasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consutasToolStripMenuItem.Text = "Consultas";
             // 
             // alunosToolStripMenuItem1
             // 
@@ -208,6 +200,14 @@
             this.vagasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.vagasToolStripMenuItem1.Text = "Vagas";
             this.vagasToolStripMenuItem1.Click += new System.EventHandler(this.vagasToolStripMenuItem1_Click);
+            // 
+            // pnlCentro
+            // 
+            this.pnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCentro.Location = new System.Drawing.Point(10, 54);
+            this.pnlCentro.Name = "pnlCentro";
+            this.pnlCentro.Size = new System.Drawing.Size(755, 507);
+            this.pnlCentro.TabIndex = 3;
             // 
             // Menu
             // 

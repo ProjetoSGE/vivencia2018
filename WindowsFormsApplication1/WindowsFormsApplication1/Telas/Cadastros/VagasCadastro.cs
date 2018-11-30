@@ -51,5 +51,10 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         {
 
         }
+
+        private void chkSeguroVida_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

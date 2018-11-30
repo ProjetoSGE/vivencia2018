@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Classes.Classes.Aluno;
+using WindowsFormsApplication1.Classes.Classes.Auxiliares;
 
 namespace WindowsFormsApplication1.Telas.Cadastros
 {
@@ -16,6 +17,7 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         public AlunosCadastro()
         {
             InitializeComponent();
+            CarregarImagem();
         }
 
         private void btnsalvar_Click(object sender, EventArgs e)
@@ -44,6 +46,17 @@ namespace WindowsFormsApplication1.Telas.Cadastros
             MessageBox.Show("Aluno salvo com sucesso");
 
 
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+         
+        }
+        CarregarImagem()
+        {
+            var aux = new Auxiliares();
+            panel1.BackgroundImage = aux.BotaoFechar;
+            
         }
     }
 }
