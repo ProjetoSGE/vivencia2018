@@ -44,13 +44,22 @@
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pnVoltar = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnFechar = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnMinimizar = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).BeginInit();
+            this.pnVoltar.SuspendLayout();
+            this.pnFechar.SuspendLayout();
+            this.pnMinimizar.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(648, 17);
+            this.button1.Location = new System.Drawing.Point(646, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 38);
             this.button1.TabIndex = 7;
@@ -60,7 +69,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 25);
+            this.textBox1.Location = new System.Drawing.Point(87, 44);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(553, 20);
             this.textBox1.TabIndex = 6;
@@ -69,11 +78,11 @@
             // 
             this.Pesquisar.AutoSize = true;
             this.Pesquisar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pesquisar.Location = new System.Drawing.Point(30, 22);
+            this.Pesquisar.Location = new System.Drawing.Point(28, 41);
             this.Pesquisar.Name = "Pesquisar";
-            this.Pesquisar.Size = new System.Drawing.Size(53, 21);
+            this.Pesquisar.Size = new System.Drawing.Size(56, 21);
             this.Pesquisar.TabIndex = 5;
-            this.Pesquisar.Text = "Nome";
+            this.Pesquisar.Text = "Nome:";
             // 
             // dgvEmpresa
             // 
@@ -96,10 +105,10 @@
             this.Column8,
             this.Column5,
             this.Column9});
-            this.dgvEmpresa.Location = new System.Drawing.Point(34, 69);
+            this.dgvEmpresa.Location = new System.Drawing.Point(32, 83);
             this.dgvEmpresa.Name = "dgvEmpresa";
             this.dgvEmpresa.RowHeadersWidth = 4;
-            this.dgvEmpresa.Size = new System.Drawing.Size(699, 408);
+            this.dgvEmpresa.Size = new System.Drawing.Size(696, 408);
             this.dgvEmpresa.TabIndex = 4;
             this.dgvEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellContentClick);
             // 
@@ -180,11 +189,59 @@
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 20;
             // 
+            // pnVoltar
+            // 
+            this.pnVoltar.Controls.Add(this.flowLayoutPanel1);
+            this.pnVoltar.Location = new System.Drawing.Point(0, 0);
+            this.pnVoltar.Name = "pnVoltar";
+            this.pnVoltar.Size = new System.Drawing.Size(23, 23);
+            this.pnVoltar.TabIndex = 44;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 13);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // pnFechar
+            // 
+            this.pnFechar.Controls.Add(this.flowLayoutPanel2);
+            this.pnFechar.Location = new System.Drawing.Point(732, 0);
+            this.pnFechar.Name = "pnFechar";
+            this.pnFechar.Size = new System.Drawing.Size(23, 23);
+            this.pnFechar.TabIndex = 45;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(32, 13);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel2.TabIndex = 0;
+            // 
+            // pnMinimizar
+            // 
+            this.pnMinimizar.Controls.Add(this.flowLayoutPanel3);
+            this.pnMinimizar.Location = new System.Drawing.Point(709, 0);
+            this.pnMinimizar.Name = "pnMinimizar";
+            this.pnMinimizar.Size = new System.Drawing.Size(23, 23);
+            this.pnMinimizar.TabIndex = 46;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(32, 13);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel3.TabIndex = 0;
+            // 
             // EmpresaConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.pnMinimizar);
+            this.Controls.Add(this.pnFechar);
+            this.Controls.Add(this.pnVoltar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Pesquisar);
@@ -192,6 +249,9 @@
             this.Name = "EmpresaConsulta";
             this.Size = new System.Drawing.Size(755, 507);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresa)).EndInit();
+            this.pnVoltar.ResumeLayout(false);
+            this.pnFechar.ResumeLayout(false);
+            this.pnMinimizar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +274,11 @@
         private System.Windows.Forms.DataGridViewImageColumn Column9;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.Panel pnVoltar;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel pnFechar;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel pnMinimizar;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }

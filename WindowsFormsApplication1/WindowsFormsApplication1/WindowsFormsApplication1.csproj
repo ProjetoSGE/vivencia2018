@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Auxiliar\Extensions.cs" />
+    <Compile Include="Classes\Auxiliar\Functions.cs" />
+    <Compile Include="Classes\Auxiliar\ImagePlugin.cs" />
     <Compile Include="Classes\Base\Connection.cs" />
     <Compile Include="Classes\Base\DataBase.cs" />
     <Compile Include="Classes\Classes\Aluno\AlunoBussiness.cs" />
