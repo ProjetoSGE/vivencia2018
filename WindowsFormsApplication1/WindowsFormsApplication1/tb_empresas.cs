@@ -22,8 +22,11 @@ namespace WindowsFormsApplication1
     
         public int id_empresa { get; set; }
         public string nm_empresa { get; set; }
+        public string nm_razaoSocial { get; set; }
         public string nr_telefone { get; set; }
         public string ds_email { get; set; }
+        public string ds_cnpj { get; set; }
+        public Nullable<int> ds_codigoEstadual { get; set; }
         public string ds_cep { get; set; }
         public string ds_bairro { get; set; }
         public string ds_endereco { get; set; }

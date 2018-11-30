@@ -13,10 +13,10 @@ namespace WindowsFormsApplication1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EstagiosEntities : DbContext
+    public partial class EstagioEntities : DbContext
     {
-        public EstagiosEntities()
-            : base("name=EstagiosEntities")
+        public EstagioEntities()
+            : base("name=EstagioEntities")
         {
         }
     

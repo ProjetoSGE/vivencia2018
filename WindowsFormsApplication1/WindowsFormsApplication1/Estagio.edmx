@@ -42,8 +42,11 @@
           </Key>
           <Property Name="id_empresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nm_empresa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nm_razaoSocial" Type="varchar" MaxLength="200" />
           <Property Name="nr_telefone" Type="varchar" MaxLength="14" Nullable="false" />
           <Property Name="ds_email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ds_cnpj" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="ds_codigoEstadual" Type="int" />
           <Property Name="ds_cep" Type="varchar" MaxLength="9" Nullable="false" />
           <Property Name="ds_bairro" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ds_endereco" Type="varchar" MaxLength="150" Nullable="false" />
@@ -152,7 +155,7 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
           <Property Name="ds_compPessoal" Type="text" Nullable="false" />
           <Property Name="ds_tarefas" Type="text" Nullable="false" />
         </EntityType>
-        <Association Name="FK__tb_candid__id_al__1BC821DD">
+        <Association Name="FK__tb_candid__id_al__367C1819">
           <End Role="tb_alunos" Type="Self.tb_alunos" Multiplicity="1" />
           <End Role="tb_candidato" Type="Self.tb_candidato" Multiplicity="*" />
           <ReferentialConstraint>
@@ -164,7 +167,7 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_candid__id_va__1CBC4616">
+        <Association Name="FK__tb_candid__id_va__37703C52">
           <End Role="tb_vagas" Type="Self.tb_vagas" Multiplicity="1" />
           <End Role="tb_candidato" Type="Self.tb_candidato" Multiplicity="*" />
           <ReferentialConstraint>
@@ -176,7 +179,7 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_vagas__id_emp__18EBB532">
+        <Association Name="FK__tb_vagas__id_emp__339FAB6E">
           <End Role="tb_empresas" Type="Self.tb_empresas" Multiplicity="1" />
           <End Role="tb_vagas" Type="Self.tb_vagas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -231,19 +234,19 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
     [vw_vagas].[ds_tarefas] AS [ds_tarefas]
     FROM [dbo].[vw_vagas] AS [vw_vagas]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__tb_candid__id_al__1BC821DD" Association="Self.FK__tb_candid__id_al__1BC821DD">
+          <AssociationSet Name="FK__tb_candid__id_al__367C1819" Association="Self.FK__tb_candid__id_al__367C1819">
             <End Role="tb_alunos" EntitySet="tb_alunos" />
             <End Role="tb_candidato" EntitySet="tb_candidato" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_candid__id_va__1CBC4616" Association="Self.FK__tb_candid__id_va__1CBC4616">
+          <AssociationSet Name="FK__tb_candid__id_va__37703C52" Association="Self.FK__tb_candid__id_va__37703C52">
             <End Role="tb_vagas" EntitySet="tb_vagas" />
             <End Role="tb_candidato" EntitySet="tb_candidato" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_vagas__id_emp__18EBB532" Association="Self.FK__tb_vagas__id_emp__18EBB532">
+          <AssociationSet Name="FK__tb_vagas__id_emp__339FAB6E" Association="Self.FK__tb_vagas__id_emp__339FAB6E">
             <End Role="tb_empresas" EntitySet="tb_empresas" />
             <End Role="tb_vagas" EntitySet="tb_vagas" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
@@ -270,7 +273,7 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
           <Property Name="ds_turno" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_expProfissional" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_areaPreferencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_candidato" Relationship="Self.FK__tb_candid__id_al__1BC821DD" FromRole="tb_alunos" ToRole="tb_candidato" />
+          <NavigationProperty Name="tb_candidato" Relationship="Self.FK__tb_candid__id_al__367C1819" FromRole="tb_alunos" ToRole="tb_candidato" />
         </EntityType>
         <EntityType Name="tb_candidato">
           <Key>
@@ -280,8 +283,8 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
           <Property Name="id_aluno" Type="Int32" Nullable="false" />
           <Property Name="id_vaga" Type="Int32" Nullable="false" />
           <Property Name="ds_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_alunos" Relationship="Self.FK__tb_candid__id_al__1BC821DD" FromRole="tb_candidato" ToRole="tb_alunos" />
-          <NavigationProperty Name="tb_vagas" Relationship="Self.FK__tb_candid__id_va__1CBC4616" FromRole="tb_candidato" ToRole="tb_vagas" />
+          <NavigationProperty Name="tb_alunos" Relationship="Self.FK__tb_candid__id_al__367C1819" FromRole="tb_candidato" ToRole="tb_alunos" />
+          <NavigationProperty Name="tb_vagas" Relationship="Self.FK__tb_candid__id_va__37703C52" FromRole="tb_candidato" ToRole="tb_vagas" />
         </EntityType>
         <EntityType Name="tb_empresas">
           <Key>
@@ -289,13 +292,16 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
           </Key>
           <Property Name="id_empresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nm_empresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_razaoSocial" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="nr_telefone" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_cnpj" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_codigoEstadual" Type="Int32" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_endereco" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_pontoReferencial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_vagas" Relationship="Self.FK__tb_vagas__id_emp__18EBB532" FromRole="tb_empresas" ToRole="tb_vagas" />
+          <NavigationProperty Name="tb_vagas" Relationship="Self.FK__tb_vagas__id_emp__339FAB6E" FromRole="tb_empresas" ToRole="tb_vagas" />
         </EntityType>
         <EntityType Name="tb_vagas">
           <Key>
@@ -327,8 +333,8 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
           <Property Name="ds_observacao" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_compPessoal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_tarefas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_candidato" Relationship="Self.FK__tb_candid__id_va__1CBC4616" FromRole="tb_vagas" ToRole="tb_candidato" />
-          <NavigationProperty Name="tb_empresas" Relationship="Self.FK__tb_vagas__id_emp__18EBB532" FromRole="tb_vagas" ToRole="tb_empresas" />
+          <NavigationProperty Name="tb_candidato" Relationship="Self.FK__tb_candid__id_va__37703C52" FromRole="tb_vagas" ToRole="tb_candidato" />
+          <NavigationProperty Name="tb_empresas" Relationship="Self.FK__tb_vagas__id_emp__339FAB6E" FromRole="tb_vagas" ToRole="tb_empresas" />
         </EntityType>
         <EntityType Name="vw_candidato">
           <Key>
@@ -398,7 +404,7 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
           <Property Name="ds_compPessoal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_tarefas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <Association Name="FK__tb_candid__id_al__1BC821DD">
+        <Association Name="FK__tb_candid__id_al__367C1819">
           <End Role="tb_alunos" Type="Self.tb_alunos" Multiplicity="1" />
           <End Role="tb_candidato" Type="Self.tb_candidato" Multiplicity="*" />
           <ReferentialConstraint>
@@ -410,7 +416,7 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_candid__id_va__1CBC4616">
+        <Association Name="FK__tb_candid__id_va__37703C52">
           <End Role="tb_vagas" Type="Self.tb_vagas" Multiplicity="1" />
           <End Role="tb_candidato" Type="Self.tb_candidato" Multiplicity="*" />
           <ReferentialConstraint>
@@ -422,7 +428,7 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tb_vagas__id_emp__18EBB532">
+        <Association Name="FK__tb_vagas__id_emp__339FAB6E">
           <End Role="tb_empresas" Type="Self.tb_empresas" Multiplicity="1" />
           <End Role="tb_vagas" Type="Self.tb_vagas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -434,22 +440,22 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EstagiosEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EstagioEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tb_alunos" EntityType="Self.tb_alunos" />
           <EntitySet Name="tb_candidato" EntityType="Self.tb_candidato" />
           <EntitySet Name="tb_empresas" EntityType="Self.tb_empresas" />
           <EntitySet Name="tb_vagas" EntityType="Self.tb_vagas" />
           <EntitySet Name="vw_candidato" EntityType="Self.vw_candidato" />
           <EntitySet Name="vw_vagas" EntityType="Self.vw_vagas" />
-          <AssociationSet Name="FK__tb_candid__id_al__1BC821DD" Association="Self.FK__tb_candid__id_al__1BC821DD">
+          <AssociationSet Name="FK__tb_candid__id_al__367C1819" Association="Self.FK__tb_candid__id_al__367C1819">
             <End Role="tb_alunos" EntitySet="tb_alunos" />
             <End Role="tb_candidato" EntitySet="tb_candidato" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_candid__id_va__1CBC4616" Association="Self.FK__tb_candid__id_va__1CBC4616">
+          <AssociationSet Name="FK__tb_candid__id_va__37703C52" Association="Self.FK__tb_candid__id_va__37703C52">
             <End Role="tb_vagas" EntitySet="tb_vagas" />
             <End Role="tb_candidato" EntitySet="tb_candidato" />
           </AssociationSet>
-          <AssociationSet Name="FK__tb_vagas__id_emp__18EBB532" Association="Self.FK__tb_vagas__id_emp__18EBB532">
+          <AssociationSet Name="FK__tb_vagas__id_emp__339FAB6E" Association="Self.FK__tb_vagas__id_emp__339FAB6E">
             <End Role="tb_empresas" EntitySet="tb_empresas" />
             <End Role="tb_vagas" EntitySet="tb_vagas" />
           </AssociationSet>
@@ -459,7 +465,7 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="infodModelStoreContainer" CdmEntityContainer="EstagiosEntities">
+        <EntityContainerMapping StorageEntityContainer="infodModelStoreContainer" CdmEntityContainer="EstagioEntities">
           <EntitySetMapping Name="tb_alunos">
             <EntityTypeMapping TypeName="infodModel.tb_alunos">
               <MappingFragment StoreEntitySet="tb_alunos">
@@ -498,8 +504,11 @@ warning 6002: The table/view 'infod.dbo.vw_vagas' does not have a primary key de
               <MappingFragment StoreEntitySet="tb_empresas">
                 <ScalarProperty Name="id_empresa" ColumnName="id_empresa" />
                 <ScalarProperty Name="nm_empresa" ColumnName="nm_empresa" />
+                <ScalarProperty Name="nm_razaoSocial" ColumnName="nm_razaoSocial" />
                 <ScalarProperty Name="nr_telefone" ColumnName="nr_telefone" />
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+                <ScalarProperty Name="ds_cnpj" ColumnName="ds_cnpj" />
+                <ScalarProperty Name="ds_codigoEstadual" ColumnName="ds_codigoEstadual" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
                 <ScalarProperty Name="ds_bairro" ColumnName="ds_bairro" />
                 <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />

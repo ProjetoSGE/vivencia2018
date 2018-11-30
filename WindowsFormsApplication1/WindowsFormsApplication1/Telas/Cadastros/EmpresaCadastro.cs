@@ -53,7 +53,12 @@ namespace WindowsFormsApplication1
                   MessageBoxButtons.OK, MessageBoxIcon.Error);
             }*/
 
+            EstagioEntities db = new EstagioEntities();
+            tb_empresas empresa = new tb_empresas();
 
+            empresa.nm_empresa = textBox2.Text;
+
+            
 
 
 

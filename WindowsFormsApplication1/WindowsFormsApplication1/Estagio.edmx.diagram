@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f305b5f8bf94442aaa1ba425cc26280d" Name="Diagram1">
-        <EntityTypeShape EntityType="infodModel.tb_alunos" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="infodModel.tb_candidato" Width="1.5" PointX="5.875" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="infodModel.tb_empresas" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+      <Diagram DiagramId="c1368a9124834f7aa8c3d19cd9a9ef7a" Name="Diagram1">
+        <EntityTypeShape EntityType="infodModel.tb_alunos" Width="1.5" PointX="7.875" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="infodModel.tb_candidato" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="infodModel.tb_empresas" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="infodModel.tb_vagas" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="infodModel.vw_candidato" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="infodModel.vw_vagas" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
-        <AssociationConnector Association="infodModel.FK__tb_candid__id_al__1BC821DD" ManuallyRouted="false" />
-        <AssociationConnector Association="infodModel.FK__tb_candid__id_va__1CBC4616" ManuallyRouted="false" />
-        <AssociationConnector Association="infodModel.FK__tb_vagas__id_emp__18EBB532" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="infodModel.vw_vagas" Width="1.5" PointX="9.875" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="infodModel.FK__tb_candid__id_al__367C1819" ManuallyRouted="false" />
+        <AssociationConnector Association="infodModel.FK__tb_candid__id_va__37703C52" ManuallyRouted="false" />
+        <AssociationConnector Association="infodModel.FK__tb_vagas__id_emp__339FAB6E" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
