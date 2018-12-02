@@ -55,17 +55,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pnVoltar = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnMinimizar = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnFechar = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.pnVoltar.SuspendLayout();
-            this.pnMinimizar.SuspendLayout();
-            this.pnFechar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -104,7 +95,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(501, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 21);
+            this.label5.Size = new System.Drawing.Size(70, 21);
             this.label5.TabIndex = 4;
             this.label5.Text = "Telefone:";
             // 
@@ -124,7 +115,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(421, 145);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(152, 21);
+            this.label7.Size = new System.Drawing.Size(151, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "Ponto de Referência:";
             // 
@@ -269,7 +260,7 @@
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(69, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 21);
+            this.label9.Size = new System.Drawing.Size(49, 21);
             this.label9.TabIndex = 22;
             this.label9.Text = "CNPJ:";
             // 
@@ -279,7 +270,7 @@
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(2, 43);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 21);
+            this.label10.Size = new System.Drawing.Size(116, 21);
             this.label10.TabIndex = 0;
             this.label10.Text = "Nome Fantasia:";
             // 
@@ -326,59 +317,11 @@
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             // 
-            // pnVoltar
-            // 
-            this.pnVoltar.Controls.Add(this.flowLayoutPanel1);
-            this.pnVoltar.Location = new System.Drawing.Point(0, 0);
-            this.pnVoltar.Name = "pnVoltar";
-            this.pnVoltar.Size = new System.Drawing.Size(23, 23);
-            this.pnVoltar.TabIndex = 44;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 13);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // pnMinimizar
-            // 
-            this.pnMinimizar.Controls.Add(this.flowLayoutPanel2);
-            this.pnMinimizar.Location = new System.Drawing.Point(715, 0);
-            this.pnMinimizar.Name = "pnMinimizar";
-            this.pnMinimizar.Size = new System.Drawing.Size(23, 23);
-            this.pnMinimizar.TabIndex = 45;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(32, 13);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel2.TabIndex = 0;
-            // 
-            // pnFechar
-            // 
-            this.pnFechar.Controls.Add(this.flowLayoutPanel3);
-            this.pnFechar.Location = new System.Drawing.Point(738, 0);
-            this.pnFechar.Name = "pnFechar";
-            this.pnFechar.Size = new System.Drawing.Size(23, 23);
-            this.pnFechar.TabIndex = 46;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(32, 13);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel3.TabIndex = 0;
-            // 
             // EmpresaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.pnFechar);
-            this.Controls.Add(this.pnMinimizar);
-            this.Controls.Add(this.pnVoltar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCadastrar);
@@ -395,9 +338,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.pnVoltar.ResumeLayout(false);
-            this.pnMinimizar.ResumeLayout(false);
-            this.pnFechar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,11 +371,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel pnVoltar;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel pnMinimizar;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel pnFechar;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }
