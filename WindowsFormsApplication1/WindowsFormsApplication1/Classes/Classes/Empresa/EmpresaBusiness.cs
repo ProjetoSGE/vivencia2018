@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
    {
         public int Salvar(EmpresaDTO dto)
         {
-            if (dto.Empresa == string.Empty)
+            if (dto.Nome== string.Empty)
             {
                 throw new ArgumentException("Nome da Empresa é obrigatório");
             }
@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 throw new ArgumentException("Telefone é obrigatório");
             }
 
-            if (dto.CEP == string.Empty)
+            if (dto.Cep == string.Empty)
             {
                 throw new ArgumentException("CEP é obrigatório");
             }

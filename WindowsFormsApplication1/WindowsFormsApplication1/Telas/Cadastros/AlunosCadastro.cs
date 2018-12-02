@@ -17,46 +17,71 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         public AlunosCadastro()
         {
             InitializeComponent();
-            CarregarImagem();
         }
 
         private void btnsalvar_Click(object sender, EventArgs e)
         {
-            AlunoDTO dto = new AlunoDTO();
-            dto.Nome = txtNome.Text; 
-           // dto.NomeCurso = txtCurso.Text;
-            dto.Idade = Convert.ToInt32(txtIdade.Text);
-           // dto.Nascimento = Convert.ToDateTime(mskNascimento.Text);
-            dto.Numero = Convert.ToInt32(txtN.Text);
-           // dto.QualCurso = txtQualCurso.Text;
-           // dto.SeEstuda = cboEstuda.Text;
-            // turno faltando
-           // dto.AnoDeEstudo = txtAno.Text;
-            dto.AreaPreferencial = txtExperiencia.Text;
-            dto.Bairro = txtBairro.Text;
-            dto.Celular = mskRecado.Text;
-            dto.Endereco = txtEndereco.Text;
-            dto.Fixo = mskRes.Text;
-            dto.CEP = mskCEP.Text;
-            dto.ExpProfissional = txtExperiencia.Text;
 
-            AlunoBussiness bussiness = new AlunoBussiness();
-            bussiness.Salvar(dto);
+        }
 
-            MessageBox.Show("Aluno salvo com sucesso");
+        private void label9_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void AlunosCadastro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mskCEP_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtN_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
         private void label12_Click(object sender, EventArgs e)
         {
-         
+
         }
-        void CarregarImagem()
+
+        private void label5_Click_1(object sender, EventArgs e)
         {
-            var aux = new Auxiliares();
-            pnFechar.BackgroundImage = aux.BotaoFechar;
-            
+
         }
     }
 }

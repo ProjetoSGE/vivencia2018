@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WindowsFormsApplication1.Classes.Base;
+using WindowsFormsApplication1.Classes.Classes.Vagas;
 
 namespace WindowsFormsApplication1.Classes.Classes.Empresa
 {
-    class VagasDataBase
+    public class VagasDataBase
     {
         public int Salvar(VagasDTO vaga)
         {
@@ -20,7 +21,8 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                                     DT_INICIOESTAGIO,
                                     DS_SEXO,
                                     ID_EMPRESA,
-                                    DS_HORARIO,
+                                    DS_HORARIOENTRADA,
+                                    DS_HORARIOSAIDA
                                     DS_INTERVALO,
                                     OP_SEGURODEVIDA,                     
                                     OP_AUXTRANSPORTE,
@@ -49,7 +51,8 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                                     @DT_INICIOESTAGIO,
                                     @DS_SEXO,
                                     @ID_EMPRESA,
-                                    @DS_HORARIO,
+                                    @DS_HORARIOENTRADA,
+                                    @DS_HORARIOSAIDA
                                     @DS_INTERVALO,
                                     @OP_SEGURODEVIDA,                     
                                     @OP_AUXTRANSPORTE,
@@ -68,7 +71,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                                     @DS_OBSERVACAO,
                                     @DS_COMPPESSOAL,
                                     @DS_TAREFAS
-                             );";
+                             )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("NM_VAGA", vaga.NomeVaga));
@@ -77,8 +80,9 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
             parms.Add(new MySqlParameter("DT_INICIOESTAGIO", vaga.DataDeInicio));
             parms.Add(new MySqlParameter("DS_SEXO", vaga.Sexo));
             parms.Add(new MySqlParameter("ID_EMPRESA", vaga.IdEmpresa));
-            parms.Add(new MySqlParameter("DS_HORARIO", vaga.DsHorario));
-            parms.Add(new MySqlParameter("DS_INTERVALO", vaga.Dsintervalo));
+            parms.Add(new MySqlParameter("DS_HORARIOENTRADA", vaga.HorarioEntrada));
+            parms.Add(new MySqlParameter("DS_HORARIOSAIDA", vaga.HorarioSaida));
+            parms.Add(new MySqlParameter("DS_INTERVALO", vaga.Intervalo));
             parms.Add(new MySqlParameter("OP_SEGURODEVIDA", vaga.SeguroDeVida));
             parms.Add(new MySqlParameter("OP_AUXTRANSPORTE", vaga.AuxTransporte));
             parms.Add(new MySqlParameter("OP_RECREMUNERADO", vaga.RecRemunerado));
@@ -104,6 +108,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
 
 
         }
+
         public void Alterar(VagasDTO vaga)
         {
             string script =
@@ -136,15 +141,15 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                WHERE ID_VAGA = @ID_VAGA";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("ID_VAGA", vaga.ID));
+            parms.Add(new MySqlParameter("ID_VAGA", vaga.Id));
             parms.Add(new MySqlParameter("NM_VAGA", vaga.NomeVaga));
             parms.Add(new MySqlParameter("NM_AREA", vaga.NomeArea));
             parms.Add(new MySqlParameter("QTD_VAGA", vaga.QuantidadeDeVaga));
             parms.Add(new MySqlParameter("DT_INICIOESTAGIO", vaga.DataDeInicio));
             parms.Add(new MySqlParameter("DS_SEXO", vaga.Sexo));
             parms.Add(new MySqlParameter("ID_EMPRESA", vaga.IdEmpresa));
-            parms.Add(new MySqlParameter("DS_HORARIO", vaga.DsHorario));
-            parms.Add(new MySqlParameter("DS_INTERVALO", vaga.Dsintervalo));
+            parms.Add(new MySqlParameter("DS_HORARIO", vaga.HorarioEntrada));
+            parms.Add(new MySqlParameter("DS_INTERVALO", vaga.HorarioSaida));
             parms.Add(new MySqlParameter("OP_SEGURODEVIDA", vaga.SeguroDeVida));
             parms.Add(new MySqlParameter("OP_AUXTRANSPORTE", vaga.AuxTransporte));
             parms.Add(new MySqlParameter("OP_RECREMUNERADO", vaga.RecRemunerado));
@@ -167,6 +172,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
             DataBase db = new DataBase();
             db.ExecuteInsertScript(script, parms);
         }
+
         public void Remover(int id)
         {
             string script =
@@ -178,34 +184,32 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
             DataBase db = new DataBase();
             db.ExecuteInsertScript(script, parms);
         }
-        public List<VagasDTO> Consultar()
+
+        public List<VagasDTO> Listar()
         {
             string script =
-            @"SELECT * 
-                FROM TB_FUNCIONARIO
-                
-                 ";
+            @"SELECT * FROM TB_FUNCIONARIO";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            
-
 
             DataBase db = new DataBase();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-            List<VagasDTO> funcionarios = new List<VagasDTO>();
+            List<VagasDTO> vagas = new List<VagasDTO>();
 
             while (reader.Read())
             {
                 VagasDTO novavaga = new VagasDTO();
-                novavaga.ID = reader.GetInt32("ID_VAGA");
+                novavaga.Id = reader.GetInt32("ID_VAGA");
                 novavaga.NomeVaga = reader.GetString("NM_VAGA");
                 novavaga.NomeArea = reader.GetString("NM_AREA");
                 novavaga.QuantidadeDeVaga = reader.GetInt32("QTD_VAGA");
-                novavaga.DataDeInicio= reader.GetDateTime("DT_INICIOESTAGIO");
-                novavaga.Sexo= reader.GetString("DS_SEXO");
-                novavaga.DsHorario = reader.GetDateTime("DS_HORARIO");
-                novavaga.Dsintervalo = reader.GetDateTime("DS_INTERVALO");
+                novavaga.DataDeInicio = reader.GetDateTime("DT_INICIOESTAGIO");
+                novavaga.Sexo = reader.GetString("DS_SEXO");
+                novavaga.IdEmpresa = reader.GetInt32("id_empresa");
+                novavaga.HorarioEntrada = reader.GetDateTime("DS_HORARIO");
+                novavaga.HorarioSaida = reader.GetDateTime("DS_INTERVALO");
+                novavaga.Intervalo = reader.GetDateTime("ds_intervalo");
                 novavaga.SeguroDeVida = reader.GetBoolean("OP_SEGURODEVIDA");
                 novavaga.AuxTransporte = reader.GetBoolean("OP_AUXTRANSPORTE");
                 novavaga.RecRemunerado = reader.GetBoolean("OP_RECREMUNERADO");
@@ -224,12 +228,59 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 novavaga.CompPessoal = reader.GetString("DS_COMPPESSOAL");
                 novavaga.Tarefas = reader.GetString("DS_TAREFAS");
 
-                funcionarios.Add(novavaga);
+                vagas.Add(novavaga);
             }
             reader.Close();
 
-            return funcionarios;
+            return vagas;
 
+        }
+
+        public List<VagasView> ListarView()
+        {
+            string script = @"SELECT * FROM vw_vagas";
+
+            DataBase db = new DataBase();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, null);
+
+            List<VagasView> vagas = new List<VagasView>();
+
+            while (reader.Read())
+            {
+                VagasView novavaga = new VagasView();
+                novavaga.Id = reader.GetInt32("ID_VAGA");
+                novavaga.NomeVaga = reader.GetString("NM_VAGA");
+                novavaga.NomeArea = reader.GetString("NM_AREA");
+                novavaga.QuantidadeDeVaga = reader.GetInt32("QTD_VAGA");
+                novavaga.DataDeInicio = reader.GetDateTime("DT_INICIOESTAGIO");
+                novavaga.Sexo = reader.GetString("DS_SEXO");
+                novavaga.Empresa = reader.GetString("nm_fantasia");
+                novavaga.HorarioEntrada = reader.GetDateTime("DS_HORARIO");
+                novavaga.HorarioSaida = reader.GetDateTime("DS_INTERVALO");
+                novavaga.Intervalo = reader.GetDateTime("ds_intervalo");
+                novavaga.SeguroDeVida = reader.GetBoolean("OP_SEGURODEVIDA");
+                novavaga.AuxTransporte = reader.GetBoolean("OP_AUXTRANSPORTE");
+                novavaga.RecRemunerado = reader.GetBoolean("OP_RECREMUNERADO");
+                novavaga.ValeRefeicao = reader.GetBoolean("OP_VALEREFEICAO");
+                novavaga.CestaBasica = reader.GetBoolean("OP_CESTABASICA");
+                novavaga.ReLocal = reader.GetBoolean("OP_REFLOCAL");
+                novavaga.AssisMedica = reader.GetBoolean("OP_ASSISMEDICA");
+                novavaga.NivelIngles = reader.GetString("NVL_INGLES");
+                novavaga.InfoOffice = reader.GetBoolean("OP_INFOOFFICE");
+                novavaga.InfoAutoCAD = reader.GetBoolean("OP_INFOAUTOCAD");
+                novavaga.InfoCorel = reader.GetBoolean("OP_INFOCOREL");
+                novavaga.InfoPhotoShop = reader.GetBoolean("OP_INFOPHOTOSHOP");
+                novavaga.InfoProgramacao = reader.GetBoolean("OP_INFOPROGRAMACAO");
+                novavaga.Outros = reader.GetString("OP_OUTROS");
+                novavaga.Observacao = reader.GetString("DS_OBSERVACAO");
+                novavaga.CompPessoal = reader.GetString("DS_COMPPESSOAL");
+                novavaga.Tarefas = reader.GetString("DS_TAREFAS");
+
+                vagas.Add(novavaga);
+            }
+            reader.Close();
+
+            return vagas;
         }
     }
 }

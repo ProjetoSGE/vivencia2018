@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApplication1.Classes.Classes.Empresa
+namespace WindowsFormsApplication1.Classes.Classes.Vagas
 {
-    public class VagasDTO
+    public class VagasView
     {
         public int Id { get; set; }
         public string NomeVaga { get; set; }
@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
         public int QuantidadeDeVaga { get; set; }
         public DateTime DataDeInicio { get; set; }
         public string Sexo { get; set; }
-        public int IdEmpresa { get; set; }
+        public string Empresa { get; set; }
         public DateTime HorarioEntrada { get; set; }
         public DateTime HorarioSaida { get; set; }
         public DateTime Intervalo { get; set; }

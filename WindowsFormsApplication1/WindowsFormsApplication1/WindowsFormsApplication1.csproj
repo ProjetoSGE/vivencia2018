@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\AppMusica\AppMusica\conexão\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -57,16 +59,18 @@
     <Compile Include="Classes\Classes\Aluno\AlunoBussiness.cs" />
     <Compile Include="Classes\Classes\Aluno\AlunoDataBase.cs" />
     <Compile Include="Classes\Classes\Aluno\AlunoDTO.cs" />
-    <Compile Include="Classes\Classes\Auxiliares\Auxiliares.cs" />
+    <Compile Include="Classes\Auxiliar\Auxiliares\Auxiliares.cs" />
     <Compile Include="Classes\Classes\Candidato\CandidatoBusiness.cs" />
     <Compile Include="Classes\Classes\Candidato\CandidatoDataBase.cs" />
     <Compile Include="Classes\Classes\Candidato\CandidatoDTO.cs" />
+    <Compile Include="Classes\Classes\Candidato\CandidatoView.cs" />
     <Compile Include="Classes\Classes\Empresa\EmpresaBusiness.cs" />
     <Compile Include="Classes\Classes\Empresa\EmpresaDataBase.cs" />
     <Compile Include="Classes\Classes\Empresa\EmpresaDTO.cs" />
     <Compile Include="Classes\Classes\Vagas\VagasBusiness.cs" />
     <Compile Include="Classes\Classes\Vagas\VagasDataBase.cs" />
     <Compile Include="Classes\Classes\Vagas\VagasDTO.cs" />
+    <Compile Include="Classes\Classes\Vagas\VagasView.cs" />
     <Compile Include="Estagio.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -236,6 +240,10 @@
       <DependentUpon>Estagio.edmx</DependentUpon>
       <LastGenOutput>Estagio.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-info-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Docs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

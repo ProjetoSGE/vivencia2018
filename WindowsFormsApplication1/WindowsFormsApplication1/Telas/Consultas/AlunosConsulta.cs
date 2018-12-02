@@ -35,34 +35,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
 
         private void dgvAluno_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 4)
-            {
-                AlunoDTO aluno = dgvAluno.Rows[e.RowIndex].DataBoundItem as AlunoDTO;
-
-
-                AlunosCadastro tela = new AlunosCadastro();
-                tela.LoadScreen(aluno);
-                tela.ShowDialog();
-                this.Hide();
-
-            }
-
-            if (e.ColumnIndex == 5)
-            {
-                AlunoDTO produtoss = dgvAluno.CurrentRow.DataBoundItem as AlunoDTO;
-
-                DialogResult r = MessageBox.Show("Deseja excluir o aluno ?", "Realce Sua Beleza",
-                                    MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Question);
-
-                if (r == DialogResult.Yes)
-                {
-                    AlunoBussiness business = new AlunoBussiness();
-                    business.Remover(produtoss.ID);
-
-                    CarregarGrid();
-                }
-            }
+         
         }
 
         private void CarregarGrid()

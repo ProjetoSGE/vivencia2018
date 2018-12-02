@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
                 if (r == DialogResult.Yes)
                 {
                     EmpresaBusiness business = new EmpresaBusiness();
-                    business.Remover(empresa.ID);
+                    business.Remover(empresa.Id);
 
                     CarregarGrid();
 

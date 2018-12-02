@@ -12,27 +12,28 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
     {
         public int Salvar(AlunoDTO dto)
         {
-            string script = @"INSERT INTO tb_alunos (nm_aluno,nm_curso,ds_anoEstudo,dt_nascimento,ds_idade,ds_endereco,ds_numero,ds_bairro,ds_cep,nr_fixo,nr_celular,ds_seEstuda,ds_qualCurso,ds_turno,ds_expProfissional,ds_areaPreferencia)
-                                           VALUES (@nm_aluno,@nm_curso,@ds_anoEstudo,@dt_nascimento,@ds_idade,@ds_endereco,@ds_numero,@ds_bairro,@ds_cep,@nr_fixo,@nr_celular,@ds_seEstuda,@ds_qualCurso,@ds_turno,@ds_expProfissional,@ds_areaPreferencia)";
+            string script = @"INSERT INTO tb_alunos (nm_aluno, nm_curso, ds_rg, ds_anoEstudo, dt_nascimento, ds_idade, ds_endereco, ds_numero, ds_bairro, ds_cep, nr_fixo, nr_celular, ds_seEstuda, ds_qualCurso, ds_turno, ds_expProfissional, ds_areaPreferencial)
+                                             VALUES (@nm_aluno, @nm_curso, @ds_rg, @ds_anoEstudo, @dt_nascimento, @ds_idade, @ds_endereco, @ds_numero, @ds_bairro, @ds_cep, @nr_fixo, @nr_celular, @ds_seEstuda, @ds_qualCurso, @ds_turno, @ds_expProfissional, @ds_areaPreferencial)";
 
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_aluno", dto.Nome));
-            parms.Add(new MySqlParameter("nm_curso", dto.NomeCurso));
+            parms.Add(new MySqlParameter("nm_curso", dto.Curso));
+            parms.Add(new MySqlParameter("ds_rg", dto.Rg));
             parms.Add(new MySqlParameter("ds_anoEstudo", dto.AnoDeEstudo));
             parms.Add(new MySqlParameter("dt_nascimento", dto.Nascimento));
             parms.Add(new MySqlParameter("ds_idade", dto.Idade));
             parms.Add(new MySqlParameter("ds_endereco", dto.Endereco));
             parms.Add(new MySqlParameter("ds_numero", dto.Numero));
             parms.Add(new MySqlParameter("ds_bairro", dto.Bairro));
-            parms.Add(new MySqlParameter("ds_cep", dto.CEP));
+            parms.Add(new MySqlParameter("ds_cep", dto.Cep));
             parms.Add(new MySqlParameter("nr_fixo", dto.Fixo));
             parms.Add(new MySqlParameter("nr_celular", dto.Celular));
             parms.Add(new MySqlParameter("ds_seEstuda", dto.SeEstuda));
             parms.Add(new MySqlParameter("ds_qualCurso", dto.QualCurso));
             parms.Add(new MySqlParameter("ds_turno", dto.Turno));
             parms.Add(new MySqlParameter("ds_expProfissional", dto.ExpProfissional));
-            parms.Add(new MySqlParameter("ds_areaPreferencia", dto.AreaPreferencial));
+            parms.Add(new MySqlParameter("ds_areaPreferencial", dto.AreaPreferencial));
 
             DataBase db = new DataBase();
             return db.ExecuteInsertScriptWithPk(script, parms);
@@ -66,14 +67,14 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_aluno", dto.Nome));
-            parms.Add(new MySqlParameter("nm_curso", dto.NomeCurso));
+            parms.Add(new MySqlParameter("nm_curso", dto.Curso));
             parms.Add(new MySqlParameter("ds_anoEstudo", dto.AnoDeEstudo));
             parms.Add(new MySqlParameter("dt_nascimento", dto.Nascimento));
             parms.Add(new MySqlParameter("ds_idade", dto.Idade));
             parms.Add(new MySqlParameter("ds_endereco", dto.Endereco));
             parms.Add(new MySqlParameter("ds_numero", dto.Numero));
             parms.Add(new MySqlParameter("ds_bairro", dto.Bairro));
-            parms.Add(new MySqlParameter("ds_cep", dto.CEP));
+            parms.Add(new MySqlParameter("ds_cep", dto.Cep));
             parms.Add(new MySqlParameter("nr_fixo", dto.Fixo));
             parms.Add(new MySqlParameter("nr_celular", dto.Celular));
             parms.Add(new MySqlParameter("ds_seEstuda", dto.SeEstuda));
@@ -107,20 +108,19 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
 
             List<AlunoDTO> lista = new List<AlunoDTO>();
             while (reader.Read())
-
-
             {
                 AlunoDTO dto = new AlunoDTO();
-                dto.ID = reader.GetInt32("id_aluno");
+                dto.Id = reader.GetInt32("id_aluno");
                 dto.Nome = reader.GetString("nm_aluno");
-                dto.NomeCurso = reader.GetString("nm_curso");
+                dto.Curso = reader.GetString("nm_curso");
+                dto.Rg = reader.GetString("ds_rg");
                 dto.AnoDeEstudo = reader.GetString("ds_anoEstudo");
-                dto.Nascimento = reader.GetDateTime("dt_nascimento");
+                dto.Nascimento = reader.GetString("dt_nascimento");
                 dto.Idade = reader.GetInt32("ds_idade");
                 dto.Endereco = reader.GetString("ds_endereco");
                 dto.Numero = reader.GetInt32("ds_numero");
                 dto.Bairro = reader.GetString("ds_bairro");
-                dto.CEP = reader.GetString("ds_cep");
+                dto.Cep = reader.GetString("ds_cep");
                 dto.Fixo = reader.GetString("nr_fixo");
                 dto.Celular = reader.GetString("nr_celular");
                 dto.SeEstuda = reader.GetString("ds_seEstuda");
@@ -151,16 +151,17 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
             while (reader.Read())
             {
                 AlunoDTO dto = new AlunoDTO();
-                dto.ID = reader.GetInt32("id_aluno");
+                dto.Id = reader.GetInt32("id_aluno");
                 dto.Nome = reader.GetString("nm_aluno");
-                dto.NomeCurso = reader.GetString("nm_curso");
+                dto.Curso = reader.GetString("nm_curso");
+                dto.Rg = reader.GetString("ds_rg");
                 dto.AnoDeEstudo = reader.GetString("ds_anoEstudo");
-                dto.Nascimento = reader.GetDateTime("dt_nascimento");
+                dto.Nascimento = reader.GetString("dt_nascimento");
                 dto.Idade = reader.GetInt32("ds_idade");
                 dto.Endereco = reader.GetString("ds_endereco");
                 dto.Numero = reader.GetInt32("ds_numero");
                 dto.Bairro = reader.GetString("ds_bairro");
-                dto.CEP = reader.GetString("ds_cep");
+                dto.Cep = reader.GetString("ds_cep");
                 dto.Fixo = reader.GetString("nr_fixo");
                 dto.Celular = reader.GetString("nr_celular");
                 dto.SeEstuda = reader.GetString("ds_seEstuda");

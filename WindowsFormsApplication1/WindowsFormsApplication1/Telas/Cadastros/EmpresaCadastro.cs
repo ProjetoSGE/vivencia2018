@@ -30,37 +30,7 @@ namespace WindowsFormsApplication1
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            /*try
-            {
-                EmpresaDTO dto = new EmpresaDTO();
-                dto.Empresa = txtNome.Text.Trim();
-                dto.Email = txtEmail.Text.Trim();
-                dto.CEP = mktCep.Text.Trim();
-                dto.Bairro = txtBairro.Text.Trim();
-                dto.Endereço = txtEndereco.Text.Trim();
-                dto.Telefone = mktTelefone.Text.Trim();
-                dto.PontoDeReferencia = txtPontoRef.Text.Trim();
-
-                EmpresaBusiness business = new EmpresaBusiness();
-                business.Salvar(dto);
-
-                MessageBox.Show("Empresa cadastrada com sucesso", "SGE");
-
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "SGE",
-                  MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-
-            EstagioEntities db = new EstagioEntities();
-            tb_empresas empresa = new tb_empresas();
-
-            empresa.nm_empresa = textBox2.Text;
-
-            
-
-
+      
 
         }
     }

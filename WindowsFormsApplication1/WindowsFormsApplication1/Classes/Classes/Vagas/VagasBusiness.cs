@@ -24,12 +24,5 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
         {
             db.Remover(id);
         }
-        public List<VagasDTO> Consultar()
-        {
-
-            return db.Consultar();
-        }
-
-
     }
 }

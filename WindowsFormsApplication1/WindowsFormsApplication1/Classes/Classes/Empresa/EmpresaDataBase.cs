@@ -12,14 +12,17 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
     {
         public int Salvar(EmpresaDTO dto)
         {
-            string script = @"INSERT INTO tb_empresas (nm_empresa,nr_telefone,ds_email,ds_cep,ds_bairro,ds_endereco,ds_pontoReferencia)
-                              VALUES(@nm_empresa,@nr_telefone,@ds_email,@ds_cep,@ds_bairro,@ds_endereco,@ds_pontoReferencia)";
+            string script = @"INSERT INTO tb_empresas (nm_fantasia, nm_razaoSocial, ds_cnpj, nr_codEstadual, nr_telefone, ds_email, ds_cep, ds_bairro, ds_endereco, ds_pontoReferencia)
+                                                VALUES(@nm_fantasia, @nm_razaoSocial, @ds_cnpj, @nr_codEstadual, @nr_telefone, @ds_email, @ds_cep, @ds_bairro, @ds_endereco, @ds_pontoReferencia)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_empresa", dto.Empresa));
+            parms.Add(new MySqlParameter("nm_fantasia", dto.Nome));
+            parms.Add(new MySqlParameter("nm_razaoSocial", dto.RazãoSocial));
+            parms.Add(new MySqlParameter("ds_cnpj", dto.Cnpj));
+            parms.Add(new MySqlParameter("nr_codEstadual", dto.CodEstadual));
             parms.Add(new MySqlParameter("nr_telefone", dto.Telefone));
             parms.Add(new MySqlParameter("ds_email", dto.Email));
-            parms.Add(new MySqlParameter("ds_cep", dto.CEP));
+            parms.Add(new MySqlParameter("ds_cep", dto.Cep));
             parms.Add(new MySqlParameter("ds_bairro", dto.Bairro));
             parms.Add(new MySqlParameter("ds_endereco", dto.Endereço));
             parms.Add(new MySqlParameter("ds_pontoReferencia", dto.PontoDeReferencia));
@@ -44,11 +47,14 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
             while (reader.Read())
             {
                 EmpresaDTO dto = new EmpresaDTO();
-                dto.ID = reader.GetInt32("id_empresa");
-                dto.Empresa = reader.GetString("nm_empresa");
+                dto.Id = reader.GetInt32("id_empresa");
+                dto.Nome = reader.GetString("nm_empresa");
+                dto.RazãoSocial = reader.GetString("nm_razaoSocial");
+                dto.Cnpj = reader.GetString("ds_cnpj");
+                dto.CodEstadual = reader.GetInt32("nr_codEstadual");
                 dto.Telefone = reader.GetString("nr_telefone");
                 dto.Email = reader.GetString("ds_email");
-                dto.CEP = reader.GetString("ds_cep");
+                dto.Cep = reader.GetString("ds_cep");
                 dto.Bairro = reader.GetString("ds_bairro");
                 dto.Endereço = reader.GetString("ds_endereco");
                 dto.PontoDeReferencia = reader.GetString("ds_pontoReferencia");
@@ -76,11 +82,14 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
             while (reader.Read())
             {
                 EmpresaDTO dto = new EmpresaDTO();
-                dto.ID = reader.GetInt32("id_empresa");
-                dto.Empresa = reader.GetString("nm_empresa");
+                dto.Id = reader.GetInt32("id_empresa");
+                dto.Nome = reader.GetString("nm_empresa");
+                dto.RazãoSocial = reader.GetString("nm_razaoSocial");
+                dto.Cnpj = reader.GetString("ds_cnpj");
+                dto.CodEstadual = reader.GetInt32("nr_codEstadual");
                 dto.Telefone = reader.GetString("nr_telefone");
                 dto.Email = reader.GetString("ds_email");
-                dto.CEP = reader.GetString("ds_cep");
+                dto.Cep = reader.GetString("ds_cep");
                 dto.Bairro = reader.GetString("ds_bairro");
                 dto.Endereço = reader.GetString("ds_endereco");
                 dto.PontoDeReferencia = reader.GetString("ds_pontoReferencia");
@@ -120,10 +129,10 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                WHERE id_empresa = @id_empresa";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_empresa", dto.Empresa));
+            parms.Add(new MySqlParameter("nm_empresa", dto.Nome));
             parms.Add(new MySqlParameter("nr_telefone", dto.Telefone));
             parms.Add(new MySqlParameter("ds_email", dto.Email));
-            parms.Add(new MySqlParameter("ds_cep", dto.CEP));
+            parms.Add(new MySqlParameter("ds_cep", dto.Cep));
             parms.Add(new MySqlParameter("ds_bairro", dto.Bairro));
             parms.Add(new MySqlParameter("ds_endereco", dto.Endereço));
             parms.Add(new MySqlParameter("ds_pontoReferencia", dto.PontoDeReferencia));

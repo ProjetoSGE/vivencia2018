@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.Classes.Classes.Candidato
 {
-    public class CandidatoDTO
+    public class CandidatoView
     {
         public int Id { get; set; }
 
-        public int IdAluno { get; set; }
+        public string Aluno { get; set; }
 
-        public int IdVaga { get; set; }
+        public string Curso { get; set; }
+
+        public string Vaga { get; set; }
 
         public string Status { get; set; }
     }
