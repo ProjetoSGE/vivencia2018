@@ -13,100 +13,97 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
     {
         public int Salvar(VagasDTO vaga)
         {
-            string Script = @"INSERT INTO TB_VAGAS
+            string Script = @"INSERT INTO tb_vagas
                             (
-                                    NM_VAGA,
-                                    NM_AREA,
-                                    QTD_VAGA,
-                                    DT_INICIOESTAGIO,
-                                    DS_SEXO,
-                                    ID_EMPRESA,
-                                    DS_HORARIOENTRADA,
-                                    DS_HORARIOSAIDA
-                                    DS_INTERVALO,
-                                    OP_SEGURODEVIDA,                     
-                                    OP_AUXTRANSPORTE,
-                                    OP_RECREMUNERADO,
-                                    OP_VALEREFEICAO,
-                                    OP_CESTABASICA,
-                                    OP_REFLOCAL,
-                                    OP_ASSISMEDICA,
-                                    NVL_INGLES,
-                                    OP_INFOOFFICE,
-                                    OP_INFOAUTOCAD,
-                                    OP_INFOCOREL,
-                                    OP_INFOPHOTOSHOP,
-                                    OP_INFOPROGRAMACAO,
-                                    OP_OUTROS,
-                                    DS_OBSERVACAO,
-                                    DS_COMPPESSOAL,
-                                    DS_TAREFAS
+                                    nm_vaga,
+                                    nm_area,
+                                    qtd_vaga,
+                                    dt_inicioEstagio,
+                                    ds_sexo,
+                                    id_empresa,
+                                    ds_horarioEntrada,
+                                    ds_horarioSaida,
+                                    ds_intervalo,
+                                    op_seguroDeVida,                     
+                                    op_auxTransporte,
+                                    op_recRemunerado,
+                                    op_valeRefeicao,
+                                    op_cestaBasica,
+                                    op_refLocal,
+                                    op_assisMedica,
+                                    nvl_ingles,
+                                    op_infoOffice,
+                                    op_infoAutoCAD,
+                                    op_infoCorel,
+                                    op_infoPhotoShop,
+                                    op_infoProgramacao,
+                                    ds_outros,
+                                    ds_observacao,
+                                    ds_compPessoal,
+                                    ds_tarefas
                                     
                             )
                             VALUES
                             (       
-                                    @NM_VAGA,
-                                    @NM_AREA,
-                                    @QTD_VAGA,
-                                    @DT_INICIOESTAGIO,
-                                    @DS_SEXO,
-                                    @ID_EMPRESA,
-                                    @DS_HORARIOENTRADA,
-                                    @DS_HORARIOSAIDA
-                                    @DS_INTERVALO,
-                                    @OP_SEGURODEVIDA,                     
-                                    @OP_AUXTRANSPORTE,
-                                    @OP_RECREMUNERADO,
-                                    @OP_VALEREFEICAO,
-                                    @OP_CESTABASICA,
-                                    @OP_REFLOCAL,
-                                    @OP_ASSISMEDICA,
-                                    @NVL_INGLES,
-                                    @OP_INFOOFFICE,
-                                    @OP_INFOAUTOCAD,
-                                    @OP_INFOCOREL,
-                                    @OP_INFOPHOTOSHOP,
-                                    @OP_INFOPROGRAMACAO,
-                                    @OP_OUTROS,
-                                    @DS_OBSERVACAO,
-                                    @DS_COMPPESSOAL,
-                                    @DS_TAREFAS
+                                    @nm_vaga,
+                                    @nm_area,
+                                    @qtd_vaga,
+                                    @dt_inicioEstagio,
+                                    @ds_sexo,
+                                    @id_empresa,
+                                    @ds_horarioEntrada,
+                                    @ds_horarioSaida,
+                                    @ds_intervalo,
+                                    @op_seguroDeVida,                     
+                                    @op_auxTransporte,
+                                    @op_recRemunerado,
+                                    @op_valeRefeicao,
+                                    @op_cestaBasica,
+                                    @op_refLocal,
+                                    @op_assisMedica,
+                                    @nvl_ingles,
+                                    @op_infoOffice,
+                                    @op_infoAutoCAD,
+                                    @op_infoCorel,
+                                    @op_infoPhotoShop,
+                                    @op_infoProgramacao,
+                                    @ds_outros,
+                                    @ds_observacao,
+                                    @ds_compPessoal,
+                                    @ds_tarefas
                              )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("NM_VAGA", vaga.NomeVaga));
-            parms.Add(new MySqlParameter("NM_AREA", vaga.NomeArea));
-            parms.Add(new MySqlParameter("QTD_VAGA", vaga.QuantidadeDeVaga));
-            parms.Add(new MySqlParameter("DT_INICIOESTAGIO", vaga.DataDeInicio));
-            parms.Add(new MySqlParameter("DS_SEXO", vaga.Sexo));
-            parms.Add(new MySqlParameter("ID_EMPRESA", vaga.IdEmpresa));
-            parms.Add(new MySqlParameter("DS_HORARIOENTRADA", vaga.HorarioEntrada));
-            parms.Add(new MySqlParameter("DS_HORARIOSAIDA", vaga.HorarioSaida));
-            parms.Add(new MySqlParameter("DS_INTERVALO", vaga.Intervalo));
-            parms.Add(new MySqlParameter("OP_SEGURODEVIDA", vaga.SeguroDeVida));
-            parms.Add(new MySqlParameter("OP_AUXTRANSPORTE", vaga.AuxTransporte));
-            parms.Add(new MySqlParameter("OP_RECREMUNERADO", vaga.RecRemunerado));
-            parms.Add(new MySqlParameter("OP_VALEREFEICAO", vaga.ValeRefeicao));
-            parms.Add(new MySqlParameter("OP_CESTABASICA", vaga.CestaBasica));
-            parms.Add(new MySqlParameter("OP_REFLOCAL", vaga.ReLocal));
-            parms.Add(new MySqlParameter("OP_ASSISMEDICA", vaga.AssisMedica));
-            parms.Add(new MySqlParameter("NVL_INGLES", vaga.NivelIngles));
-            parms.Add(new MySqlParameter("OP_INFOOFFICE", vaga.InfoOffice));
-            parms.Add(new MySqlParameter("OP_INFOAUTOCAD", vaga.InfoAutoCAD));
-            parms.Add(new MySqlParameter("OP_INFOCOREL", vaga.InfoCorel));
-            parms.Add(new MySqlParameter("OP_INFOPHOTOSHOP", vaga.InfoPhotoShop));
-            parms.Add(new MySqlParameter("OP_INFOPROGRAMACAO", vaga.InfoProgramacao));
-            parms.Add(new MySqlParameter("OP_OUTROS", vaga.Outros));
-            parms.Add(new MySqlParameter("DS_OBSERVACAO", vaga.Observacao));
-            parms.Add(new MySqlParameter("DS_COMPPESSOAL", vaga.CompPessoal));
-            parms.Add(new MySqlParameter("DS_TAREFAS", vaga.Tarefas));
+            parms.Add(new MySqlParameter("nm_vaga", vaga.NomeVaga));
+            parms.Add(new MySqlParameter("nm_area", vaga.NomeArea));
+            parms.Add(new MySqlParameter("qtd_vaga", vaga.QuantidadeDeVaga));
+            parms.Add(new MySqlParameter("dt_inicioEstagio", vaga.DataDeInicio));
+            parms.Add(new MySqlParameter("ds_sexo", vaga.Sexo));
+            parms.Add(new MySqlParameter("id_empresa", vaga.IdEmpresa));
+            parms.Add(new MySqlParameter("ds_horarioEntrada", vaga.HorarioEntrada));
+            parms.Add(new MySqlParameter("ds_horarioSaida", vaga.HorarioSaida));
+            parms.Add(new MySqlParameter("ds_intervalo", vaga.Intervalo));
+            parms.Add(new MySqlParameter("op_seguroDeVida", vaga.SeguroDeVida));
+            parms.Add(new MySqlParameter("op_auxTransporte", vaga.AuxTransporte));
+            parms.Add(new MySqlParameter("op_recRemunerado", vaga.RecRemunerado));
+            parms.Add(new MySqlParameter("op_valeRefeicao", vaga.ValeRefeicao));
+            parms.Add(new MySqlParameter("op_cestaBasica", vaga.CestaBasica));
+            parms.Add(new MySqlParameter("op_refLocal", vaga.ReLocal));
+            parms.Add(new MySqlParameter("op_assisMedica", vaga.AssisMedica));
+            parms.Add(new MySqlParameter("nvl_ingles", vaga.NivelIngles));
+            parms.Add(new MySqlParameter("op_infoOffice", vaga.InfoOffice));
+            parms.Add(new MySqlParameter("op_infoAutoCAD", vaga.InfoAutoCAD));
+            parms.Add(new MySqlParameter("op_infoCorel", vaga.InfoCorel));
+            parms.Add(new MySqlParameter("op_infoPhotoShop", vaga.InfoPhotoShop));
+            parms.Add(new MySqlParameter("op_infoProgramacao", vaga.InfoProgramacao));
+            parms.Add(new MySqlParameter("ds_outros", vaga.Outros));
+            parms.Add(new MySqlParameter("ds_observacao", vaga.Observacao));
+            parms.Add(new MySqlParameter("ds_compPessoal", vaga.CompPessoal));
+            parms.Add(new MySqlParameter("ds_tarefas", vaga.Tarefas));
 
 
             DataBase db = new DataBase();
-            int pk = db.ExecuteInsertScriptWithPk(Script, parms);
-            return pk;
-
-
+            return db.ExecuteInsertScriptWithPk(Script, parms);
         }
 
         public void Alterar(VagasDTO vaga)
@@ -207,9 +204,9 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 novavaga.DataDeInicio = reader.GetDateTime("DT_INICIOESTAGIO");
                 novavaga.Sexo = reader.GetString("DS_SEXO");
                 novavaga.IdEmpresa = reader.GetInt32("id_empresa");
-                novavaga.HorarioEntrada = reader.GetDateTime("DS_HORARIO");
-                novavaga.HorarioSaida = reader.GetDateTime("DS_INTERVALO");
-                novavaga.Intervalo = reader.GetDateTime("ds_intervalo");
+                novavaga.HorarioEntrada = reader.GetString("DS_HORARIO");
+                novavaga.HorarioSaida = reader.GetString("DS_INTERVALO");
+                novavaga.Intervalo = reader.GetString("ds_intervalo");
                 novavaga.SeguroDeVida = reader.GetBoolean("OP_SEGURODEVIDA");
                 novavaga.AuxTransporte = reader.GetBoolean("OP_AUXTRANSPORTE");
                 novavaga.RecRemunerado = reader.GetBoolean("OP_RECREMUNERADO");
@@ -255,9 +252,9 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 novavaga.DataDeInicio = reader.GetDateTime("DT_INICIOESTAGIO");
                 novavaga.Sexo = reader.GetString("DS_SEXO");
                 novavaga.Empresa = reader.GetString("nm_fantasia");
-                novavaga.HorarioEntrada = reader.GetDateTime("DS_HORARIO");
-                novavaga.HorarioSaida = reader.GetDateTime("DS_INTERVALO");
-                novavaga.Intervalo = reader.GetDateTime("ds_intervalo");
+                novavaga.HorarioEntrada = reader.GetString("DS_HORARIO");
+                novavaga.HorarioSaida = reader.GetString("DS_INTERVALO");
+                novavaga.Intervalo = reader.GetString("ds_intervalo");
                 novavaga.SeguroDeVida = reader.GetBoolean("OP_SEGURODEVIDA");
                 novavaga.AuxTransporte = reader.GetBoolean("OP_AUXTRANSPORTE");
                 novavaga.RecRemunerado = reader.GetBoolean("OP_RECREMUNERADO");

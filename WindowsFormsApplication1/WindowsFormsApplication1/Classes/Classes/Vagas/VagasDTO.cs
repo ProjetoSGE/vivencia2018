@@ -15,9 +15,9 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
         public DateTime DataDeInicio { get; set; }
         public string Sexo { get; set; }
         public int IdEmpresa { get; set; }
-        public DateTime HorarioEntrada { get; set; }
-        public DateTime HorarioSaida { get; set; }
-        public DateTime Intervalo { get; set; }
+        public string HorarioEntrada { get; set; }
+        public string HorarioSaida { get; set; }
+        public string Intervalo { get; set; }
         public bool SeguroDeVida { get; set; }
         public bool AuxTransporte { get; set; }
         public bool RecRemunerado { get; set; }
