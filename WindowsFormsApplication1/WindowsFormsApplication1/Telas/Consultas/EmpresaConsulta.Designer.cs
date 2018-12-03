@@ -84,6 +84,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBox1
             // 
@@ -128,6 +129,7 @@
             this.dgvEmpresa.RowHeadersWidth = 4;
             this.dgvEmpresa.Size = new System.Drawing.Size(712, 397);
             this.dgvEmpresa.TabIndex = 18;
+            this.dgvEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellContentClick_1);
             // 
             // Column1
             // 
@@ -138,7 +140,7 @@
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "Empresa";
+            this.Column2.DataPropertyName = "Nome";
             this.Column2.HeaderText = "Nome";
             this.Column2.Name = "Column2";
             // 
@@ -170,13 +172,14 @@
             // 
             // Column8
             // 
-            this.Column8.DataPropertyName = "PontodeRef";
+            this.Column8.DataPropertyName = "PontoDeReferencia";
             this.Column8.HeaderText = "Referência";
             this.Column8.Name = "Column8";
             // 
             // Column5
             // 
             this.Column5.HeaderText = "";
+            this.Column5.Image = global::WindowsFormsApplication1.Properties.Resources.lapis;
             this.Column5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.Column5.Name = "Column5";
             this.Column5.Width = 25;
@@ -184,6 +187,7 @@
             // Column9
             // 
             this.Column9.HeaderText = "";
+            this.Column9.Image = global::WindowsFormsApplication1.Properties.Resources.excluir;
             this.Column9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.Column9.Name = "Column9";
             this.Column9.Width = 25;

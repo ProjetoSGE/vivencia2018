@@ -11,6 +11,7 @@ using WindowsFormsApplication1.Telas;
 using WindowsFormsApplication1.Telas.Cadastros;
 using WindowsFormsApplication1.Telas.Consultas;
 
+
 namespace WindowsFormsApplication1
 {
     public partial class Menu : Form
@@ -21,9 +22,9 @@ namespace WindowsFormsApplication1
         }
         public void OpenScreen(UserControl control)
         {
-            if (pnlCentro.Controls.Count == 1)
-                pnlCentro.Controls.RemoveAt(0);
-            pnlCentro.Controls.Add(control);
+            if (pnlCentru.Controls.Count == 1)
+                pnlCentru.Controls.RemoveAt(0);
+            pnlCentru.Controls.Add(control);
         }
 
         private void control_Paint(object sender, PaintEventArgs e)
@@ -92,6 +93,86 @@ namespace WindowsFormsApplication1
         {
             VagasConsulta frm = new VagasConsulta();
             OpenScreen(frm);
+        }
+
+        private void empresasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            EmpresaCadastro tela = new EmpresaCadastro();
+            OpenScreen(tela);
+        }
+
+        private void vagasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            VagasCadastro tela = new VagasCadastro();
+            OpenScreen(tela);
+        }
+
+        private void candidatoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void alunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlunosCadastro tela = new AlunosCadastro();
+            OpenScreen(tela);
+        }
+
+        private void alunoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AlunosConsulta tela = new AlunosConsulta();
+            OpenScreen(tela);
+        }
+
+        private void candidatoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Candidato tela = new Candidato();
+            OpenScreen(tela);
+        }
+
+        private void empreSAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmpresaConsulta tela = new EmpresaConsulta();
+            OpenScreen(tela);
+        }
+
+        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home tela = new Home();
+            OpenScreen(tela);
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Deseja realmente sair?", "SGE",
+                             MessageBoxButtons.YesNo,
+                             MessageBoxIcon.Question);
+
+            if (r == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlCentru_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
