@@ -88,9 +88,9 @@
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(23, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 25);
+            this.label12.Size = new System.Drawing.Size(149, 25);
             this.label12.TabIndex = 82;
-            this.label12.Text = "Cadastrar Vaga";
+            this.label12.Text = "Cadastrar Vagas";
             // 
             // btnCancelar
             // 
