@@ -56,5 +56,10 @@ namespace WindowsFormsApplication1.Telas.Consultas
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
