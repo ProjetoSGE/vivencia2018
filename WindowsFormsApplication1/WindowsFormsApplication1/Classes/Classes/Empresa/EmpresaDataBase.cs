@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
 
         public void Remover(int id)
         {
-            string script = @"DELETE FROM tb_empresa WHERE id_empresa like @id_empresa";
+            string script = @"DELETE FROM tb_empresas WHERE id_empresa like @id_empresa";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_empresa", id));
