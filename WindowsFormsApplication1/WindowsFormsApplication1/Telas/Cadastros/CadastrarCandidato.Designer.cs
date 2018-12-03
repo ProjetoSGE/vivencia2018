@@ -86,6 +86,7 @@
             this.btnCadatrar.TabIndex = 81;
             this.btnCadatrar.Text = "Cadastrar";
             this.btnCadatrar.UseVisualStyleBackColor = true;
+            this.btnCadatrar.Click += new System.EventHandler(this.btnCadatrar_Click);
             // 
             // cboTurma
             // 
