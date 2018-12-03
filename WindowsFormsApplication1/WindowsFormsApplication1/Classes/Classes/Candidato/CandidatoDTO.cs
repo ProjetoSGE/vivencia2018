@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Asnsf.AdmPersonalizadora.Lib.Auxiliar;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,16 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
 
         public int IdVaga { get; set; }
 
-        public string Status { get; set; }
+        public EnStatus IdStatus { get; set; }
+    }
+
+    public enum EnStatus
+    {
+        [Description("Dispensado")]
+        Dispensado = 0,
+        [Description("Em Andamento")]
+        Andamento = 1,
+        [Description("Contratado")]
+        Contratado = 2
     }
 }
