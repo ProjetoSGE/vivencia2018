@@ -70,6 +70,8 @@
             this.mskRes = new System.Windows.Forms.MaskedTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
+            this.txtRG = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -331,6 +333,8 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.txtRG);
             this.groupBox4.Controls.Add(this.mskRecado);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.label2);
@@ -347,7 +351,7 @@
             this.groupBox4.Controls.Add(this.mskRes);
             this.groupBox4.Location = new System.Drawing.Point(64, 42);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(324, 245);
+            this.groupBox4.Size = new System.Drawing.Size(324, 260);
             this.groupBox4.TabIndex = 78;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Aluno";
@@ -518,6 +522,23 @@
             this.btnsalvar.UseVisualStyleBackColor = true;
             this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click_1);
             // 
+            // txtRG
+            // 
+            this.txtRG.Location = new System.Drawing.Point(169, 223);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(132, 20);
+            this.txtRG.TabIndex = 69;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(126, 222);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 21);
+            this.label18.TabIndex = 70;
+            this.label18.Text = "RG:";
+            // 
             // AlunosCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,5 +609,7 @@
         private System.Windows.Forms.MaskedTextBox mskRes;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnsalvar;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtRG;
     }
 }

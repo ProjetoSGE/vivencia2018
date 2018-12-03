@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                 dto.Rg = reader.GetString("ds_rg");
                 dto.AnoDeEstudo = reader.GetString("ds_anoEstudo");
                 dto.Nascimento = reader.GetDateTime("dt_nascimento");
-                dto.Idade = reader.GetInt32("ds_idade");
+                dto.Idade = reader.GetString("ds_idade");
                 dto.Endereco = reader.GetString("ds_endereco");
                 dto.Numero = reader.GetString("ds_numero");
                 dto.Bairro = reader.GetString("ds_bairro");
@@ -157,7 +157,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                 dto.Rg = reader.GetString("ds_rg");
                 dto.AnoDeEstudo = reader.GetString("ds_anoEstudo");
                 dto.Nascimento = reader.GetDateTime("dt_nascimento");
-                dto.Idade = reader.GetInt32("ds_idade");
+                dto.Idade = reader.GetString("ds_idade");
                 dto.Endereco = reader.GetString("ds_endereco");
                 dto.Numero = reader.GetString("ds_numero");
                 dto.Bairro = reader.GetString("ds_bairro");
