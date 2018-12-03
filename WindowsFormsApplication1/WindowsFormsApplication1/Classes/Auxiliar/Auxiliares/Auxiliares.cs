@@ -12,4 +12,9 @@ namespace WindowsFormsApplication1.Classes.Classes.Auxiliares
     {
         public Bitmap BotaoFechar => Properties.Resources.excluir;
     }
+    public class VText
+    {
+        public string Value { get; set; }
+        public string Text { get; set; }
+    }
 }

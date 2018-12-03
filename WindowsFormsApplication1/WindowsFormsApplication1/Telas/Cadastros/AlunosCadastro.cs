@@ -19,6 +19,9 @@ namespace WindowsFormsApplication1.Telas.Cadastros
             InitializeComponent();
         }
 
+
+
+
         private void btnsalvar_Click(object sender, EventArgs e)
         {
 
@@ -87,12 +90,12 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         private void btnsalvar_Click_1(object sender, EventArgs e)
         {
 
-            try
-            {
+            /*try
+            {*/
                 AlunoDTO dto = new AlunoDTO();
 
                 dto.Nome = txtNome.Text;
-                dto.Idade = Convert.ToInt32(txtIdade.Text);
+                dto.Idade = txtIdade.Text;
                 dto.AreaPreferencial = txtPreferencia.Text;
                 dto.Bairro = txtBairro.Text;
                 dto.Celular = mskRecado.Text;
@@ -100,25 +103,25 @@ namespace WindowsFormsApplication1.Telas.Cadastros
                 dto.Cep = mskCEP.Text;
                 dto.Endereco = txtEndereco.Text;
                 dto.ExpProfissional = txtExperiencia.Text;
-                dto.Nascimento = dtpDataNasc.Value;
+                dto.Nascimento = dtpDataNasc.Value.Date;
                 dto.Curso = cboCurso.SelectedItem.ToString();
                 dto.Turno = cboTurno.SelectedItem.ToString();
                 dto.QualCurso = cboSerie.SelectedItem.ToString();
                 dto.SeEstuda = rdnSim.Checked;
                 dto.Numero = txtNumero.Text;
                 dto.AnoDeEstudo = cboAnoEstudou.SelectedItem.ToString();
-
+                dto.Rg = txtRG.Text;
 
                 AlunoBussiness business = new AlunoBussiness();
                 business.Salvar(dto);
 
-            }
+            /*}
             catch (Exception)
             {
 
                 throw new ArgumentException("Preencha todos os campos utilizando apenas informações válidas ");
                 
-            }
+            }*/
             
 
 

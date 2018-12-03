@@ -33,8 +33,6 @@
             this.btnCadatrar = new System.Windows.Forms.Button();
             this.cboTurma = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblArea = new System.Windows.Forms.Label();
             this.cboVaga = new System.Windows.Forms.ComboBox();
@@ -51,6 +49,8 @@
             this.lblNomeCompleto = new System.Windows.Forms.Label();
             this.cboAluno = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -105,24 +105,6 @@
             this.label3.Size = new System.Drawing.Size(55, 21);
             this.label3.TabIndex = 80;
             this.label3.Text = "Turma";
-            // 
-            // cboTipo
-            // 
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(553, 81);
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(98, 21);
-            this.cboTipo.TabIndex = 76;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(507, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 21);
-            this.label5.TabIndex = 77;
-            this.label5.Text = "Tipo";
             // 
             // groupBox2
             // 
@@ -295,6 +277,24 @@
             this.label1.TabIndex = 44;
             this.label1.Text = "Aluno";
             // 
+            // cboTipo
+            // 
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Location = new System.Drawing.Point(553, 81);
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(98, 21);
+            this.cboTipo.TabIndex = 76;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(507, 81);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 21);
+            this.label5.TabIndex = 77;
+            this.label5.Text = "Área";
+            // 
             // CadastrarCandidato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,8 +330,6 @@
         private System.Windows.Forms.Button btnCadatrar;
         private System.Windows.Forms.ComboBox cboTurma;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboTipo;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.ComboBox cboVaga;
@@ -348,5 +346,7 @@
         private System.Windows.Forms.Label lblNomeCompleto;
         private System.Windows.Forms.ComboBox cboAluno;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboTipo;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -68,6 +68,8 @@
             this.mskRes = new System.Windows.Forms.MaskedTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
+            this.txtRg = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -314,6 +316,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.txtRg);
             this.groupBox4.Controls.Add(this.mskRecado);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.label2);
@@ -330,7 +334,7 @@
             this.groupBox4.Controls.Add(this.mskRes);
             this.groupBox4.Location = new System.Drawing.Point(47, 38);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(324, 245);
+            this.groupBox4.Size = new System.Drawing.Size(324, 260);
             this.groupBox4.TabIndex = 84;
             this.groupBox4.TabStop = false;
             // 
@@ -366,7 +370,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 84);
+            this.label3.Location = new System.Drawing.Point(28, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 21);
             this.label3.TabIndex = 44;
@@ -384,7 +388,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(103, 143);
+            this.label5.Location = new System.Drawing.Point(109, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 21);
             this.label5.TabIndex = 46;
@@ -420,7 +424,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 194);
+            this.label11.Location = new System.Drawing.Point(17, 194);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(143, 21);
             this.label11.TabIndex = 50;
@@ -479,6 +483,24 @@
             this.btnAlterar.TabIndex = 80;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // txtRg
+            // 
+            this.txtRg.Location = new System.Drawing.Point(170, 225);
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(132, 20);
+            this.txtRg.TabIndex = 69;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(125, 222);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 21);
+            this.label18.TabIndex = 70;
+            this.label18.Text = "RG:";
             // 
             // FrmAlterarAluno
             // 
@@ -550,5 +572,7 @@
         private System.Windows.Forms.MaskedTextBox mskRes;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtRg;
     }
 }

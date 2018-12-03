@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Auxiliar\Auxiliares\Enumeradores.cs" />
     <Compile Include="Classes\Auxiliar\Extensions.cs" />
     <Compile Include="Classes\Auxiliar\Functions.cs" />
     <Compile Include="Classes\Auxiliar\ImagePlugin.cs" />
