@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.mtkCNPJ = new System.Windows.Forms.MaskedTextBox();
@@ -67,17 +66,6 @@
             this.label4.Size = new System.Drawing.Size(254, 25);
             this.label4.TabIndex = 45;
             this.label4.Text = "Alterar Registros de Empresa";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(434, 426);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(104, 45);
-            this.btnCancelar.TabIndex = 49;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -235,7 +223,7 @@
             this.txtPontoRef.Location = new System.Drawing.Point(14, 125);
             this.txtPontoRef.Multiline = true;
             this.txtPontoRef.Name = "txtPontoRef";
-            this.txtPontoRef.Size = new System.Drawing.Size(138, 63);
+            this.txtPontoRef.Size = new System.Drawing.Size(207, 63);
             this.txtPontoRef.TabIndex = 38;
             // 
             // label8
@@ -253,7 +241,7 @@
             // 
             this.txtBairro.Location = new System.Drawing.Point(93, 48);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(100, 20);
+            this.txtBairro.Size = new System.Drawing.Size(128, 20);
             this.txtBairro.TabIndex = 36;
             // 
             // lblBairro
@@ -290,7 +278,7 @@
             // 
             this.txtEndereco.Location = new System.Drawing.Point(93, 75);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(100, 20);
+            this.txtEndereco.Size = new System.Drawing.Size(128, 20);
             this.txtEndereco.TabIndex = 30;
             // 
             // label6
@@ -308,12 +296,13 @@
             // 
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(243, 426);
+            this.btnAlterar.Location = new System.Drawing.Point(339, 368);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(104, 45);
             this.btnAlterar.TabIndex = 46;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // FrmAlterarEmpresa
             // 
@@ -321,12 +310,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 521);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAlterar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAlterarEmpresa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAlterarEmpresa";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -340,7 +329,6 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox mtkCNPJ;

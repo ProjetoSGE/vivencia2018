@@ -113,7 +113,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(135, 171);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.Size = new System.Drawing.Size(108, 20);
             this.txtEmail.TabIndex = 13;
             // 
             // mtkCNPJ
@@ -121,7 +121,7 @@
             this.mtkCNPJ.Location = new System.Drawing.Point(136, 19);
             this.mtkCNPJ.Mask = "99.999.999/9999-99";
             this.mtkCNPJ.Name = "mtkCNPJ";
-            this.mtkCNPJ.Size = new System.Drawing.Size(100, 20);
+            this.mtkCNPJ.Size = new System.Drawing.Size(107, 20);
             this.mtkCNPJ.TabIndex = 33;
             this.mtkCNPJ.ValidatingType = typeof(int);
             // 
@@ -212,14 +212,14 @@
             // 
             this.txtNomeFantasi.Location = new System.Drawing.Point(136, 49);
             this.txtNomeFantasi.Name = "txtNomeFantasi";
-            this.txtNomeFantasi.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeFantasi.Size = new System.Drawing.Size(107, 20);
             this.txtNomeFantasi.TabIndex = 7;
             // 
             // txtRazaoSocial
             // 
             this.txtRazaoSocial.Location = new System.Drawing.Point(136, 82);
             this.txtRazaoSocial.Name = "txtRazaoSocial";
-            this.txtRazaoSocial.Size = new System.Drawing.Size(100, 20);
+            this.txtRazaoSocial.Size = new System.Drawing.Size(107, 20);
             this.txtRazaoSocial.TabIndex = 7;
             // 
             // groupBox1
@@ -235,7 +235,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(409, 132);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(249, 203);
+            this.groupBox1.Size = new System.Drawing.Size(236, 203);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             // 
@@ -244,7 +244,7 @@
             this.txtPontoRef.Location = new System.Drawing.Point(14, 125);
             this.txtPontoRef.Multiline = true;
             this.txtPontoRef.Name = "txtPontoRef";
-            this.txtPontoRef.Size = new System.Drawing.Size(138, 63);
+            this.txtPontoRef.Size = new System.Drawing.Size(204, 63);
             this.txtPontoRef.TabIndex = 38;
             // 
             // label8
@@ -260,9 +260,9 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.Location = new System.Drawing.Point(93, 48);
+            this.txtBairro.Location = new System.Drawing.Point(93, 47);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(100, 20);
+            this.txtBairro.Size = new System.Drawing.Size(125, 20);
             this.txtBairro.TabIndex = 36;
             // 
             // lblBairro
@@ -299,7 +299,7 @@
             // 
             this.txtEndereco.Location = new System.Drawing.Point(93, 75);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(100, 20);
+            this.txtEndereco.Size = new System.Drawing.Size(125, 20);
             this.txtEndereco.TabIndex = 30;
             // 
             // label6
@@ -324,6 +324,7 @@
             this.btnAlterar.TabIndex = 41;
             this.btnAlterar.Text = "Cadastrar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // EmpresaCadastro
             // 

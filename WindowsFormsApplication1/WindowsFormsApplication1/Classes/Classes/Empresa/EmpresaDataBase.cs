@@ -48,7 +48,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
             {
                 EmpresaDTO dto = new EmpresaDTO();
                 dto.Id = reader.GetInt32("id_empresa");
-                dto.Nome = reader.GetString("nm_empresa");
+                dto.Nome = reader.GetString("nm_fantasia");
                 dto.RazãoSocial = reader.GetString("nm_razaoSocial");
                 dto.Cnpj = reader.GetString("ds_cnpj");
                 dto.CodEstadual = reader.GetInt32("nr_codEstadual");
@@ -69,10 +69,10 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
 
         public List<EmpresaDTO> Consultar(string nome)
         {
-            string script = @"SELECT * FROM tb_empresas WHERE nm_empresa like @nm_empresa";
-
+            string script = @"SELECT * FROM tb_empresas WHERE nm_fantasia like @nm_fantasia";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nm_fantasia", nome + "%"));
 
             DataBase db = new DataBase();
 
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
             {
                 EmpresaDTO dto = new EmpresaDTO();
                 dto.Id = reader.GetInt32("id_empresa");
-                dto.Nome = reader.GetString("nm_empresa");
+                dto.Nome = reader.GetString("nm_fantasia");
                 dto.RazãoSocial = reader.GetString("nm_razaoSocial");
                 dto.Cnpj = reader.GetString("ds_cnpj");
                 dto.CodEstadual = reader.GetInt32("nr_codEstadual");
@@ -118,8 +118,11 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
         public void Alterar(EmpresaDTO dto)
         {
             string script =
-            @"UPDATE tb_empresa
-                 SET nm_empresa = @nm_empresa,
+            @"UPDATE tb_empresas
+                 SET nm_fantasia = @nm_fantasia,
+                     nm_razaoSocial = @nm_razaoSocial,
+                     ds_cnpj = @ds_cnpj,
+                     nr_codEstadual = @nr_codEstadual,
 	                 nr_telefone = @nr_telefone,
                      ds_email = @ds_email,
                      ds_cep = @ds_cep,
@@ -129,7 +132,11 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                WHERE id_empresa = @id_empresa";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_empresa", dto.Nome));
+            parms.Add(new MySqlParameter("id_empresa", dto.Id));
+            parms.Add(new MySqlParameter("nm_fantasia", dto.Nome));
+            parms.Add(new MySqlParameter("nm_razaoSocial", dto.RazãoSocial));
+            parms.Add(new MySqlParameter("ds_cnpj", dto.Cnpj));
+            parms.Add(new MySqlParameter("nr_codEstadual", dto.CodEstadual));
             parms.Add(new MySqlParameter("nr_telefone", dto.Telefone));
             parms.Add(new MySqlParameter("ds_email", dto.Email));
             parms.Add(new MySqlParameter("ds_cep", dto.Cep));

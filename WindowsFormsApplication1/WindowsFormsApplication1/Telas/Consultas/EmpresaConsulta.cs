@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Classes.Classes.Empresa;
+using WindowsFormsApplication1.Telas.Alterações;
 
 namespace WindowsFormsApplication1.Telas.Consultas
 {
@@ -16,19 +17,32 @@ namespace WindowsFormsApplication1.Telas.Consultas
         public EmpresaConsulta()
         {
             InitializeComponent();
+            AutoCarregar();
+        }
+
+        void AutoCarregar()
+        {
+            EmpresaBusiness buss = new EmpresaBusiness();
+            List<EmpresaDTO> lista = buss.Listar();
+
+            dgvEmpresa.AutoGenerateColumns = false;
+            dgvEmpresa.DataSource = lista;
         }
 
         public void CarregarGrid()
         {
             try
             {
+
+                string nome = textBox1.Text.Trim();
+
                 EmpresaBusiness business = new EmpresaBusiness();
-                List<EmpresaDTO> dto = business.Consultar(textBox1.Text.Trim());
+                List<EmpresaDTO> dto = business.Consultar(nome);
 
                 dgvEmpresa.AutoGenerateColumns = false;
                 dgvEmpresa.DataSource = dto;
 
-            }
+           }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro ao consultar a empresa: " + ex.Message, "SGE",
@@ -42,20 +56,30 @@ namespace WindowsFormsApplication1.Telas.Consultas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CarregarGrid();
+           
         }
 
         private void dgvEmpresa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CarregarGrid();
+        }
+
+        private void dgvEmpresa_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 7)
             {
                 EmpresaDTO produto = dgvEmpresa.CurrentRow.DataBoundItem as EmpresaDTO;
 
-                // this.Hide();
-                // AlterarProduto tela = new AlterarProduto();
-                // tela.LoadScreen(produto);
+                this.Hide();
+                FrmAlterarEmpresa tela = new FrmAlterarEmpresa();
+                tela.LoadScreen(produto);
 
-                // tela.Show();
+                tela.Show();
 
             }
 
@@ -77,6 +101,5 @@ namespace WindowsFormsApplication1.Telas.Consultas
                 }
             }
         }
-
     }
 }
