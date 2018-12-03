@@ -1,16 +1,16 @@
-﻿namespace WindowsFormsApplication1.Telas.Cadastros
+﻿namespace WindowsFormsApplication1.Telas.Alterações
 {
-    partial class VagasCadastro
+    partial class FrmAlterarVagas
     {
-        /// <summary> 
-        /// Variável de designer necessária.
+        /// <summary>
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Limpar os recursos que estão sendo usados.
+        /// <summary>
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,18 +20,14 @@
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Designer de Componentes
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
-            this.label12 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,6 +70,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtd)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -81,25 +78,14 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 25);
-            this.label12.TabIndex = 82;
-            this.label12.Text = "Cadastrar Vaga";
-            // 
             // btnCancelar
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(628, 471);
+            this.btnCancelar.Location = new System.Drawing.Point(613, 481);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 32);
-            this.btnCancelar.TabIndex = 88;
+            this.btnCancelar.TabIndex = 99;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -116,10 +102,10 @@
             this.groupBox4.Controls.Add(this.nudQtd);
             this.groupBox4.Controls.Add(this.txtArea);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(28, 311);
+            this.groupBox4.Location = new System.Drawing.Point(12, 291);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(675, 78);
-            this.groupBox4.TabIndex = 94;
+            this.groupBox4.TabIndex = 105;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Vagas";
             // 
@@ -225,10 +211,10 @@
             // 
             this.btnsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalvar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalvar.Location = new System.Drawing.Point(544, 471);
+            this.btnsalvar.Location = new System.Drawing.Point(528, 481);
             this.btnsalvar.Name = "btnsalvar";
             this.btnsalvar.Size = new System.Drawing.Size(75, 32);
-            this.btnsalvar.TabIndex = 86;
+            this.btnsalvar.TabIndex = 97;
             this.btnsalvar.Text = "Cadastrar";
             this.btnsalvar.UseVisualStyleBackColor = true;
             // 
@@ -243,10 +229,10 @@
             this.groupBox3.Controls.Add(this.mtkIntervalo);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(28, 48);
+            this.groupBox3.Location = new System.Drawing.Point(12, 37);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(676, 100);
-            this.groupBox3.TabIndex = 93;
+            this.groupBox3.TabIndex = 104;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estágio";
             // 
@@ -338,10 +324,10 @@
             this.groupBox2.Controls.Add(this.chkCorelDraw);
             this.groupBox2.Controls.Add(this.chkOutros);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(28, 163);
+            this.groupBox2.Location = new System.Drawing.Point(12, 143);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(312, 139);
-            this.groupBox2.TabIndex = 92;
+            this.groupBox2.TabIndex = 103;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Conhecimentos De Informática";
             // 
@@ -421,10 +407,10 @@
             this.groupBox1.Controls.Add(this.chkRefeitorioLocal);
             this.groupBox1.Controls.Add(this.chkCestaBasica);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(359, 163);
+            this.groupBox1.Location = new System.Drawing.Point(343, 143);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(345, 139);
-            this.groupBox1.TabIndex = 91;
+            this.groupBox1.TabIndex = 102;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Benefícios";
             // 
@@ -498,38 +484,38 @@
             // txtCompetecias
             // 
             this.txtCompetecias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCompetecias.Location = new System.Drawing.Point(120, 392);
+            this.txtCompetecias.Location = new System.Drawing.Point(107, 388);
             this.txtCompetecias.Name = "txtCompetecias";
             this.txtCompetecias.Size = new System.Drawing.Size(226, 20);
-            this.txtCompetecias.TabIndex = 90;
+            this.txtCompetecias.TabIndex = 101;
             // 
             // txtTarefa
             // 
             this.txtTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTarefa.Location = new System.Drawing.Point(475, 392);
+            this.txtTarefa.Location = new System.Drawing.Point(462, 388);
             this.txtTarefa.Multiline = true;
             this.txtTarefa.Name = "txtTarefa";
             this.txtTarefa.Size = new System.Drawing.Size(226, 73);
-            this.txtTarefa.TabIndex = 89;
+            this.txtTarefa.TabIndex = 100;
             // 
             // txtObs
             // 
             this.txtObs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtObs.Location = new System.Drawing.Point(120, 418);
+            this.txtObs.Location = new System.Drawing.Point(107, 414);
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(226, 47);
-            this.txtObs.TabIndex = 87;
+            this.txtObs.TabIndex = 98;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(54, 388);
+            this.label11.Location = new System.Drawing.Point(41, 384);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 21);
-            this.label11.TabIndex = 85;
+            this.label11.TabIndex = 96;
             this.label11.Text = "Tarefas";
             // 
             // label8
@@ -537,10 +523,10 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(361, 392);
+            this.label8.Location = new System.Drawing.Point(348, 388);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 21);
-            this.label8.TabIndex = 83;
+            this.label8.TabIndex = 94;
             this.label8.Text = "Competências";
             // 
             // label10
@@ -548,17 +534,28 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(21, 418);
+            this.label10.Location = new System.Drawing.Point(8, 414);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 21);
-            this.label10.TabIndex = 84;
+            this.label10.TabIndex = 95;
             this.label10.Text = "Observações ";
             // 
-            // VagasCadastro
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(7, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(230, 25);
+            this.label12.TabIndex = 106;
+            this.label12.Text = "Alterar Registros de vagas";
+            // 
+            // FrmAlterarVagas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(747, 521);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox4);
@@ -572,9 +569,9 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
-            this.Name = "VagasCadastro";
-            this.Size = new System.Drawing.Size(757, 509);
-            this.Load += new System.EventHandler(this.VagasCadastro_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmAlterarVagas";
+            this.Text = "FrmAlterarVagas";
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtd)).EndInit();
@@ -590,10 +587,7 @@
         }
 
         #endregion
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker3;
-        private System.Windows.Forms.Label label12;
+
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label1;
@@ -636,5 +630,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
     }
 }

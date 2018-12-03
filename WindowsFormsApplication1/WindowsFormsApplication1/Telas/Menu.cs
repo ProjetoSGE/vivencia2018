@@ -41,19 +41,9 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void alunoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void registroToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-                
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)

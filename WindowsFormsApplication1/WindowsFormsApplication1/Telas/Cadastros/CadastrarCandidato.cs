@@ -1,25 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.Telas
+namespace WindowsFormsApplication1.Telas.Cadastros
 {
-    public partial class Home : UserControl
+    public partial class CadastrarCandidato : Form
     {
-        public Home()
+        public CadastrarCandidato()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

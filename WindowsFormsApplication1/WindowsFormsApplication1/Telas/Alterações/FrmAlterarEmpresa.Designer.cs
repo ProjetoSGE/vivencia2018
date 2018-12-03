@@ -1,13 +1,13 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace WindowsFormsApplication1.Telas.Alterações
 {
-    partial class EmpresaCadastro
+    partial class FrmAlterarEmpresa
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,15 +20,14 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -58,35 +57,27 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(789, 182);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(17, 20);
-            this.maskedTextBox2.TabIndex = 9;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 25);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "Cadastrar Empresa";
+            this.label4.Size = new System.Drawing.Size(254, 25);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Alterar Registros de Empresa";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(409, 391);
+            this.btnCancelar.Location = new System.Drawing.Point(434, 426);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(104, 29);
-            this.btnCancelar.TabIndex = 45;
+            this.btnCancelar.Size = new System.Drawing.Size(104, 45);
+            this.btnCancelar.TabIndex = 49;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -103,10 +94,10 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtNomeFantasi);
             this.groupBox2.Controls.Add(this.txtRazaoSocial);
-            this.groupBox2.Location = new System.Drawing.Point(126, 132);
+            this.groupBox2.Location = new System.Drawing.Point(98, 136);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(249, 203);
-            this.groupBox2.TabIndex = 44;
+            this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             // 
             // txtEmail
@@ -118,7 +109,7 @@
             // 
             // mtkCNPJ
             // 
-            this.mtkCNPJ.Location = new System.Drawing.Point(136, 19);
+            this.mtkCNPJ.Location = new System.Drawing.Point(135, 16);
             this.mtkCNPJ.Mask = "99.999.999/9999-99";
             this.mtkCNPJ.Name = "mtkCNPJ";
             this.mtkCNPJ.Size = new System.Drawing.Size(100, 20);
@@ -233,10 +224,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtEndereco);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(409, 132);
+            this.groupBox1.Location = new System.Drawing.Point(434, 136);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(249, 203);
-            this.groupBox1.TabIndex = 43;
+            this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             // 
             // txtPontoRef
@@ -315,29 +306,28 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.BackColor = System.Drawing.Color.Transparent;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(271, 391);
+            this.btnAlterar.Location = new System.Drawing.Point(243, 426);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(104, 29);
-            this.btnAlterar.TabIndex = 41;
-            this.btnAlterar.Text = "Cadastrar";
-            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Size = new System.Drawing.Size(104, 45);
+            this.btnAlterar.TabIndex = 46;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
-            // EmpresaCadastro
+            // FrmAlterarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(747, 521);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Name = "EmpresaCadastro";
-            this.Size = new System.Drawing.Size(747, 521);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmAlterarEmpresa";
+            this.Text = "FrmAlterarEmpresa";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -348,7 +338,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox2;
