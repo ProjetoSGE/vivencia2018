@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WindowsFormsApplication1.Classes.Base;
+using WindowsFormsApplication1.Classes.Classes.Vagas;
 
 namespace WindowsFormsApplication1.Classes.Classes.Empresa
 {
@@ -27,6 +28,18 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
         public List<VagasDTO> Listar()
         {
            return db.Listar();
+        }
+
+        public List<VagasView> ListarView()
+        {
+            VagasDataBase db = new VagasDataBase();
+            return db.ListarView();
+        }
+
+        public List<VagasView> Consultar(string vaga)
+        {
+            VagasDataBase db = new VagasDataBase();
+            return db.Consultar(vaga);
         }
     }
 }

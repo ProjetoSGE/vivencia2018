@@ -36,6 +36,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlCentro = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -51,16 +52,15 @@
             this.alunoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.candidatoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.empreSAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vagasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlCentru = new System.Windows.Forms.Panel();
+            this.vagasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -134,6 +134,19 @@
             this.panel6.Size = new System.Drawing.Size(755, 26);
             this.panel6.TabIndex = 14;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(730, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.DodgerBlue;
@@ -182,7 +195,7 @@
             // 
             this.homeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("homeToolStripMenuItem.Image")));
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click_1);
             // 
@@ -190,7 +203,7 @@
             // 
             this.sairToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sairToolStripMenuItem.Image")));
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -210,7 +223,7 @@
             // 
             this.alunoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("alunoToolStripMenuItem.Image")));
             this.alunoToolStripMenuItem.Name = "alunoToolStripMenuItem";
-            this.alunoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alunoToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.alunoToolStripMenuItem.Text = "Aluno";
             this.alunoToolStripMenuItem.Click += new System.EventHandler(this.alunoToolStripMenuItem_Click);
             // 
@@ -218,7 +231,7 @@
             // 
             this.candidatoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("candidatoToolStripMenuItem.Image")));
             this.candidatoToolStripMenuItem.Name = "candidatoToolStripMenuItem";
-            this.candidatoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.candidatoToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.candidatoToolStripMenuItem.Text = "Candidato";
             this.candidatoToolStripMenuItem.Click += new System.EventHandler(this.candidatoToolStripMenuItem_Click);
             // 
@@ -226,7 +239,7 @@
             // 
             this.empresasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("empresasToolStripMenuItem.Image")));
             this.empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.empresasToolStripMenuItem.Text = "Empresas";
             this.empresasToolStripMenuItem.Click += new System.EventHandler(this.empresasToolStripMenuItem_Click_1);
             // 
@@ -234,7 +247,7 @@
             // 
             this.vagasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vagasToolStripMenuItem.Image")));
             this.vagasToolStripMenuItem.Name = "vagasToolStripMenuItem";
-            this.vagasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vagasToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.vagasToolStripMenuItem.Text = "Vagas";
             this.vagasToolStripMenuItem.Click += new System.EventHandler(this.vagasToolStripMenuItem_Click_1);
             // 
@@ -254,7 +267,7 @@
             this.alunoToolStripMenuItem1.BackColor = System.Drawing.Color.DodgerBlue;
             this.alunoToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("alunoToolStripMenuItem1.Image")));
             this.alunoToolStripMenuItem1.Name = "alunoToolStripMenuItem1";
-            this.alunoToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.alunoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.alunoToolStripMenuItem1.Text = "Aluno";
             this.alunoToolStripMenuItem1.Click += new System.EventHandler(this.alunoToolStripMenuItem1_Click);
             // 
@@ -263,7 +276,7 @@
             this.candidatoToolStripMenuItem1.BackColor = System.Drawing.Color.DodgerBlue;
             this.candidatoToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("candidatoToolStripMenuItem1.Image")));
             this.candidatoToolStripMenuItem1.Name = "candidatoToolStripMenuItem1";
-            this.candidatoToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.candidatoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.candidatoToolStripMenuItem1.Text = "Candidato";
             this.candidatoToolStripMenuItem1.Click += new System.EventHandler(this.candidatoToolStripMenuItem1_Click);
             // 
@@ -272,30 +285,9 @@
             this.empreSAToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
             this.empreSAToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("empreSAToolStripMenuItem.Image")));
             this.empreSAToolStripMenuItem.Name = "empreSAToolStripMenuItem";
-            this.empreSAToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.empreSAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.empreSAToolStripMenuItem.Text = "Empresa";
             this.empreSAToolStripMenuItem.Click += new System.EventHandler(this.empreSAToolStripMenuItem_Click);
-            // 
-            // vagasToolStripMenuItem1
-            // 
-            this.vagasToolStripMenuItem1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.vagasToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("vagasToolStripMenuItem1.Image")));
-            this.vagasToolStripMenuItem1.Name = "vagasToolStripMenuItem1";
-            this.vagasToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
-            this.vagasToolStripMenuItem1.Text = "Vagas";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(730, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // pnlCentru
             // 
@@ -304,6 +296,13 @@
             this.pnlCentru.Size = new System.Drawing.Size(755, 501);
             this.pnlCentru.TabIndex = 16;
             this.pnlCentru.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCentru_Paint);
+            // 
+            // vagasToolStripMenuItem1
+            // 
+            this.vagasToolStripMenuItem1.Name = "vagasToolStripMenuItem1";
+            this.vagasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.vagasToolStripMenuItem1.Text = "Vagas";
+            this.vagasToolStripMenuItem1.Click += new System.EventHandler(this.vagasToolStripMenuItem1_Click_2);
             // 
             // Menu
             // 
@@ -326,10 +325,10 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,9 +358,9 @@
         private System.Windows.Forms.ToolStripMenuItem alunoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem candidatoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem empreSAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vagasToolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel pnlCentru;
+        private System.Windows.Forms.ToolStripMenuItem vagasToolStripMenuItem1;
     }
 }
 

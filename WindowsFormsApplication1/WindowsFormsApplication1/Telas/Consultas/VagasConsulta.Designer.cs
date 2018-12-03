@@ -30,9 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtVaga = new System.Windows.Forms.TextBox();
             this.Pesquisar = new System.Windows.Forms.Label();
             this.dgvVaga = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVaga)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +61,14 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtVaga
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(553, 20);
-            this.textBox1.TabIndex = 22;
+            this.txtVaga.Location = new System.Drawing.Point(72, 69);
+            this.txtVaga.Name = "txtVaga";
+            this.txtVaga.Size = new System.Drawing.Size(553, 20);
+            this.txtVaga.TabIndex = 22;
             // 
             // Pesquisar
             // 
@@ -78,10 +83,39 @@
             // dgvVaga
             // 
             this.dgvVaga.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVaga.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dgvVaga.Location = new System.Drawing.Point(17, 100);
             this.dgvVaga.Name = "dgvVaga";
             this.dgvVaga.Size = new System.Drawing.Size(711, 391);
             this.dgvVaga.TabIndex = 20;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "NomeVaga";
+            this.Column2.HeaderText = "Vaga";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Empresa";
+            this.Column3.HeaderText = "Empresa";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "QuantidadeDeVaga";
+            this.Column4.HeaderText = "QTD ";
+            this.Column4.Name = "Column4";
             // 
             // VagasConsulta
             // 
@@ -90,7 +124,7 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtVaga);
             this.Controls.Add(this.Pesquisar);
             this.Controls.Add(this.dgvVaga);
             this.Name = "VagasConsulta";
@@ -105,8 +139,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtVaga;
         private System.Windows.Forms.Label Pesquisar;
         private System.Windows.Forms.DataGridView dgvVaga;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

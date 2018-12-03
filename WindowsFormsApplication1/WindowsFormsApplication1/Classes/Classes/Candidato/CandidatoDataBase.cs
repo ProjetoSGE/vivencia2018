@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
                 {
                     new MySqlParameter("ID_ALUNO", c.IdAluno),
                     new MySqlParameter("ID_VAGA", c.IdVaga),
-                    new MySqlParameter("DS_STATUS", c.IdStatus),
+                    new MySqlParameter("DS_STATUS", c.Status),
                     new MySqlParameter("ID_VAGA", c.IdVaga)
                 };
                 

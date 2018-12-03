@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
 
         public int IdVaga { get; set; }
 
-        public EnStatus IdStatus { get; set; }
+        public string Status { get; set; }
     }
 
     

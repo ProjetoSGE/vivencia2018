@@ -252,8 +252,8 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 novavaga.DataDeInicio = reader.GetDateTime("DT_INICIOESTAGIO");
                 novavaga.Sexo = reader.GetString("DS_SEXO");
                 novavaga.Empresa = reader.GetString("nm_fantasia");
-                novavaga.HorarioEntrada = reader.GetString("DS_HORARIO");
-                novavaga.HorarioSaida = reader.GetString("DS_INTERVALO");
+                novavaga.HorarioEntrada = reader.GetString("ds_horarioEntrada");
+                novavaga.HorarioSaida = reader.GetString("ds_horarioSaida");
                 novavaga.Intervalo = reader.GetString("ds_intervalo");
                 novavaga.SeguroDeVida = reader.GetBoolean("OP_SEGURODEVIDA");
                 novavaga.AuxTransporte = reader.GetBoolean("OP_AUXTRANSPORTE");
@@ -268,7 +268,57 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 novavaga.InfoCorel = reader.GetBoolean("OP_INFOCOREL");
                 novavaga.InfoPhotoShop = reader.GetBoolean("OP_INFOPHOTOSHOP");
                 novavaga.InfoProgramacao = reader.GetBoolean("OP_INFOPROGRAMACAO");
-                novavaga.Outros = reader.GetString("OP_OUTROS");
+                novavaga.Outros = reader.GetString("ds_outros");
+                novavaga.Observacao = reader.GetString("DS_OBSERVACAO");
+                novavaga.CompPessoal = reader.GetString("DS_COMPPESSOAL");
+                novavaga.Tarefas = reader.GetString("DS_TAREFAS");
+
+                vagas.Add(novavaga);
+            }
+            reader.Close();
+
+            return vagas;
+        }
+
+        public List<VagasView> Consultar(string vaga)
+        {
+            string script = @"SELECT * FROM vw_vagas WHERE nm_vaga LIKE @ nm_vaga";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nm_vaga", vaga + "%"));
+
+            DataBase db = new DataBase();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            List<VagasView> vagas = new List<VagasView>();
+
+            while (reader.Read())
+            {
+                VagasView novavaga = new VagasView();
+                novavaga.Id = reader.GetInt32("ID_VAGA");
+                novavaga.NomeVaga = reader.GetString("NM_VAGA");
+                novavaga.NomeArea = reader.GetString("NM_AREA");
+                novavaga.QuantidadeDeVaga = reader.GetInt32("QTD_VAGA");
+                novavaga.DataDeInicio = reader.GetDateTime("DT_INICIOESTAGIO");
+                novavaga.Sexo = reader.GetString("DS_SEXO");
+                novavaga.Empresa = reader.GetString("nm_fantasia");
+                novavaga.HorarioEntrada = reader.GetString("ds_horarioEntrada");
+                novavaga.HorarioSaida = reader.GetString("ds_horarioSaida");
+                novavaga.Intervalo = reader.GetString("ds_intervalo");
+                novavaga.SeguroDeVida = reader.GetBoolean("OP_SEGURODEVIDA");
+                novavaga.AuxTransporte = reader.GetBoolean("OP_AUXTRANSPORTE");
+                novavaga.RecRemunerado = reader.GetBoolean("OP_RECREMUNERADO");
+                novavaga.ValeRefeicao = reader.GetBoolean("OP_VALEREFEICAO");
+                novavaga.CestaBasica = reader.GetBoolean("OP_CESTABASICA");
+                novavaga.ReLocal = reader.GetBoolean("OP_REFLOCAL");
+                novavaga.AssisMedica = reader.GetBoolean("OP_ASSISMEDICA");
+                novavaga.NivelIngles = reader.GetString("NVL_INGLES");
+                novavaga.InfoOffice = reader.GetBoolean("OP_INFOOFFICE");
+                novavaga.InfoAutoCAD = reader.GetBoolean("OP_INFOAUTOCAD");
+                novavaga.InfoCorel = reader.GetBoolean("OP_INFOCOREL");
+                novavaga.InfoPhotoShop = reader.GetBoolean("OP_INFOPHOTOSHOP");
+                novavaga.InfoProgramacao = reader.GetBoolean("OP_INFOPROGRAMACAO");
+                novavaga.Outros = reader.GetString("ds_outros");
                 novavaga.Observacao = reader.GetString("DS_OBSERVACAO");
                 novavaga.CompPessoal = reader.GetString("DS_COMPPESSOAL");
                 novavaga.Tarefas = reader.GetString("DS_TAREFAS");

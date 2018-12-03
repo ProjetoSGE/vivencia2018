@@ -167,12 +167,23 @@ namespace WindowsFormsApplication1
 
         private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+         
         }
 
         private void pnlCentru_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void vagasToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vagasToolStripMenuItem1_Click_2(object sender, EventArgs e)
+        {
+            VagasConsulta tela = new VagasConsulta();
+            OpenScreen(tela);
         }
     }
 }

@@ -47,8 +47,7 @@ namespace WindowsFormsApplication1.Telas.Alterações
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
                 this.alunos.Nome = txtNome.Text;
                 this.alunos.Idade = txtIdade.Text;
                 this.alunos.AreaPreferencial = txtPreferencia.Text;
@@ -67,7 +66,7 @@ namespace WindowsFormsApplication1.Telas.Alterações
                 this.alunos.AnoDeEstudo = cboAnoEstudou.SelectedItem.ToString();
                 this.alunos.Rg = txtRg.Text;
 
-            } 
+            
         }
     }
 }

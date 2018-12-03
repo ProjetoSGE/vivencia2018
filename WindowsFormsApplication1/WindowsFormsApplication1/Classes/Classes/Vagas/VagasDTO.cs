@@ -9,7 +9,6 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
     public class VagasDTO
     {
         public int Id { get; set; }
-        public int IdQtdVaga { get; set; }
         public string NomeVaga { get; set; }
         public string NomeArea { get; set; }
         public int QuantidadeDeVaga { get; set; }
