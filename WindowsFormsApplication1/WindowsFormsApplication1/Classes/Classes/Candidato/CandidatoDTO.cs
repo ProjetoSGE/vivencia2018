@@ -18,13 +18,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
         public EnStatus IdStatus { get; set; }
     }
 
-    public enum EnStatus
-    {
-        [Description("Dispensado")]
-        Dispensado = 0,
-        [Description("Em Andamento")]
-        Andamento = 1,
-        [Description("Contratado")]
-        Contratado = 2
-    }
+    
+
+
 }

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using WindowsFormsApplication1.Classes.Base;
 using WindowsFormsApplication1.Classes.Classes.Empresa;
 using Asnsf.AdmPersonalizadora.Lib.Auxiliar;
+using WindowsFormsApplication1.Classes.Classes.Auxiliares;
+using static WindowsFormsApplication1.Classes.Auxiliar.Auxiliares.Enumeradores;
+using WindowsFormsApplication1.Classes.Classes.Aluno;
 
 namespace WindowsFormsApplication1.Classes.Classes.Candidato
 {
@@ -15,7 +18,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
         internal void Salvar(CandidatoDTO c, VagasDTO v)
         {
             var dBase = new DataBase();
-
+            
             try
             {
 
@@ -35,34 +38,11 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
                         @DS_STATUS
                     );
 
-                    UPDATE TB_VAGAS
+                    UPDATE QT
                     SET
-                        NM_VAGA = @NM_VAGA,
-                        NM_AREA = @NM_AREA,
-                        QTD_AREA = @QTD_AREA - 1,
-                        DT_INICIOESTAGIO = @DT_INICIOESTAGIO,
-                        DS_SEXO = @DS_SEXO,
-                        ID_EMPRESA = @ID_EMPRESA,
-                        DS_HORARIOENTRADA = @DS_HORARIOENTRADA,
-                        DS_HORARIOSAIDA = @DS_HORARIOSAIDA,
-                        DS_INTERVALO = @DS_INTERVALO,
-                        OP_SEGURODEVIDA = @OP_SEGURODEVIDA,
-                        OP_AUXTRANSPORTE = @OP_AUXTRANSPORTE,
-                        OP_RECREMUNERADO = @OP_RECREMUNERADO,
-                        OP_VALEREFEICAO = @OP_VALEREFEICAO,
-                        OP_CESTABASICA = @OP_CESTABASICA,
-                        OP_REFLOCAL = @OP_REFLOCAL,
-                        OP_ASSISMEDICA = @OP_ASSISMEDICA,
-                        NVL_INGLES = @NVL_INGLES,
-                        OP_INFOOFFICE = @OP_INFOOFFICE,
-                        OP_INFOAUTOCAD = @OP_INFOAUTOCAD,
-                        OP_INFOCOREL = @OP_INFOCOREL,
-                        OP_INFOPHOTOSHOP = @OP_INFOPHOTOSHOP,
-                        OP_INFOPROGRAMACAO = @OP_INFOPROGRAMACAO,
-                        DS_OUTROS = @DS_OUTROS,
-                        DS_OBSERVACAO = @DS_OBSERVACAO,
-                        DS_COMPPESSOAL = @DS_COMPPESSOAL,
-                        DS_TAREFAS = @DS_TAREFAS
+                        QT_VAGAS = @QT_VAGAS - 1
+                    FROM TB_QTVAGAS AS QT
+                    INNER JOIN TB_VAGAS VG ON VG.ID_QTVAGAS = QT.ID_QTVAGAS
                     WHERE
                         ID_VAGA = @ID_VAGA;
 
@@ -73,31 +53,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
                     new MySqlParameter("ID_ALUNO", c.IdAluno),
                     new MySqlParameter("ID_VAGA", c.IdVaga),
                     new MySqlParameter("DS_STATUS", c.IdStatus),
-                    new MySqlParameter("NM_VAGA", v.NomeVaga),
-                    new MySqlParameter("NM_AREA", v.NomeArea),
-                    new MySqlParameter("QTD_AREA", v.QuantidadeDeVaga),
-                    new MySqlParameter("DT_INICIOESTAGIO", v.DataDeInicio),
-                    new MySqlParameter("ID_EMPRESA", v.IdEmpresa),
-                    new MySqlParameter("DS_HORARIOENTRADA", v.HorarioEntrada),
-                    new MySqlParameter("DS_HORARIOSAIDA", v.HorarioSaida),
-                    new MySqlParameter("DS_INTERVALO", v.Intervalo),
-                    new MySqlParameter("OP_SEGURODEVIDA", v.SeguroDeVida),
-                    new MySqlParameter("OP_AUXTRANSPORTE", v.AuxTransporte),
-                    new MySqlParameter("OP_RECREMUNERADO", v.RecRemunerado),
-                    new MySqlParameter("OP_VALEREFEICAO", v.ValeRefeicao),
-                    new MySqlParameter("OP_CESTABASICA", v.CestaBasica),
-                    new MySqlParameter("OP_REFLOCAL", v.ReLocal),
-                    new MySqlParameter("OP_ASSISMEDICA", v.AssisMedica),
-                    new MySqlParameter("NVL_INGLES", v.NivelIngles),
-                    new MySqlParameter("OP_INFOOFFICE", v.InfoOffice),
-                    new MySqlParameter("OP_INFOAUTOCAD", v.InfoAutoCAD),
-                    new MySqlParameter("OP_INFOCOREL", v.InfoCorel),
-                    new MySqlParameter("OP_INFOPHOTOSHOP", v.InfoPhotoShop),
-                    new MySqlParameter("OP_INFOPROGRAMACAO", v.InfoProgramacao),
-                    new MySqlParameter("DS_OUTROS", v.Outros),
-                    new MySqlParameter("DS_OBSERVACAO", v.Observacao),
-                    new MySqlParameter("DS_COMPPESSOAL", v.CompPessoal),
-                    new MySqlParameter("DS_TAREFAS", v.Tarefas)
+                    new MySqlParameter("ID_VAGA", c.IdVaga)
                 };
                 
                           
@@ -111,7 +67,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
         }
 
 
-        internal List<Tuple<CandidatoDTO, VagasDTO>> Listar(string pFiltro)
+        internal List<Tuple<CandidatoDTO, VagasDTO, AlunoDTO>> Listar(string pFiltro)
         {
             MySqlDataReader dR = null;
             try
@@ -122,24 +78,10 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
                         C.ID_ALUNO,
                         C.ID_VAGA,
                         C.DS_STATUS,
-A.NM_ALUNO,
-NM_CURSO,
-DS_RG,
-DS_ANOESTUDO,
-DT_NASCIMENTO,
-DS_IDADE,
-DS_ENDERECO,
-DS_NUMERO,
-DS_BAIRRO,
-DS_CEP,
-NR_FIXO,
-NR_CELULAR,
-DS_SEESTUDA,
-DS_QUALCURSO,
-DS_TURNO,
-DS_EXPPROFISSIONAL,
-DS_AREAPREFERENCIAL
-
+                        A.NM_ALUNO,
+                        A.DS_IDADE,
+                        A.DS_NUMERO,
+                        A.NR_FIXO,
                         V.NM_VAGA,
                         V.NM_AREA,
                         V.QTD_AREA,
@@ -191,23 +133,23 @@ DS_AREAPREFERENCIAL
                         new MySqlParameter("P_FILTRO_L", pFiltro.ParseToSqlLike())
                     });
 
-                var lReturn = new List<Tuple<Cargo>>();
-                using (dR = new DBase.DBase().ExecuteScriptDataReader(sScript, !pFiltro.ParseIsNullOrEmpty() ? lParams : null))
+                var lReturn = new List<Tuple<CandidatoDTO, VagasDTO, AlunoDTO>>();
+                using (dR = new DataBase().ExecuteSelectScript(sScript, !pFiltro.ParseIsNullOrEmpty() ? lParams : null))
                     while (dR.Read())
-                        lReturn.Add(new Tuple<Cargo>(new Cargo
+                        lReturn.Add(new Tuple<CandidatoDTO, VagasDTO, AlunoDTO>(new CandidatoDTO
                         {
-                            IdCargo = dR["ID_CARGO"].ParseToLong(),
-                            DsNome = dR["DS_NOME"].ParseToString(),
-                            NrSalario = dR["NR_SALARIO"].ParseToDouble(),
-                            TpPermissao = Extensions.GetEnum<EnPermissao>(dR["TP_PERMISAO"].ParseToInt()),
-                            FlPedidoCompra = dR["FL_PEDIDO_COMPRA"].ParseToBool(),
-                            FlPedidoVenda = dR["FL_PEDIDO_VENDA"].ParseToBool(),
-                            IdStatus = Extensions.GetEnum<EnStatus>(dR["ID_STATUS"].ParseToInt()),
-                            DtCadastro = dR["DT_CADASTRO"].ParseToDateTime(),
-                            DtAlteracao = dR["DT_ALTERACAO"].ParseToDateTime(),
-                            IdLoginCadastro = dR["ID_LOGIN_CADASTRO"].ParseToLong(),
-                            IdLoginAlteracao = dR["ID_LOGIN_ALTERACAO"].ParseToLong()
-                        }));
+
+                            Id = dR["ID_LOGIN_ALTERACAO"].ParseToInt()
+                        }, new VagasDTO
+                        {
+                           
+                       
+                        }, new AlunoDTO
+                        {
+
+                        }
+
+                        ));
 
                 return lReturn;
             }
@@ -217,6 +159,42 @@ DS_AREAPREFERENCIAL
                     dR.Close();
             }
         }
+
+
+         internal List<VText> ListarCBoxCursos()
+        {
+            MySqlDataReader dR = null;
+            try
+            {
+                const string sScript = @"
+                    SELECT
+                        C.ID_CURSO,
+                        C.NM_CURSO,
+                        C.ID_TURMA,
+                        T.NM_TURMA
+                    FROM
+                        TB_CURSO C 
+                    INNER JOIN TB_TURMA T ON  C.ID_TURMA = @ID_STATUS
+                    WHERE
+                       ID_CURSO = @ID_CURSO
+                    ORDER BY
+                        DS_NOME_FANTASIA";
+
+                var lReturn = new List<VText>();
+                    while (dR.Read())
+                        lReturn.Add(new VText
+                        {
+                            Value = dR["ID_CURSO"].ParseToString(),
+                            Text = dR["NM_CURSO"].ParseToString().ParseToConcatStrings(dR["NM_CURSO"].ParseToString())
+                        });
+
+                return lReturn;
+            }
+            finally
+            {
+                if (dR != null && !dR.IsClosed)
+                    dR.Close();
+            }
 
 
 
