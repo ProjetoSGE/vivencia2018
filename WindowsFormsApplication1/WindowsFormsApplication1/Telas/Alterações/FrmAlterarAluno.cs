@@ -47,7 +47,8 @@ namespace WindowsFormsApplication1.Telas.Alterações
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
                 this.alunos.Nome = txtNome.Text;
                 this.alunos.Idade = txtIdade.Text;
                 this.alunos.AreaPreferencial = txtPreferencia.Text;
@@ -58,15 +59,38 @@ namespace WindowsFormsApplication1.Telas.Alterações
                 this.alunos.Endereco = txtEndereco.Text;
                 this.alunos.ExpProfissional = txtExperiencia.Text;
                 this.alunos.Nascimento = dtpDataNasc.Value.Date;
-                this.alunos.Curso = cboCurso.SelectedItem.ToString();
+                this.alunos.QualCurso = cboCurso.SelectedItem.ToString();
                 this.alunos.Turno = cboTurno.SelectedItem.ToString();
-                this.alunos.QualCurso = cboSerie.SelectedItem.ToString();
+                this.alunos.Curso = cboSerie.SelectedItem.ToString();
                 this.alunos.SeEstuda = rdbSim.Checked;
                 this.alunos.Numero = txtNumero.Text;
                 this.alunos.AnoDeEstudo = cboAnoEstudou.SelectedItem.ToString();
                 this.alunos.Rg = txtRg.Text;
 
-            
-        }
+                AlunoBussiness buss = new AlunoBussiness();
+                buss.Alterar(alunos);
+
+
+                MessageBox.Show("Aluno alterado com sucesso.", "SGE",
+                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                
+                this.Close();
+                /*ConsultarCliente tela = new ConsultarCliente();
+                tela.Show();
+                tela.CarregarGrid();*/
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível alterar o aluno.", "SGE",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+
+
+
+        
+        }   
     }
 }

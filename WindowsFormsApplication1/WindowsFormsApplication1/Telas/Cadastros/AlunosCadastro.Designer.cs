@@ -54,6 +54,8 @@
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.mskCEP = new System.Windows.Forms.MaskedTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtRG = new System.Windows.Forms.TextBox();
             this.mskRecado = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,8 +72,6 @@
             this.mskRes = new System.Windows.Forms.MaskedTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
-            this.txtRG = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -356,6 +356,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Aluno";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(126, 222);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 21);
+            this.label18.TabIndex = 70;
+            this.label18.Text = "RG:";
+            // 
+            // txtRG
+            // 
+            this.txtRG.Location = new System.Drawing.Point(169, 223);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(132, 20);
+            this.txtRG.TabIndex = 69;
+            // 
             // mskRecado
             // 
             this.mskRecado.Location = new System.Drawing.Point(170, 197);
@@ -427,6 +444,7 @@
             this.cboCurso.Name = "cboCurso";
             this.cboCurso.Size = new System.Drawing.Size(133, 21);
             this.cboCurso.TabIndex = 67;
+            this.cboCurso.SelectedIndexChanged += new System.EventHandler(this.cboCurso_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -463,7 +481,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(18, 194);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(143, 21);
+            this.label11.Size = new System.Drawing.Size(141, 21);
             this.label11.TabIndex = 50;
             this.label11.Text = "Telefone(RECADO):";
             // 
@@ -473,7 +491,7 @@
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(52, 170);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(109, 21);
+            this.label14.Size = new System.Drawing.Size(107, 21);
             this.label14.TabIndex = 52;
             this.label14.Text = "Telefone(RES):";
             // 
@@ -509,6 +527,7 @@
             this.btnCancelar.TabIndex = 75;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnsalvar
             // 
@@ -521,23 +540,6 @@
             this.btnsalvar.Text = "Cadastrar";
             this.btnsalvar.UseVisualStyleBackColor = true;
             this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click_1);
-            // 
-            // txtRG
-            // 
-            this.txtRG.Location = new System.Drawing.Point(169, 223);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(132, 20);
-            this.txtRG.TabIndex = 69;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(126, 222);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 21);
-            this.label18.TabIndex = 70;
-            this.label18.Text = "RG:";
             // 
             // AlunosCadastro
             // 

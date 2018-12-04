@@ -57,15 +57,16 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                                                      ds_cep = @ds_cep,
                                                     nr_fixo = @nr_fixo,
                                                  nr_celular = @nr_celular,
-                                                ds_seEstudO = @ds_seEstuda,
+                                                ds_seEstuda = @ds_seEstuda,
                                                ds_qualCurso = @ds_qualCurso,
                                                    ds_turno = @ds_turno,
                                          ds_expProfissional = @ds_expProfissional,
-                                         ds_areaPreferencia = @ds_areaPreferencia
+                                        ds_areaPreferencial = @ds_areaPreferencial
                                             WHERE id_aluno = @id_aluno";
 
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Id_aluno", dto.Id));
             parms.Add(new MySqlParameter("nm_aluno", dto.Nome));
             parms.Add(new MySqlParameter("nm_curso", dto.Curso));
             parms.Add(new MySqlParameter("ds_anoEstudo", dto.AnoDeEstudo));
@@ -81,7 +82,8 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
             parms.Add(new MySqlParameter("ds_qualCurso", dto.QualCurso));
             parms.Add(new MySqlParameter("ds_turno", dto.Turno));
             parms.Add(new MySqlParameter("ds_expProfissional", dto.ExpProfissional));
-            parms.Add(new MySqlParameter("ds_areaPreferencia", dto.AreaPreferencial));
+            parms.Add(new MySqlParameter("ds_areaPreferencial", dto.AreaPreferencial));
+            
 
 
             DataBase db = new DataBase();
@@ -127,7 +129,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                 dto.QualCurso = reader.GetString("ds_qualCurso");
                 dto.Turno = reader.GetString("ds_turno");
                 dto.ExpProfissional = reader.GetString("ds_expProfissional");
-                dto.AreaPreferencial = reader.GetString("ds_areaPreferencia");
+                dto.AreaPreferencial = reader.GetString("ds_areaPreferencial");
 
 
                 lista.Add(dto);

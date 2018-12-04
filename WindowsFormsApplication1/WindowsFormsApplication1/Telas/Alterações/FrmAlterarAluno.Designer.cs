@@ -52,6 +52,8 @@
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.mskCEP = new System.Windows.Forms.MaskedTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtRg = new System.Windows.Forms.TextBox();
             this.mskRecado = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,8 +70,6 @@
             this.mskRes = new System.Windows.Forms.MaskedTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.txtRg = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -82,7 +82,7 @@
             this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(30, 10);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(225, 25);
+            this.label17.Size = new System.Drawing.Size(224, 25);
             this.label17.TabIndex = 79;
             this.label17.Text = "Alterar Regsitro do Aluno";
             // 
@@ -338,6 +338,23 @@
             this.groupBox4.TabIndex = 84;
             this.groupBox4.TabStop = false;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(125, 222);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 21);
+            this.label18.TabIndex = 70;
+            this.label18.Text = "RG:";
+            // 
+            // txtRg
+            // 
+            this.txtRg.Location = new System.Drawing.Point(170, 225);
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(132, 20);
+            this.txtRg.TabIndex = 69;
+            // 
             // mskRecado
             // 
             this.mskRecado.Location = new System.Drawing.Point(170, 197);
@@ -397,6 +414,14 @@
             // cboCurso
             // 
             this.cboCurso.FormattingEnabled = true;
+            this.cboCurso.Items.AddRange(new object[] {
+            "Administração",
+            "Comunicação Visual",
+            "Eletromecânica",
+            "Eletrotécnica",
+            "Informática",
+            "Inglês",
+            "Secretariado"});
             this.cboCurso.Location = new System.Drawing.Point(169, 53);
             this.cboCurso.Name = "cboCurso";
             this.cboCurso.Size = new System.Drawing.Size(132, 21);
@@ -415,6 +440,17 @@
             // cboAnoEstudou
             // 
             this.cboAnoEstudou.FormattingEnabled = true;
+            this.cboAnoEstudou.Items.AddRange(new object[] {
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010"});
             this.cboAnoEstudou.Location = new System.Drawing.Point(170, 84);
             this.cboAnoEstudou.Name = "cboAnoEstudou";
             this.cboAnoEstudou.Size = new System.Drawing.Size(124, 21);
@@ -426,7 +462,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(17, 194);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(143, 21);
+            this.label11.Size = new System.Drawing.Size(141, 21);
             this.label11.TabIndex = 50;
             this.label11.Text = "Telefone(RECADO):";
             // 
@@ -436,7 +472,7 @@
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(52, 170);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(109, 21);
+            this.label14.Size = new System.Drawing.Size(107, 21);
             this.label14.TabIndex = 52;
             this.label14.Text = "Telefone(RES):";
             // 
@@ -485,23 +521,6 @@
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // txtRg
-            // 
-            this.txtRg.Location = new System.Drawing.Point(170, 225);
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(132, 20);
-            this.txtRg.TabIndex = 69;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(125, 222);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 21);
-            this.label18.TabIndex = 70;
-            this.label18.Text = "RG:";
-            // 
             // FrmAlterarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -516,6 +535,7 @@
             this.Controls.Add(this.btnAlterar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAlterarAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAlterarAluno";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

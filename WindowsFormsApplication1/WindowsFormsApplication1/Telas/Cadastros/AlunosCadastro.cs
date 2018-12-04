@@ -90,8 +90,8 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         private void btnsalvar_Click_1(object sender, EventArgs e)
         {
 
-            /*try
-            {*/
+            try
+            {
                 AlunoDTO dto = new AlunoDTO();
 
                 dto.Nome = txtNome.Text;
@@ -104,9 +104,9 @@ namespace WindowsFormsApplication1.Telas.Cadastros
                 dto.Endereco = txtEndereco.Text;
                 dto.ExpProfissional = txtExperiencia.Text;
                 dto.Nascimento = dtpDataNasc.Value.Date;
-                dto.Curso = cboCurso.SelectedItem.ToString();
+                dto.QualCurso = cboCurso.SelectedItem.ToString();
                 dto.Turno = cboTurno.SelectedItem.ToString();
-                dto.QualCurso = cboSerie.SelectedItem.ToString();
+                dto.Curso = cboSerie.SelectedItem.ToString();
                 dto.SeEstuda = rdnSim.Checked;
                 dto.Numero = txtNumero.Text;
                 dto.AnoDeEstudo = cboAnoEstudou.SelectedItem.ToString();
@@ -115,20 +115,39 @@ namespace WindowsFormsApplication1.Telas.Cadastros
                 AlunoBussiness business = new AlunoBussiness();
                 business.Salvar(dto);
 
-            /*}
-            catch (Exception)
+            MessageBox.Show("Empresa cadastrada com sucesso", "SGE");
+
+            this.Hide();
+            Menu tela = new Menu();
+            tela.Show();
+
+        }
+
+            catch (ArgumentException ex)
             {
+                MessageBox.Show(ex.Message, "SGE",
+                  MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                throw new ArgumentException("Preencha todos os campos utilizando apenas informações válidas ");
-                
-            }*/
-            
-
+            }
 
 
 
 
 
+
+
+
+}
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu tela = new Menu();
+            tela.Show();
+        }
+
+        private void cboCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Classes.Classes.Aluno;
 using WindowsFormsApplication1.Telas.Cadastros;
+using WindowsFormsApplication1.Telas.Alterações;
 
 namespace WindowsFormsApplication1.Telas.Consultas
 {
@@ -60,6 +61,57 @@ namespace WindowsFormsApplication1.Telas.Consultas
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvAluno_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 5)
+                {
+                    AlunoDTO funcionario = dgvAluno.CurrentRow.DataBoundItem as AlunoDTO;
+
+                    DialogResult r = MessageBox.Show("Deseja excluir o aluno?", "SGE",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Question);
+
+                    if (r == DialogResult.Yes)
+                    {
+                        AlunoBussiness business = new AlunoBussiness();
+                        business.Remover(funcionario.Id);
+
+                        CarregarGrid();
+
+                    }
+                }
+                if (e.ColumnIndex == 4)
+                {
+                    AlunoDTO funcionario = dgvAluno.CurrentRow.DataBoundItem as AlunoDTO;
+
+                    DialogResult r = MessageBox.Show("Deseja alterar o aluno?", "SGE",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Question);
+
+                    if (r == DialogResult.Yes)
+                    {
+                        AlunoDTO dto = dgvAluno.Rows[e.RowIndex].DataBoundItem as AlunoDTO;
+                        this.Hide();
+                        FrmAlterarAluno tela = new FrmAlterarAluno();
+                        tela.LoadScrean(dto);
+                        tela.Show();
+
+
+                    }
+                }
+            }
+            catch (Exception)
+            {
+               /* MessageBox.Show("Não foi possível realizar a ação requisitada.", "SGE",
+                  MessageBoxButtons.OK, MessageBoxIcon.Error);*/
+
+
+               
+            }
         }
     }
 }

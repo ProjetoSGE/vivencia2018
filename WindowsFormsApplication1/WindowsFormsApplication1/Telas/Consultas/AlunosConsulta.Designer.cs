@@ -98,10 +98,11 @@
             this.dgvAluno.ReadOnly = true;
             this.dgvAluno.Size = new System.Drawing.Size(709, 400);
             this.dgvAluno.TabIndex = 13;
+            this.dgvAluno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAluno_CellContentClick_1);
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "id_aluno";
+            this.Column2.DataPropertyName = "Id";
             this.Column2.HeaderText = "ID";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -109,7 +110,7 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "nm_nome";
+            this.Column1.DataPropertyName = "Nome";
             this.Column1.HeaderText = "Nome";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -117,7 +118,7 @@
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "ds_idade";
+            this.Column4.DataPropertyName = "Idade";
             this.Column4.HeaderText = "Idade";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -125,7 +126,7 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "nm_curso";
+            this.Column3.DataPropertyName = "QualCurso";
             this.Column3.HeaderText = "Curso";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
