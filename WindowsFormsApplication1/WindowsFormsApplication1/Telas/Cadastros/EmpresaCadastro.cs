@@ -36,16 +36,47 @@ namespace WindowsFormsApplication1
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+ 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
             try
             {
                 EmpresaDTO empresa = new EmpresaDTO();
+
+                if (mktCep.MaskCompleted)
+                {
+                    empresa.Cep = mktCep.Text.Trim();
+
+                }
+                else
+                {
+                    throw new ArgumentException("CEP é obrigatório");
+                }
+
+                if (mktTelefone.MaskCompleted)
+                {
+                    empresa.Telefone = mktTelefone.Text.Trim();
+
+                }
+                else
+                {
+                    throw new ArgumentException("Telefone é obrigatório");
+                }
+
+
+
                 empresa.Cnpj = mtkCNPJ.Text.Trim();
                 empresa.Nome = txtNomeFantasi.Text.Trim();
                 empresa.RazãoSocial = txtRazaoSocial.Text.Trim();
-                empresa.CodEstadual = Convert.ToInt32(mktRegistroEstadual.Text.Trim());
-                empresa.Telefone = mktTelefone.Text.Trim();
+                empresa.CodEstadual = mktRegistroEstadual.Text.Trim();
                 empresa.Email = txtEmail.Text.Trim();
-                empresa.Cep = mktCep.Text.Trim();
                 empresa.Bairro = txtBairro.Text.Trim();
                 empresa.Endereço = txtEndereco.Text.Trim();
                 empresa.PontoDeReferencia = txtPontoRef.Text.Trim();
@@ -67,14 +98,6 @@ namespace WindowsFormsApplication1
                   MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
-
-
-           
-          
-
-
-
         }
     }
 }

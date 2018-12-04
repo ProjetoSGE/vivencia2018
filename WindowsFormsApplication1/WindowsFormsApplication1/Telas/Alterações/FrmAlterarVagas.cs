@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1.Telas.Alterações
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

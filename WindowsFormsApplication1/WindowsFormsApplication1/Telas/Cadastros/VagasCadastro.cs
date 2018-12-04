@@ -43,8 +43,8 @@ namespace WindowsFormsApplication1.Telas.Cadastros
             VagasDTO dto = new VagasDTO();
             EmpresaDTO empresa = cboEmpresa.SelectedItem as EmpresaDTO;
 
-            dto.NomeVaga = txtNome.Text;
-            dto.NomeArea = txtArea.Text;
+            dto.NomeVaga = txtNome.Text.Trim();
+            dto.NomeArea = txtArea.Text.Trim();
             dto.QuantidadeDeVaga = (int)nudQtd.Value;
             dto.DataDeInicio = dtInicioEstagio.Value;
             dto.Sexo = (string)cboSexo.SelectedItem;
@@ -55,11 +55,11 @@ namespace WindowsFormsApplication1.Telas.Cadastros
             dto.HorarioEntrada = Convert.ToString(inicioHora);
 
             DateTime fim = Convert.ToDateTime(mkbFim.Text);
-            TimeSpan fimHora = inicio.TimeOfDay;
+            TimeSpan fimHora = fim.TimeOfDay;
             dto.HorarioSaida = Convert.ToString(fimHora);
 
             DateTime intervalo = Convert.ToDateTime(mkbIntervalo.Text);
-            TimeSpan intervaloHora = inicio.TimeOfDay;
+            TimeSpan intervaloHora = intervalo.TimeOfDay;
             dto.Intervalo = Convert.ToString(intervaloHora);
 
             dto.SeguroDeVida = chkSeguroVida.Checked;
@@ -75,15 +75,24 @@ namespace WindowsFormsApplication1.Telas.Cadastros
             dto.InfoCorel = chkCorelDraw.Checked;
             dto.InfoPhotoShop = chkPhotoshop.Checked;
             dto.InfoProgramacao = chkProgramacao.Checked;
-            dto.Outros = txtOutros.Text;
-            dto.Observacao = txtObs.Text;
-            dto.CompPessoal = txtCompetecias.Text;
-            dto.Tarefas = txtTarefa.Text;
+            dto.Outros = txtOutros.Text.Trim();
+            dto.Observacao = txtObs.Text.Trim();
+            dto.CompPessoal = txtCompetecias.Text.Trim();
+            dto.Tarefas = txtTarefa.Text.Trim();
 
             VagasBusiness buss = new VagasBusiness();
             buss.Salvar(dto);
 
-            MessageBox.Show("Vaga salva com sucesso!");
+            MessageBox.Show("Vaga salva com sucesso!","SGE");
+
+            this.Hide();
+            Menu tela = new Menu();
+            tela.Show();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

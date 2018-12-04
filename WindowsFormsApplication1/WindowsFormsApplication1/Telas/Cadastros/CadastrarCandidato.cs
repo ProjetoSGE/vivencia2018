@@ -46,6 +46,16 @@ namespace WindowsFormsApplication1.Telas.Cadastros
 
         private void btnCadatrar_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
             CandidatoDTO dto = new CandidatoDTO();
             AlunoDTO dto1 = cboAluno.SelectedItem as AlunoDTO;
             VagasDTO dto2 = cboVaga.SelectedItem as VagasDTO;

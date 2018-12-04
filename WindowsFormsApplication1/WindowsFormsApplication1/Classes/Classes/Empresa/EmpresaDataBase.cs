@@ -51,7 +51,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 dto.Nome = reader.GetString("nm_fantasia");
                 dto.RazãoSocial = reader.GetString("nm_razaoSocial");
                 dto.Cnpj = reader.GetString("ds_cnpj");
-                dto.CodEstadual = reader.GetInt32("nr_codEstadual");
+                dto.CodEstadual = reader.GetString("nr_codEstadual");
                 dto.Telefone = reader.GetString("nr_telefone");
                 dto.Email = reader.GetString("ds_email");
                 dto.Cep = reader.GetString("ds_cep");
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 dto.Nome = reader.GetString("nm_fantasia");
                 dto.RazãoSocial = reader.GetString("nm_razaoSocial");
                 dto.Cnpj = reader.GetString("ds_cnpj");
-                dto.CodEstadual = reader.GetInt32("nr_codEstadual");
+                dto.CodEstadual = reader.GetString("nr_codEstadual");
                 dto.Telefone = reader.GetString("nr_telefone");
                 dto.Email = reader.GetString("ds_email");
                 dto.Cep = reader.GetString("ds_cep");

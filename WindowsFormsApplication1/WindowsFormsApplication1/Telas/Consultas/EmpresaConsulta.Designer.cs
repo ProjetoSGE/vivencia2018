@@ -81,7 +81,7 @@
             this.button1.Location = new System.Drawing.Point(635, 54);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 34);
-            this.button1.TabIndex = 21;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -91,7 +91,7 @@
             this.textBox1.Location = new System.Drawing.Point(76, 64);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(553, 20);
-            this.textBox1.TabIndex = 20;
+            this.textBox1.TabIndex = 1;
             // 
             // Pesquisar
             // 
@@ -128,7 +128,7 @@
             this.dgvEmpresa.Name = "dgvEmpresa";
             this.dgvEmpresa.RowHeadersWidth = 4;
             this.dgvEmpresa.Size = new System.Drawing.Size(712, 397);
-            this.dgvEmpresa.TabIndex = 18;
+            this.dgvEmpresa.TabIndex = 3;
             this.dgvEmpresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpresa_CellContentClick_1);
             // 
             // Column1

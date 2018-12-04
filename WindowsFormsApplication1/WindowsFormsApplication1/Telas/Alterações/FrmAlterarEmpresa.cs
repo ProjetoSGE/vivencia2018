@@ -36,17 +36,46 @@ namespace WindowsFormsApplication1.Telas.Alterações
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
             try
             {
                 EmpresaDTO empresa = new EmpresaDTO();
+
+                if (mktCep.MaskCompleted)
+                {
+                    empresa.Cep = mktCep.Text.Trim();
+
+                }
+                else
+                {
+                    throw new ArgumentException("CEP é obrigatório");
+                }
+
+                if (mktTelefone.MaskCompleted)
+                {
+                    empresa.Telefone = mktTelefone.Text.Trim();
+
+                }
+                else
+                {
+                    throw new ArgumentException("Telefone é obrigatório");
+                }
+
                 empresa.Id = this.empresa.Id;
                 empresa.Cnpj = mtkCNPJ.Text.Trim();
                 empresa.Nome = txtNomeFantasi.Text.Trim();
                 empresa.RazãoSocial = txtRazaoSocial.Text.Trim();
-                empresa.CodEstadual = Convert.ToInt32(mktRegistroEstadual.Text.Trim());
-                empresa.Telefone = mktTelefone.Text.Trim();
+                empresa.CodEstadual = mktRegistroEstadual.Text.Trim();
                 empresa.Email = txtEmail.Text.Trim();
-                empresa.Cep = mktCep.Text.Trim();
                 empresa.Bairro = txtBairro.Text.Trim();
                 empresa.Endereço = txtEndereco.Text.Trim();
                 empresa.PontoDeReferencia = txtPontoRef.Text.Trim();
@@ -54,7 +83,7 @@ namespace WindowsFormsApplication1.Telas.Alterações
                 EmpresaBusiness business = new EmpresaBusiness();
                 business.Alterar(empresa);
 
-                MessageBox.Show("Empresa cadastrada com sucesso", "SGE");
+                MessageBox.Show("Empresa alterada com sucesso", "SGE");
 
                 this.Hide();
                 Menu tela = new Menu();

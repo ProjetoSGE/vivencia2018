@@ -31,7 +31,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -86,20 +85,6 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_delete_26;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(145, 8);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(94, 50);
-            this.btnCancelar.TabIndex = 88;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label1);
@@ -135,17 +120,19 @@
             // 
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.Location = new System.Drawing.Point(88, 20);
+            this.txtNome.MaxLength = 150;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(121, 25);
-            this.txtNome.TabIndex = 60;
+            this.txtNome.TabIndex = 18;
             // 
             // cboEmpresa
             // 
+            this.cboEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmpresa.FormattingEnabled = true;
             this.cboEmpresa.Location = new System.Drawing.Point(88, 49);
             this.cboEmpresa.Name = "cboEmpresa";
             this.cboEmpresa.Size = new System.Drawing.Size(121, 25);
-            this.cboEmpresa.TabIndex = 49;
+            this.cboEmpresa.TabIndex = 19;
             // 
             // label6
             // 
@@ -171,14 +158,16 @@
             // 
             // cboSexo
             // 
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
             "Masculino",
-            "Feminino"});
+            "Feminino",
+            "Ambos "});
             this.cboSexo.Location = new System.Drawing.Point(314, 51);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(91, 25);
-            this.cboSexo.TabIndex = 58;
+            this.cboSexo.TabIndex = 21;
             // 
             // label3
             // 
@@ -208,15 +197,16 @@
             this.nudQtd.Location = new System.Drawing.Point(314, 23);
             this.nudQtd.Name = "nudQtd";
             this.nudQtd.Size = new System.Drawing.Size(91, 25);
-            this.nudQtd.TabIndex = 62;
+            this.nudQtd.TabIndex = 20;
             // 
             // txtArea
             // 
             this.txtArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtArea.Location = new System.Drawing.Point(530, 20);
+            this.txtArea.MaxLength = 100;
             this.txtArea.Name = "txtArea";
             this.txtArea.Size = new System.Drawing.Size(100, 25);
-            this.txtArea.TabIndex = 61;
+            this.txtArea.TabIndex = 22;
             // 
             // btnsalvar
             // 
@@ -224,10 +214,10 @@
             this.btnsalvar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalvar.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_save_261;
             this.btnsalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnsalvar.Location = new System.Drawing.Point(35, 8);
+            this.btnsalvar.Location = new System.Drawing.Point(615, 3);
             this.btnsalvar.Name = "btnsalvar";
-            this.btnsalvar.Size = new System.Drawing.Size(89, 50);
-            this.btnsalvar.TabIndex = 86;
+            this.btnsalvar.Size = new System.Drawing.Size(89, 47);
+            this.btnsalvar.TabIndex = 27;
             this.btnsalvar.Text = "Salvar";
             this.btnsalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnsalvar.UseVisualStyleBackColor = true;
@@ -257,7 +247,7 @@
             this.dtInicioEstagio.Location = new System.Drawing.Point(111, 19);
             this.dtInicioEstagio.Name = "dtInicioEstagio";
             this.dtInicioEstagio.Size = new System.Drawing.Size(100, 25);
-            this.dtInicioEstagio.TabIndex = 48;
+            this.dtInicioEstagio.TabIndex = 1;
             // 
             // label4
             // 
@@ -276,8 +266,8 @@
             this.mkbInicio.Location = new System.Drawing.Point(111, 60);
             this.mkbInicio.Mask = "00:00";
             this.mkbInicio.Name = "mkbInicio";
-            this.mkbInicio.Size = new System.Drawing.Size(33, 25);
-            this.mkbInicio.TabIndex = 50;
+            this.mkbInicio.Size = new System.Drawing.Size(41, 25);
+            this.mkbInicio.TabIndex = 2;
             // 
             // label7
             // 
@@ -296,8 +286,8 @@
             this.mkbFim.Location = new System.Drawing.Point(204, 60);
             this.mkbFim.Mask = "00:00";
             this.mkbFim.Name = "mkbFim";
-            this.mkbFim.Size = new System.Drawing.Size(33, 25);
-            this.mkbFim.TabIndex = 55;
+            this.mkbFim.Size = new System.Drawing.Size(37, 25);
+            this.mkbFim.TabIndex = 3;
             // 
             // label16
             // 
@@ -316,8 +306,8 @@
             this.mkbIntervalo.Location = new System.Drawing.Point(323, 61);
             this.mkbIntervalo.Mask = "00:00";
             this.mkbIntervalo.Name = "mkbIntervalo";
-            this.mkbIntervalo.Size = new System.Drawing.Size(33, 25);
-            this.mkbIntervalo.TabIndex = 57;
+            this.mkbIntervalo.Size = new System.Drawing.Size(38, 25);
+            this.mkbIntervalo.TabIndex = 4;
             // 
             // label9
             // 
@@ -351,10 +341,11 @@
             // 
             this.txtOutros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOutros.Location = new System.Drawing.Point(134, 93);
+            this.txtOutros.MaxLength = 150;
             this.txtOutros.Multiline = true;
             this.txtOutros.Name = "txtOutros";
             this.txtOutros.Size = new System.Drawing.Size(151, 40);
-            this.txtOutros.TabIndex = 63;
+            this.txtOutros.TabIndex = 10;
             this.txtOutros.Visible = false;
             // 
             // chkAutoCad
@@ -364,7 +355,7 @@
             this.chkAutoCad.Location = new System.Drawing.Point(8, 29);
             this.chkAutoCad.Name = "chkAutoCad";
             this.chkAutoCad.Size = new System.Drawing.Size(93, 25);
-            this.chkAutoCad.TabIndex = 36;
+            this.chkAutoCad.TabIndex = 5;
             this.chkAutoCad.Text = "AutoCAD";
             this.chkAutoCad.UseVisualStyleBackColor = true;
             // 
@@ -376,7 +367,7 @@
             this.chkPhotoshop.Location = new System.Drawing.Point(8, 60);
             this.chkPhotoshop.Name = "chkPhotoshop";
             this.chkPhotoshop.Size = new System.Drawing.Size(106, 25);
-            this.chkPhotoshop.TabIndex = 39;
+            this.chkPhotoshop.TabIndex = 6;
             this.chkPhotoshop.Text = "PhotoShop";
             this.chkPhotoshop.UseVisualStyleBackColor = false;
             // 
@@ -387,7 +378,7 @@
             this.chkProgramacao.Location = new System.Drawing.Point(8, 91);
             this.chkProgramacao.Name = "chkProgramacao";
             this.chkProgramacao.Size = new System.Drawing.Size(122, 25);
-            this.chkProgramacao.TabIndex = 42;
+            this.chkProgramacao.TabIndex = 7;
             this.chkProgramacao.Text = "Programação";
             this.chkProgramacao.UseVisualStyleBackColor = true;
             // 
@@ -398,7 +389,7 @@
             this.chkPacoteOffice.Location = new System.Drawing.Point(134, 29);
             this.chkPacoteOffice.Name = "chkPacoteOffice";
             this.chkPacoteOffice.Size = new System.Drawing.Size(117, 25);
-            this.chkPacoteOffice.TabIndex = 38;
+            this.chkPacoteOffice.TabIndex = 8;
             this.chkPacoteOffice.Text = "Pacote office";
             this.chkPacoteOffice.UseVisualStyleBackColor = true;
             // 
@@ -409,7 +400,7 @@
             this.chkCorelDraw.Location = new System.Drawing.Point(134, 60);
             this.chkCorelDraw.Name = "chkCorelDraw";
             this.chkCorelDraw.Size = new System.Drawing.Size(103, 25);
-            this.chkCorelDraw.TabIndex = 37;
+            this.chkCorelDraw.TabIndex = 9;
             this.chkCorelDraw.Text = "CorelDraw";
             this.chkCorelDraw.UseVisualStyleBackColor = true;
             // 
@@ -449,7 +440,7 @@
             this.chkAssisMedica.Location = new System.Drawing.Point(6, 108);
             this.chkAssisMedica.Name = "chkAssisMedica";
             this.chkAssisMedica.Size = new System.Drawing.Size(159, 25);
-            this.chkAssisMedica.TabIndex = 46;
+            this.chkAssisMedica.TabIndex = 14;
             this.chkAssisMedica.Text = "Assistência Médica";
             this.chkAssisMedica.UseVisualStyleBackColor = true;
             // 
@@ -460,7 +451,7 @@
             this.chkAuxilioTrasporte.Location = new System.Drawing.Point(6, 19);
             this.chkAuxilioTrasporte.Name = "chkAuxilioTrasporte";
             this.chkAuxilioTrasporte.Size = new System.Drawing.Size(152, 25);
-            this.chkAuxilioTrasporte.TabIndex = 35;
+            this.chkAuxilioTrasporte.TabIndex = 11;
             this.chkAuxilioTrasporte.Text = "Auxilio transporte";
             this.chkAuxilioTrasporte.UseVisualStyleBackColor = true;
             // 
@@ -471,7 +462,7 @@
             this.chkRecessoRemuneracao.Location = new System.Drawing.Point(6, 50);
             this.chkRecessoRemuneracao.Name = "chkRecessoRemuneracao";
             this.chkRecessoRemuneracao.Size = new System.Drawing.Size(179, 25);
-            this.chkRecessoRemuneracao.TabIndex = 45;
+            this.chkRecessoRemuneracao.TabIndex = 12;
             this.chkRecessoRemuneracao.Text = "Recesso Remunerado";
             this.chkRecessoRemuneracao.UseVisualStyleBackColor = true;
             // 
@@ -482,7 +473,7 @@
             this.chkValeRef.Location = new System.Drawing.Point(6, 81);
             this.chkValeRef.Name = "chkValeRef";
             this.chkValeRef.Size = new System.Drawing.Size(122, 25);
-            this.chkValeRef.TabIndex = 43;
+            this.chkValeRef.TabIndex = 13;
             this.chkValeRef.Text = "Vale Refeição";
             this.chkValeRef.UseVisualStyleBackColor = true;
             // 
@@ -493,7 +484,7 @@
             this.chkSeguroVida.Location = new System.Drawing.Point(185, 19);
             this.chkSeguroVida.Name = "chkSeguroVida";
             this.chkSeguroVida.Size = new System.Drawing.Size(135, 25);
-            this.chkSeguroVida.TabIndex = 34;
+            this.chkSeguroVida.TabIndex = 15;
             this.chkSeguroVida.Text = "Seguro de Vida";
             this.chkSeguroVida.UseVisualStyleBackColor = true;
             // 
@@ -505,7 +496,7 @@
             this.chkRefeitorioLocal.Location = new System.Drawing.Point(185, 82);
             this.chkRefeitorioLocal.Name = "chkRefeitorioLocal";
             this.chkRefeitorioLocal.Size = new System.Drawing.Size(159, 25);
-            this.chkRefeitorioLocal.TabIndex = 40;
+            this.chkRefeitorioLocal.TabIndex = 17;
             this.chkRefeitorioLocal.Text = "Refeitório no Local";
             this.chkRefeitorioLocal.UseVisualStyleBackColor = false;
             // 
@@ -516,7 +507,7 @@
             this.chkCestaBasica.Location = new System.Drawing.Point(185, 50);
             this.chkCestaBasica.Name = "chkCestaBasica";
             this.chkCestaBasica.Size = new System.Drawing.Size(114, 25);
-            this.chkCestaBasica.TabIndex = 44;
+            this.chkCestaBasica.TabIndex = 16;
             this.chkCestaBasica.Text = "Cesta Básica";
             this.chkCestaBasica.UseVisualStyleBackColor = true;
             // 
@@ -524,27 +515,30 @@
             // 
             this.txtCompetecias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCompetecias.Location = new System.Drawing.Point(120, 350);
+            this.txtCompetecias.MaxLength = 200;
             this.txtCompetecias.Name = "txtCompetecias";
             this.txtCompetecias.Size = new System.Drawing.Size(226, 20);
-            this.txtCompetecias.TabIndex = 90;
+            this.txtCompetecias.TabIndex = 23;
             // 
             // txtTarefa
             // 
             this.txtTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTarefa.Location = new System.Drawing.Point(475, 350);
+            this.txtTarefa.MaxLength = 200;
             this.txtTarefa.Multiline = true;
             this.txtTarefa.Name = "txtTarefa";
             this.txtTarefa.Size = new System.Drawing.Size(226, 47);
-            this.txtTarefa.TabIndex = 89;
+            this.txtTarefa.TabIndex = 25;
             // 
             // txtObs
             // 
             this.txtObs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtObs.Location = new System.Drawing.Point(120, 376);
+            this.txtObs.MaxLength = 250;
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(226, 47);
-            this.txtObs.TabIndex = 87;
+            this.txtObs.TabIndex = 24;
             // 
             // label11
             // 
@@ -582,7 +576,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnsalvar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 445);
@@ -603,6 +596,7 @@
             // 
             // cboNvlIngles
             // 
+            this.cboNvlIngles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNvlIngles.FormattingEnabled = true;
             this.cboNvlIngles.Items.AddRange(new object[] {
             "Básico",
@@ -612,7 +606,7 @@
             this.cboNvlIngles.Location = new System.Drawing.Point(475, 403);
             this.cboNvlIngles.Name = "cboNvlIngles";
             this.cboNvlIngles.Size = new System.Drawing.Size(121, 21);
-            this.cboNvlIngles.TabIndex = 63;
+            this.cboNvlIngles.TabIndex = 26;
             // 
             // VagasCadastro
             // 
@@ -653,7 +647,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNome;

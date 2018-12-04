@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            CarregarGrid();
+
            
         }
 
@@ -42,7 +42,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
         private void CarregarGrid()
         {
             AlunoBussiness business = new AlunoBussiness();
-            List<AlunoDTO> lista = business.Consultar(textBox1.Text);
+            List<AlunoDTO> lista = business.Consultar(textBox1.Text.Trim());
 
             dgvAluno.AutoGenerateColumns = false;
             dgvAluno.DataSource = lista;
@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            CarregarGrid();
         }
 
         private void dgvAluno_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

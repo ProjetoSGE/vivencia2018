@@ -22,11 +22,6 @@ namespace WindowsFormsApplication1.Telas.Cadastros
 
 
 
-        private void btnsalvar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -89,39 +84,82 @@ namespace WindowsFormsApplication1.Telas.Cadastros
 
         private void btnsalvar_Click_1(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void cboCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             try
             {
                 AlunoDTO dto = new AlunoDTO();
 
-                dto.Nome = txtNome.Text;
-                dto.Idade = txtIdade.Text;
-                dto.AreaPreferencial = txtPreferencia.Text;
-                dto.Bairro = txtBairro.Text;
-                dto.Celular = mskRecado.Text;
-                dto.Fixo = mskRes.Text;
-                dto.Cep = mskCEP.Text;
-                dto.Endereco = txtEndereco.Text;
-                dto.ExpProfissional = txtExperiencia.Text;
-                dto.Nascimento = dtpDataNasc.Value.Date;
-                dto.QualCurso = cboCurso.SelectedItem.ToString();
-                dto.Turno = cboTurno.SelectedItem.ToString();
-                dto.Curso = cboSerie.SelectedItem.ToString();
+                if (mskCEP.MaskCompleted)
+                {
+                    dto.Cep = mskCEP.Text.Trim();
+
+                }
+                else
+                {
+                    throw new ArgumentException("CEP é obrigatório");
+                }
+
+                if (mskRecado.MaskCompleted)
+                {
+                    dto.Celular = mskRecado.Text.Trim();
+
+                }
+                else
+                {
+                    throw new ArgumentException("Celular é obrigatório");
+                }
+
+                if (mtkRG.MaskCompleted)
+                {
+                    dto.Rg = mtkRG.Text.Trim();
+
+                }
+                else
+                {
+                    throw new ArgumentException("RG é obrigatório");
+                }
+
+
+                dto.Nome = txtNome.Text.Trim();
+                dto.Curso = cboCurso.Text;
+                dto.Idade = Convert.ToInt32(numericUpDown1.Value);
+                dto.AreaPreferencial = txtPreferencia.Text.Trim();
+                dto.Bairro = txtBairro.Text.Trim();
+                dto.Fixo = mskRes.Text.Trim();
+                dto.Endereco = txtEndereco.Text.Trim();
+                dto.ExpProfissional = txtExperiencia.Text.Trim();
+                dto.Nascimento = dtpDataNasc.Value;
+                dto.QualCurso = cboSerie.Text;
+                dto.Turno = cboTurno.Text;
                 dto.SeEstuda = rdnSim.Checked;
-                dto.Numero = txtNumero.Text;
-                dto.AnoDeEstudo = cboAnoEstudou.SelectedItem.ToString();
-                dto.Rg = txtRG.Text;
+                dto.Numero = txtNumero.Text.Trim();
+                dto.AnoDeEstudo = cboAnoEstudou.Text.Trim();
+
 
                 AlunoBussiness business = new AlunoBussiness();
                 business.Salvar(dto);
 
-            MessageBox.Show("Empresa cadastrada com sucesso", "SGE");
+                MessageBox.Show("Aluno cadastrado com sucesso", "SGE");
 
-            this.Hide();
-            Menu tela = new Menu();
-            tela.Show();
+                this.Hide();
+                Menu tela = new Menu();
+                tela.Show();
 
-        }
+            }
 
             catch (ArgumentException ex)
             {
@@ -129,26 +167,19 @@ namespace WindowsFormsApplication1.Telas.Cadastros
                   MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
-
-
-
-
-
-
-
-}
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Menu tela = new Menu();
-            tela.Show();
         }
 
-        private void cboCurso_SelectedIndexChanged(object sender, EventArgs e)
+        private void rdnSim_CheckedChanged(object sender, EventArgs e)
         {
+            cboSerie.Enabled = true;
+            cboTurno.Enabled = true;
+               
+        }
 
+        private void rdbNao_CheckedChanged(object sender, EventArgs e)
+        {
+            cboSerie.Enabled = false;
+            cboTurno.Enabled = false;
         }
     }
 }

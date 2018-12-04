@@ -15,16 +15,6 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 throw new ArgumentException("Nome da Empresa é obrigatório");
             }
 
-            if (dto.Telefone == string.Empty)
-            {
-                throw new ArgumentException("Telefone é obrigatório");
-            }
-
-            if (dto.Cep == string.Empty)
-            {
-                throw new ArgumentException("CEP é obrigatório");
-            }
-
             if (dto.Bairro == string.Empty)
             {
                 throw new ArgumentException("Bairro é obrigatório");
@@ -40,12 +30,6 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
                 throw new ArgumentException("Email é obrigatório");
             }
 
-            if (dto.PontoDeReferencia == string.Empty)
-            {
-                throw new ArgumentException("Ponto de Referência é obrigatório");
-            }
-
-       
             EmpresaDataBase db = new EmpresaDataBase();
             return db.Salvar(dto);
 
@@ -71,6 +55,26 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
 
         public void Alterar(EmpresaDTO dto)
         {
+            if (dto.Nome == string.Empty)
+            {
+                throw new ArgumentException("Nome da Empresa é obrigatório");
+            }
+
+            if (dto.Bairro == string.Empty)
+            {
+                throw new ArgumentException("Bairro é obrigatório");
+            }
+
+            if (dto.Endereço == string.Empty)
+            {
+                throw new ArgumentException("Endereço é obrigatório");
+            }
+
+            if (dto.Email == string.Empty)
+            {
+                throw new ArgumentException("Email é obrigatório");
+            }
+
             EmpresaDataBase db = new EmpresaDataBase();
             db.Alterar(dto);
 

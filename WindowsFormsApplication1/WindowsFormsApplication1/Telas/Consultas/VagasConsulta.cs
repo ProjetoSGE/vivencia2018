@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
 
         void CarregarGrid()
         {
-            string vaga = txtVaga.Text;
+            string vaga = txtVaga.Text.Trim();
 
             VagasBusiness buss = new VagasBusiness();
             List<VagasView> lista = buss.Consultar(vaga);

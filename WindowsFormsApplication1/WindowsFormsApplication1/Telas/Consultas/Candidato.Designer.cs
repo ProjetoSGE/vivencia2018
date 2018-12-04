@@ -59,7 +59,7 @@
             this.button1.Location = new System.Drawing.Point(629, 47);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 34);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -68,7 +68,7 @@
             this.textBox1.Location = new System.Drawing.Point(70, 53);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(553, 20);
-            this.textBox1.TabIndex = 15;
+            this.textBox1.TabIndex = 1;
             // 
             // Pesquisar
             // 
@@ -96,7 +96,7 @@
             this.dgvAluno.Name = "dgvAluno";
             this.dgvAluno.ReadOnly = true;
             this.dgvAluno.Size = new System.Drawing.Size(709, 400);
-            this.dgvAluno.TabIndex = 13;
+            this.dgvAluno.TabIndex = 3;
             // 
             // Column2
             // 

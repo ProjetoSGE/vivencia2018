@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnCadatrar = new System.Windows.Forms.Button();
             this.cboTurma = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -51,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnsalvar = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,36 +64,14 @@
             this.label4.TabIndex = 83;
             this.label4.Text = "Cadastrar Candidato";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(401, 424);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(92, 28);
-            this.btnCancelar.TabIndex = 82;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnCadatrar
-            // 
-            this.btnCadatrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadatrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadatrar.Location = new System.Drawing.Point(271, 424);
-            this.btnCadatrar.Name = "btnCadatrar";
-            this.btnCadatrar.Size = new System.Drawing.Size(92, 28);
-            this.btnCadatrar.TabIndex = 81;
-            this.btnCadatrar.Text = "Cadastrar";
-            this.btnCadatrar.UseVisualStyleBackColor = true;
-            this.btnCadatrar.Click += new System.EventHandler(this.btnCadatrar_Click);
-            // 
             // cboTurma
             // 
+            this.cboTurma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTurma.FormattingEnabled = true;
             this.cboTurma.Location = new System.Drawing.Point(347, 80);
             this.cboTurma.Name = "cboTurma";
             this.cboTurma.Size = new System.Drawing.Size(98, 21);
-            this.cboTurma.TabIndex = 79;
+            this.cboTurma.TabIndex = 2;
             // 
             // label3
             // 
@@ -133,11 +110,12 @@
             // 
             // cboVaga
             // 
+            this.cboVaga.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboVaga.FormattingEnabled = true;
             this.cboVaga.Location = new System.Drawing.Point(71, 19);
             this.cboVaga.Name = "cboVaga";
             this.cboVaga.Size = new System.Drawing.Size(179, 21);
-            this.cboVaga.TabIndex = 0;
+            this.cboVaga.TabIndex = 5;
             // 
             // lblQuantidade
             // 
@@ -181,6 +159,7 @@
             // 
             // cboCurso
             // 
+            this.cboCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCurso.FormattingEnabled = true;
             this.cboCurso.Items.AddRange(new object[] {
             "Administração",
@@ -193,7 +172,7 @@
             this.cboCurso.Location = new System.Drawing.Point(135, 81);
             this.cboCurso.Name = "cboCurso";
             this.cboCurso.Size = new System.Drawing.Size(98, 21);
-            this.cboCurso.TabIndex = 73;
+            this.cboCurso.TabIndex = 1;
             // 
             // label2
             // 
@@ -261,11 +240,12 @@
             // 
             // cboAluno
             // 
+            this.cboAluno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAluno.FormattingEnabled = true;
             this.cboAluno.Location = new System.Drawing.Point(71, 19);
             this.cboAluno.Name = "cboAluno";
             this.cboAluno.Size = new System.Drawing.Size(199, 21);
-            this.cboAluno.TabIndex = 0;
+            this.cboAluno.TabIndex = 4;
             // 
             // label1
             // 
@@ -279,11 +259,12 @@
             // 
             // cboTipo
             // 
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipo.FormattingEnabled = true;
             this.cboTipo.Location = new System.Drawing.Point(553, 81);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(98, 21);
-            this.cboTipo.TabIndex = 76;
+            this.cboTipo.TabIndex = 3;
             // 
             // label5
             // 
@@ -295,14 +276,28 @@
             this.label5.TabIndex = 77;
             this.label5.Text = "Área";
             // 
+            // btnsalvar
+            // 
+            this.btnsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsalvar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalvar.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_save_261;
+            this.btnsalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnsalvar.Location = new System.Drawing.Point(625, 393);
+            this.btnsalvar.Name = "btnsalvar";
+            this.btnsalvar.Size = new System.Drawing.Size(89, 45);
+            this.btnsalvar.TabIndex = 6;
+            this.btnsalvar.Text = "Salvar";
+            this.btnsalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsalvar.UseVisualStyleBackColor = true;
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
+            // 
             // CadastrarCandidato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 521);
+            this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnCadatrar);
             this.Controls.Add(this.cboTurma);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboTipo);
@@ -326,8 +321,6 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnCadatrar;
         private System.Windows.Forms.ComboBox cboTurma;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -348,5 +341,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnsalvar;
     }
 }

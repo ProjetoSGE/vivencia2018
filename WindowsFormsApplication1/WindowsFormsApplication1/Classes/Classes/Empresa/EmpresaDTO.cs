@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Empresa
         public string Nome { get; set; }
         public string RazãoSocial { get; set; }
         public string Cnpj { get; set; }
-        public int CodEstadual { get; set; }
+        public string CodEstadual { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
         public string Cep { get; set; }

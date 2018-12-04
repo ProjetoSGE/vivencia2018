@@ -51,7 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnsalvar = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -84,24 +84,26 @@
             this.groupBox2.Controls.Add(this.txtRazaoSocial);
             this.groupBox2.Location = new System.Drawing.Point(98, 136);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(249, 203);
+            this.groupBox2.Size = new System.Drawing.Size(259, 203);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(135, 171);
+            this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 13;
+            this.txtEmail.Size = new System.Drawing.Size(118, 20);
+            this.txtEmail.TabIndex = 6;
             // 
             // mtkCNPJ
             // 
             this.mtkCNPJ.Location = new System.Drawing.Point(135, 16);
             this.mtkCNPJ.Mask = "99.999.999/9999-99";
             this.mtkCNPJ.Name = "mtkCNPJ";
-            this.mtkCNPJ.Size = new System.Drawing.Size(100, 20);
-            this.mtkCNPJ.TabIndex = 33;
+            this.mtkCNPJ.Size = new System.Drawing.Size(118, 20);
+            this.mtkCNPJ.TabIndex = 1;
             this.mtkCNPJ.ValidatingType = typeof(int);
             // 
             // label5
@@ -120,15 +122,15 @@
             this.mktTelefone.Location = new System.Drawing.Point(135, 145);
             this.mktTelefone.Mask = "0000-0000";
             this.mktTelefone.Name = "mktTelefone";
-            this.mktTelefone.Size = new System.Drawing.Size(59, 20);
-            this.mktTelefone.TabIndex = 31;
+            this.mktTelefone.Size = new System.Drawing.Size(66, 20);
+            this.mktTelefone.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(72, 167);
+            this.label2.Location = new System.Drawing.Point(72, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 21);
             this.label2.TabIndex = 1;
@@ -140,7 +142,7 @@
             this.mktRegistroEstadual.Mask = "00000";
             this.mktRegistroEstadual.Name = "mktRegistroEstadual";
             this.mktRegistroEstadual.Size = new System.Drawing.Size(32, 20);
-            this.mktRegistroEstadual.TabIndex = 32;
+            this.mktRegistroEstadual.TabIndex = 4;
             this.mktRegistroEstadual.ValidatingType = typeof(int);
             // 
             // label11
@@ -190,16 +192,18 @@
             // txtNomeFantasi
             // 
             this.txtNomeFantasi.Location = new System.Drawing.Point(136, 49);
+            this.txtNomeFantasi.MaxLength = 150;
             this.txtNomeFantasi.Name = "txtNomeFantasi";
-            this.txtNomeFantasi.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeFantasi.TabIndex = 7;
+            this.txtNomeFantasi.Size = new System.Drawing.Size(118, 20);
+            this.txtNomeFantasi.TabIndex = 2;
             // 
             // txtRazaoSocial
             // 
             this.txtRazaoSocial.Location = new System.Drawing.Point(136, 82);
+            this.txtRazaoSocial.MaxLength = 300;
             this.txtRazaoSocial.Name = "txtRazaoSocial";
-            this.txtRazaoSocial.Size = new System.Drawing.Size(100, 20);
-            this.txtRazaoSocial.TabIndex = 7;
+            this.txtRazaoSocial.Size = new System.Drawing.Size(118, 20);
+            this.txtRazaoSocial.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -221,10 +225,11 @@
             // txtPontoRef
             // 
             this.txtPontoRef.Location = new System.Drawing.Point(14, 125);
+            this.txtPontoRef.MaxLength = 100;
             this.txtPontoRef.Multiline = true;
             this.txtPontoRef.Name = "txtPontoRef";
-            this.txtPontoRef.Size = new System.Drawing.Size(207, 63);
-            this.txtPontoRef.TabIndex = 38;
+            this.txtPontoRef.Size = new System.Drawing.Size(229, 63);
+            this.txtPontoRef.TabIndex = 10;
             // 
             // label8
             // 
@@ -240,9 +245,10 @@
             // txtBairro
             // 
             this.txtBairro.Location = new System.Drawing.Point(93, 48);
+            this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(128, 20);
-            this.txtBairro.TabIndex = 36;
+            this.txtBairro.Size = new System.Drawing.Size(150, 20);
+            this.txtBairro.TabIndex = 8;
             // 
             // lblBairro
             // 
@@ -260,8 +266,8 @@
             this.mktCep.Location = new System.Drawing.Point(93, 22);
             this.mktCep.Mask = "00000-000";
             this.mktCep.Name = "mktCep";
-            this.mktCep.Size = new System.Drawing.Size(59, 20);
-            this.mktCep.TabIndex = 17;
+            this.mktCep.Size = new System.Drawing.Size(69, 20);
+            this.mktCep.TabIndex = 7;
             // 
             // label3
             // 
@@ -277,9 +283,10 @@
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(93, 75);
+            this.txtEndereco.MaxLength = 150;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(128, 20);
-            this.txtEndereco.TabIndex = 30;
+            this.txtEndereco.Size = new System.Drawing.Size(150, 20);
+            this.txtEndereco.TabIndex = 9;
             // 
             // label6
             // 
@@ -292,27 +299,30 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "Endereço:";
             // 
-            // btnAlterar
+            // btnsalvar
             // 
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(339, 368);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(104, 45);
-            this.btnAlterar.TabIndex = 46;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            this.btnsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsalvar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalvar.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_save_261;
+            this.btnsalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnsalvar.Location = new System.Drawing.Point(594, 345);
+            this.btnsalvar.Name = "btnsalvar";
+            this.btnsalvar.Size = new System.Drawing.Size(89, 42);
+            this.btnsalvar.TabIndex = 11;
+            this.btnsalvar.Text = "Alterar";
+            this.btnsalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsalvar.UseVisualStyleBackColor = true;
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
             // FrmAlterarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 521);
+            this.Controls.Add(this.btnsalvar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnAlterar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAlterarEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -351,6 +361,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnsalvar;
     }
 }
