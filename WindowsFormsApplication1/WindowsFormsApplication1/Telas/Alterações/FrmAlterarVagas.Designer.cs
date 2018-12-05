@@ -54,7 +54,6 @@
             this.chkProgramacao = new System.Windows.Forms.CheckBox();
             this.chkPacoteOffice = new System.Windows.Forms.CheckBox();
             this.chkCorelDraw = new System.Windows.Forms.CheckBox();
-            this.chkOutros = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chkAuxilioTrasporte = new System.Windows.Forms.CheckBox();
             this.chkRecessoRemuneracao = new System.Windows.Forms.CheckBox();
@@ -63,13 +62,17 @@
             this.chkRefeitorioLocal = new System.Windows.Forms.CheckBox();
             this.chkCestaBasica = new System.Windows.Forms.CheckBox();
             this.txtCompetecias = new System.Windows.Forms.TextBox();
-            this.txtTarefa = new System.Windows.Forms.TextBox();
             this.txtObs = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtOutros = new System.Windows.Forms.TextBox();
+            this.chkAssisMedica = new System.Windows.Forms.CheckBox();
+            this.cboNvlIngles = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTarefa = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtd)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -296,12 +299,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtOutros);
             this.groupBox2.Controls.Add(this.chkAutoCad);
             this.groupBox2.Controls.Add(this.chkPhotoshop);
             this.groupBox2.Controls.Add(this.chkProgramacao);
             this.groupBox2.Controls.Add(this.chkPacoteOffice);
             this.groupBox2.Controls.Add(this.chkCorelDraw);
-            this.groupBox2.Controls.Add(this.chkOutros);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 143);
             this.groupBox2.Name = "groupBox2";
@@ -316,9 +319,9 @@
             this.chkAutoCad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkAutoCad.Location = new System.Drawing.Point(8, 29);
             this.chkAutoCad.Name = "chkAutoCad";
-            this.chkAutoCad.Size = new System.Drawing.Size(91, 25);
+            this.chkAutoCad.Size = new System.Drawing.Size(93, 25);
             this.chkAutoCad.TabIndex = 7;
-            this.chkAutoCad.Text = "autoCAD";
+            this.chkAutoCad.Text = "AutoCAD";
             this.chkAutoCad.UseVisualStyleBackColor = true;
             // 
             // chkPhotoshop
@@ -350,7 +353,7 @@
             this.chkPacoteOffice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPacoteOffice.Location = new System.Drawing.Point(134, 29);
             this.chkPacoteOffice.Name = "chkPacoteOffice";
-            this.chkPacoteOffice.Size = new System.Drawing.Size(117, 25);
+            this.chkPacoteOffice.Size = new System.Drawing.Size(116, 25);
             this.chkPacoteOffice.TabIndex = 10;
             this.chkPacoteOffice.Text = "Pacote office";
             this.chkPacoteOffice.UseVisualStyleBackColor = true;
@@ -366,19 +369,9 @@
             this.chkCorelDraw.Text = "CorelDraw";
             this.chkCorelDraw.UseVisualStyleBackColor = true;
             // 
-            // chkOutros
-            // 
-            this.chkOutros.AutoSize = true;
-            this.chkOutros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOutros.Location = new System.Drawing.Point(134, 91);
-            this.chkOutros.Name = "chkOutros";
-            this.chkOutros.Size = new System.Drawing.Size(77, 25);
-            this.chkOutros.TabIndex = 12;
-            this.chkOutros.Text = "Outros";
-            this.chkOutros.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkAssisMedica);
             this.groupBox1.Controls.Add(this.chkAuxilioTrasporte);
             this.groupBox1.Controls.Add(this.chkRecessoRemuneracao);
             this.groupBox1.Controls.Add(this.chkValeRef);
@@ -421,7 +414,7 @@
             this.chkValeRef.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkValeRef.Location = new System.Drawing.Point(6, 81);
             this.chkValeRef.Name = "chkValeRef";
-            this.chkValeRef.Size = new System.Drawing.Size(122, 25);
+            this.chkValeRef.Size = new System.Drawing.Size(121, 25);
             this.chkValeRef.TabIndex = 16;
             this.chkValeRef.Text = "Vale Refeição";
             this.chkValeRef.UseVisualStyleBackColor = true;
@@ -468,15 +461,6 @@
             this.txtCompetecias.Size = new System.Drawing.Size(226, 20);
             this.txtCompetecias.TabIndex = 26;
             // 
-            // txtTarefa
-            // 
-            this.txtTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTarefa.Location = new System.Drawing.Point(462, 388);
-            this.txtTarefa.Multiline = true;
-            this.txtTarefa.Name = "txtTarefa";
-            this.txtTarefa.Size = new System.Drawing.Size(226, 73);
-            this.txtTarefa.TabIndex = 28;
-            // 
             // txtObs
             // 
             this.txtObs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -493,20 +477,9 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(41, 384);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 21);
+            this.label11.Size = new System.Drawing.Size(58, 21);
             this.label11.TabIndex = 96;
             this.label11.Text = "Tarefas";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(348, 388);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 21);
-            this.label8.TabIndex = 94;
-            this.label8.Text = "Competências";
             // 
             // label10
             // 
@@ -526,7 +499,7 @@
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(7, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(230, 25);
+            this.label12.Size = new System.Drawing.Size(229, 25);
             this.label12.TabIndex = 106;
             this.label12.Text = "Alterar Registros de vagas";
             // 
@@ -545,11 +518,83 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtOutros
+            // 
+            this.txtOutros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtOutros.Location = new System.Drawing.Point(134, 91);
+            this.txtOutros.MaxLength = 150;
+            this.txtOutros.Multiline = true;
+            this.txtOutros.Name = "txtOutros";
+            this.txtOutros.Size = new System.Drawing.Size(151, 40);
+            this.txtOutros.TabIndex = 13;
+            this.txtOutros.Visible = false;
+            // 
+            // chkAssisMedica
+            // 
+            this.chkAssisMedica.AutoSize = true;
+            this.chkAssisMedica.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAssisMedica.Location = new System.Drawing.Point(6, 106);
+            this.chkAssisMedica.Name = "chkAssisMedica";
+            this.chkAssisMedica.Size = new System.Drawing.Size(159, 25);
+            this.chkAssisMedica.TabIndex = 20;
+            this.chkAssisMedica.Text = "Assistência Médica";
+            this.chkAssisMedica.UseVisualStyleBackColor = true;
+            // 
+            // cboNvlIngles
+            // 
+            this.cboNvlIngles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboNvlIngles.FormattingEnabled = true;
+            this.cboNvlIngles.Items.AddRange(new object[] {
+            "Básico",
+            "Intermediário",
+            "Avançado",
+            "Indiferente"});
+            this.cboNvlIngles.Location = new System.Drawing.Point(462, 441);
+            this.cboNvlIngles.Name = "cboNvlIngles";
+            this.cboNvlIngles.Size = new System.Drawing.Size(121, 21);
+            this.cboNvlIngles.TabIndex = 108;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(405, 441);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 21);
+            this.label8.TabIndex = 110;
+            this.label8.Text = "Inglês";
+            // 
+            // txtTarefa
+            // 
+            this.txtTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTarefa.Location = new System.Drawing.Point(462, 388);
+            this.txtTarefa.MaxLength = 200;
+            this.txtTarefa.Multiline = true;
+            this.txtTarefa.Name = "txtTarefa";
+            this.txtTarefa.Size = new System.Drawing.Size(226, 47);
+            this.txtTarefa.TabIndex = 107;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(348, 388);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(108, 21);
+            this.label13.TabIndex = 109;
+            this.label13.Text = "Competências";
+            // 
             // FrmAlterarVagas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 521);
+            this.Controls.Add(this.cboNvlIngles);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtTarefa);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox4);
@@ -557,10 +602,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtCompetecias);
-            this.Controls.Add(this.txtTarefa);
             this.Controls.Add(this.txtObs);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAlterarVagas";
@@ -606,7 +649,6 @@
         private System.Windows.Forms.CheckBox chkProgramacao;
         private System.Windows.Forms.CheckBox chkPacoteOffice;
         private System.Windows.Forms.CheckBox chkCorelDraw;
-        private System.Windows.Forms.CheckBox chkOutros;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chkAuxilioTrasporte;
         private System.Windows.Forms.CheckBox chkRecessoRemuneracao;
@@ -615,12 +657,16 @@
         private System.Windows.Forms.CheckBox chkRefeitorioLocal;
         private System.Windows.Forms.CheckBox chkCestaBasica;
         private System.Windows.Forms.TextBox txtCompetecias;
-        private System.Windows.Forms.TextBox txtTarefa;
         private System.Windows.Forms.TextBox txtObs;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtOutros;
+        private System.Windows.Forms.CheckBox chkAssisMedica;
+        private System.Windows.Forms.ComboBox cboNvlIngles;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtTarefa;
+        private System.Windows.Forms.Label label13;
     }
 }
