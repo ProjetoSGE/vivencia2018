@@ -12,8 +12,8 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
     {
         public int Salvar(AlunoDTO dto)
         {
-            string script = @"INSERT INTO tb_alunos (nm_aluno, nm_curso, ds_rg, ds_anoEstudo, dt_nascimento, ds_idade, ds_endereco, ds_numero, ds_bairro, ds_cep, nr_fixo, nr_celular, ds_seEstuda, ds_qualCurso, ds_turno, ds_expProfissional, ds_areaPreferencial)
-                                             VALUES (@nm_aluno, @nm_curso, @ds_rg, @ds_anoEstudo, @dt_nascimento, @ds_idade, @ds_endereco, @ds_numero, @ds_bairro, @ds_cep, @nr_fixo, @nr_celular, @ds_seEstuda, @ds_qualCurso, @ds_turno, @ds_expProfissional, @ds_areaPreferencial)";
+            string script = @"INSERT INTO tb_alunos (nm_aluno, nm_curso, ds_rg, ds_anoEstudo, dt_nascimento, ds_idade, ds_endereco, ds_numero, ds_bairro, ds_cep, nr_fixo, nr_celular, ds_seEstuda, ds_qualCurso, ds_turno, ds_expProfissional, ds_areaPreferencial, ds_email)
+                                             VALUES (@nm_aluno, @nm_curso, @ds_rg, @ds_anoEstudo, @dt_nascimento, @ds_idade, @ds_endereco, @ds_numero, @ds_bairro, @ds_cep, @nr_fixo, @nr_celular, @ds_seEstuda, @ds_qualCurso, @ds_turno, @ds_expProfissional, @ds_areaPreferencial, @ds_email)";
 
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -34,6 +34,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
             parms.Add(new MySqlParameter("ds_turno", dto.Turno));
             parms.Add(new MySqlParameter("ds_expProfissional", dto.ExpProfissional));
             parms.Add(new MySqlParameter("ds_areaPreferencial", dto.AreaPreferencial));
+            parms.Add(new MySqlParameter("ds_email", dto.email));
 
             DataBase db = new DataBase();
             return db.ExecuteInsertScriptWithPk(script, parms);
@@ -61,7 +62,8 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                                                ds_qualCurso = @ds_qualCurso,
                                                    ds_turno = @ds_turno,
                                          ds_expProfissional = @ds_expProfissional,
-                                        ds_areaPreferencial = @ds_areaPreferencial
+                                        ds_areaPreferencial = @ds_areaPreferencial,
+                                                   ds_email = @ds_email
                                             WHERE id_aluno = @id_aluno";
 
 
@@ -83,7 +85,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
             parms.Add(new MySqlParameter("ds_turno", dto.Turno));
             parms.Add(new MySqlParameter("ds_expProfissional", dto.ExpProfissional));
             parms.Add(new MySqlParameter("ds_areaPreferencial", dto.AreaPreferencial));
-            
+            parms.Add(new MySqlParameter("ds_email", dto.email));
 
 
             DataBase db = new DataBase();
@@ -130,7 +132,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                 dto.Turno = reader.GetString("ds_turno");
                 dto.ExpProfissional = reader.GetString("ds_expProfissional");
                 dto.AreaPreferencial = reader.GetString("ds_areaPreferencial");
-
+                dto.email = reader.GetString("ds_email");
 
                 lista.Add(dto);
             }
@@ -171,6 +173,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                 dto.Turno = reader.GetString("ds_turno");
                 dto.ExpProfissional = reader.GetString("ds_expProfissional");
                 dto.AreaPreferencial = reader.GetString("ds_areaPreferencial");
+                dto.email = reader.GetString("ds_email");
 
                 lista.Add(dto);
             }

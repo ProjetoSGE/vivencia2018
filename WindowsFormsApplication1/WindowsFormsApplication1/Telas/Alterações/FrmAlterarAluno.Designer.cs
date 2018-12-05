@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.label17 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtPreferencia = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtExperiencia = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cboTurno = new System.Windows.Forms.ComboBox();
@@ -69,11 +64,18 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.mskRes = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtPreferencia = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtExperiencia = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label17
@@ -82,58 +84,9 @@
             this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(30, 10);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(225, 25);
+            this.label17.Size = new System.Drawing.Size(224, 25);
             this.label17.TabIndex = 79;
             this.label17.Text = "Alterar Regsitro do Aluno";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtPreferencia);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtExperiencia);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(47, 304);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(669, 140);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            // 
-            // txtPreferencia
-            // 
-            this.txtPreferencia.Location = new System.Drawing.Point(228, 16);
-            this.txtPreferencia.MaxLength = 100;
-            this.txtPreferencia.Name = "txtPreferencia";
-            this.txtPreferencia.Size = new System.Drawing.Size(402, 20);
-            this.txtPreferencia.TabIndex = 21;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(71, 45);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(366, 21);
-            this.label8.TabIndex = 48;
-            this.label8.Text = "Já teve alguma experiencia profissional? Como foi ?";
-            // 
-            // txtExperiencia
-            // 
-            this.txtExperiencia.Location = new System.Drawing.Point(75, 69);
-            this.txtExperiencia.MaxLength = 200;
-            this.txtExperiencia.Multiline = true;
-            this.txtExperiencia.Name = "txtExperiencia";
-            this.txtExperiencia.Size = new System.Drawing.Size(556, 54);
-            this.txtExperiencia.TabIndex = 22;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(71, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(148, 21);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "Área de Preferência:";
             // 
             // groupBox2
             // 
@@ -508,7 +461,7 @@
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(50, 168);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(109, 21);
+            this.label14.Size = new System.Drawing.Size(107, 21);
             this.label14.TabIndex = 52;
             this.label14.Text = "Telefone(RES):";
             // 
@@ -534,7 +487,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_save_261;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(627, 450);
+            this.button1.Location = new System.Drawing.Point(627, 471);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 38);
             this.button1.TabIndex = 23;
@@ -543,14 +496,85 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.txtPreferencia);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtExperiencia);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Location = new System.Drawing.Point(47, 312);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(669, 153);
+            this.groupBox1.TabIndex = 80;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Area profissional";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(219, 12);
+            this.txtEmail.MaxLength = 100;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(403, 20);
+            this.txtEmail.TabIndex = 65;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(158, 9);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 21);
+            this.label19.TabIndex = 66;
+            this.label19.Text = "Email:";
+            // 
+            // txtPreferencia
+            // 
+            this.txtPreferencia.Location = new System.Drawing.Point(219, 38);
+            this.txtPreferencia.MaxLength = 100;
+            this.txtPreferencia.Name = "txtPreferencia";
+            this.txtPreferencia.Size = new System.Drawing.Size(403, 20);
+            this.txtPreferencia.TabIndex = 21;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(62, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(366, 21);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Já teve alguma experiencia profissional? Como foi ?";
+            // 
+            // txtExperiencia
+            // 
+            this.txtExperiencia.Location = new System.Drawing.Point(66, 88);
+            this.txtExperiencia.MaxLength = 200;
+            this.txtExperiencia.Multiline = true;
+            this.txtExperiencia.Name = "txtExperiencia";
+            this.txtExperiencia.Size = new System.Drawing.Size(556, 54);
+            this.txtExperiencia.TabIndex = 22;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(62, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(148, 21);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Área de Preferência:";
+            // 
             // FrmAlterarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 521);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
@@ -558,8 +582,6 @@
             this.Name = "FrmAlterarAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAlterarAluno";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -567,6 +589,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,11 +599,6 @@
         #endregion
 
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPreferencia;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtExperiencia;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cboTurno;
@@ -615,5 +634,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.MaskedTextBox mtkRG;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtPreferencia;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtExperiencia;
+        private System.Windows.Forms.Label label9;
     }
 }

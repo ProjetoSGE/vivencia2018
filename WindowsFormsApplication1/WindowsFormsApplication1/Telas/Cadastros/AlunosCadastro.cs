@@ -151,7 +151,7 @@ namespace WindowsFormsApplication1.Telas.Cadastros
                 dto.SeEstuda = rdnSim.Checked;
                 dto.Numero = txtNumero.Text.Trim();
                 dto.AnoDeEstudo = cboAnoEstudou.Text.Trim();
-
+                dto.email = txtEmail.Text;
 
                 AlunoBussiness business = new AlunoBussiness();
                 business.Salvar(dto);

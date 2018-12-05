@@ -62,6 +62,7 @@ namespace WindowsFormsApplication1.Telas.Alterações
             txtPreferencia.Text = aluno.AreaPreferencial;
             txtExperiencia.Text = aluno.ExpProfissional;
             mtkRG.Text = aluno.Rg;
+            txtEmail.Text = aluno.email;
 
 
         }
@@ -122,7 +123,7 @@ namespace WindowsFormsApplication1.Telas.Alterações
                 this.alunos.SeEstuda = rdbSim.Checked;
                 this.alunos.Numero = txtNumero.Text.Trim();
                 this.alunos.AnoDeEstudo = cboAnoEstudou.Text.Trim();
-
+                this.alunos.email = txtEmail.Text;
 
                 AlunoBussiness buss = new AlunoBussiness();
                 buss.Alterar(alunos);

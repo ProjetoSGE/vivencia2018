@@ -27,5 +27,6 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
         public string Turno { get; set; }
         public string ExpProfissional { get; set; }
         public string AreaPreferencial { get; set; }
+        public string email { get; set; }
     }
 }
