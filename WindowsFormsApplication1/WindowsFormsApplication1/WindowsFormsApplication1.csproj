@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Auxiliar\Auxiliares\Enumeradores.cs" />
+    <Compile Include="Classes\Auxiliar\PluginEmail\Email.cs" />
     <Compile Include="Classes\Auxiliar\Extensions.cs" />
     <Compile Include="Classes\Auxiliar\Functions.cs" />
     <Compile Include="Classes\Auxiliar\ImagePlugin.cs" />
@@ -90,6 +91,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Estagio.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Adicionais\AlunoEmail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Adicionais\AlunoEmail.Designer.cs">
+      <DependentUpon>AlunoEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Adicionais\emailempresa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Adicionais\emailempresa.Designer.cs">
+      <DependentUpon>emailempresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Menu.cs">
       <SubType>Form</SubType>
@@ -189,6 +202,12 @@
     <Compile Include="vw_vagas.cs">
       <DependentUpon>Estagio.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\Adicionais\AlunoEmail.resx">
+      <DependentUpon>AlunoEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Adicionais\emailempresa.resx">
+      <DependentUpon>emailempresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +291,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Classes\Auxiliar\PluginEmail\EmailHTML.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Estagio.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Estagio.edmx</DependentUpon>

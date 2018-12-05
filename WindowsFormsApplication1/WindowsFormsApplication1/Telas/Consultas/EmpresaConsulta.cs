@@ -9,11 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Classes.Classes.Empresa;
 using WindowsFormsApplication1.Telas.Alterações;
+using WindowsFormsApplication1.Telas.Adicionais;
 
 namespace WindowsFormsApplication1.Telas.Consultas
 {
     public partial class EmpresaConsulta : UserControl
     {
+        public void OpenScreen(UserControl control)
+        {
+            if (pnlCentru.Controls.Count == 1)
+                pnlCentru.Controls.RemoveAt(0);
+            pnlCentru.Controls.Add(control);
+        }
         public EmpresaConsulta()
         {
             InitializeComponent();
@@ -71,6 +78,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
 
         private void dgvEmpresa_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+           
             if (e.ColumnIndex == 7)
             {
                 EmpresaDTO produto = dgvEmpresa.CurrentRow.DataBoundItem as EmpresaDTO;
@@ -101,5 +109,7 @@ namespace WindowsFormsApplication1.Telas.Consultas
                 }
             }
         }
+        
+
     }
 }

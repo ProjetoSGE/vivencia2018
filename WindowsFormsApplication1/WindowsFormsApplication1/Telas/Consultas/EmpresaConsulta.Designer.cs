@@ -105,6 +105,8 @@
             // 
             // dgvEmpresa
             // 
+            this.dgvEmpresa.AllowUserToAddRows = false;
+            this.dgvEmpresa.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,6 +128,7 @@
             this.Column9});
             this.dgvEmpresa.Location = new System.Drawing.Point(16, 98);
             this.dgvEmpresa.Name = "dgvEmpresa";
+            this.dgvEmpresa.ReadOnly = true;
             this.dgvEmpresa.RowHeadersWidth = 4;
             this.dgvEmpresa.Size = new System.Drawing.Size(712, 397);
             this.dgvEmpresa.TabIndex = 3;
@@ -136,6 +139,7 @@
             this.Column1.DataPropertyName = "ID";
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 70;
             // 
             // Column2
@@ -143,12 +147,14 @@
             this.Column2.DataPropertyName = "Nome";
             this.Column2.HeaderText = "Nome";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "Telefone";
             this.Column3.HeaderText = "Telefone";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 90;
             // 
             // Column4
@@ -156,12 +162,14 @@
             this.Column4.DataPropertyName = "Email";
             this.Column4.HeaderText = "Email";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.DataPropertyName = "Endereço";
             this.Column6.HeaderText = "Endereço";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
@@ -169,12 +177,14 @@
             this.Column7.DataPropertyName = "Bairro";
             this.Column7.HeaderText = "Bairro";
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
             this.Column8.DataPropertyName = "PontoDeReferencia";
             this.Column8.HeaderText = "Referência";
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // Column5
             // 
@@ -182,6 +192,7 @@
             this.Column5.Image = global::WindowsFormsApplication1.Properties.Resources.lapis;
             this.Column5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 25;
             // 
             // Column9
@@ -190,6 +201,7 @@
             this.Column9.Image = global::WindowsFormsApplication1.Properties.Resources.excluir;
             this.Column9.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             this.Column9.Width = 25;
             // 
             // EmpresaConsulta
