@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Telas;
+using WindowsFormsApplication1.Telas.Adicionais;
 using WindowsFormsApplication1.Telas.Cadastros;
 using WindowsFormsApplication1.Telas.Consultas;
 
@@ -184,6 +185,17 @@ namespace WindowsFormsApplication1
         {
             VagasConsulta tela = new VagasConsulta();
             OpenScreen(tela);
+        }
+
+        private void empresaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            emailempresa tela = new emailempresa();
+            OpenScreen(tela);
+        }
+
+        private void alunoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
