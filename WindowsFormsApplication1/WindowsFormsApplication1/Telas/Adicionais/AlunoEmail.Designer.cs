@@ -169,9 +169,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label txEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

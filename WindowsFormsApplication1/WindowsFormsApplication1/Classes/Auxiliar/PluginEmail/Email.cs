@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1.Classes.Auxiliar
         {
 
 
-        https://myaccount.google.com/lesssecureapps?pli=1
+        //https://myaccount.google.com/lesssecureapps?pli=1
             string remetente = "thiago.oliveira.santana.16@gmail.com";
             string senha = "22113366";
 

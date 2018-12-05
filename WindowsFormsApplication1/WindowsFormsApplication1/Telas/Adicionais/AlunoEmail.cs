@@ -22,14 +22,14 @@ namespace WindowsFormsApplication1.Telas.Adicionais
         private void button1_Click(object sender, EventArgs e)
         {
             Email email = new Email();
-            email.Enviar(txEmail.Text, conteudo.Text);
+            email.Enviar(textBox1.Text, conteudo.Text);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             AlunoDTO alu = comboBox1.SelectedItem as AlunoDTO;
 
-            textBox1.Text = alu.........;
+            textBox1.Text = alu.email;
         }
     }
 }
