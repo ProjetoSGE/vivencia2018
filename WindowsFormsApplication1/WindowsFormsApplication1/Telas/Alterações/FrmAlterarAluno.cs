@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Classes.Classes.Aluno;
+using WindowsFormsApplication1.Classes.Diferenciais.CEP;
 
 namespace WindowsFormsApplication1.Telas.Alterações
 {
@@ -139,7 +142,19 @@ namespace WindowsFormsApplication1.Telas.Alterações
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private CorreioResponde BuscarAPICorreio(string cep)
+        {
+            // Cria objeto responsável por conversar com uma API
+            WebClient rest = new WebClient();
+            rest.Encoding = Encoding.UTF8;
 
+            // Chama API do correio, concatenando o cep
+            string resposta = rest.DownloadString("https://viacep.com.br/ws/" + cep + "/json");
+
+            // Transforma a resposta do correio em DTO
+            CorreioResponde correio = JsonConvert.DeserializeObject<CorreioResponde>(resposta);
+            return correio;
+        }
         private void rdbSim_CheckedChanged(object sender, EventArgs e)
         {
             cboSerie.Enabled = true;
@@ -150,6 +165,19 @@ namespace WindowsFormsApplication1.Telas.Alterações
         {
             cboSerie.Enabled = false;
             cboTurno.Enabled = false;
+        }
+
+        private void mskCEP_Validated(object sender, EventArgs e)
+        {
+            // Lê e formata o CEP do textbox
+            string cep = mskCEP.Text.Trim().Replace("-", "");
+
+            // Chama função BuscarAPICorreio
+            CorreioResponde correio = BuscarAPICorreio(cep);
+
+            // Altera os valores dos textbox com a resposta do correio
+            txtEndereco.Text = correio.Logradouro + correio.Complemento;
+            txtBairro.Text = correio.bairro;
         }
     }
 }

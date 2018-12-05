@@ -36,6 +36,9 @@
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\AppMusica\AppMusica\conexão\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -72,6 +75,7 @@
     <Compile Include="Classes\Classes\Vagas\VagasDataBase.cs" />
     <Compile Include="Classes\Classes\Vagas\VagasDTO.cs" />
     <Compile Include="Classes\Classes\Vagas\VagasView.cs" />
+    <Compile Include="Classes\Diferenciais\CEP\CorreioResponde.cs" />
     <Compile Include="Estagio.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -241,6 +245,7 @@
     <None Include="Estagio.edmx.diagram">
       <DependentUpon>Estagio.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

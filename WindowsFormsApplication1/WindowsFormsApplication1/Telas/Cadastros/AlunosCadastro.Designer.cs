@@ -336,6 +336,7 @@
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(68, 20);
             this.mskCEP.TabIndex = 11;
+            this.mskCEP.Validated += new System.EventHandler(this.mskCEP_Validated);
             // 
             // groupBox4
             // 

@@ -268,6 +268,7 @@
             this.mktCep.Name = "mktCep";
             this.mktCep.Size = new System.Drawing.Size(69, 20);
             this.mktCep.TabIndex = 9;
+            this.mktCep.Validated += new System.EventHandler(this.mktCep_Validated);
             // 
             // label3
             // 
