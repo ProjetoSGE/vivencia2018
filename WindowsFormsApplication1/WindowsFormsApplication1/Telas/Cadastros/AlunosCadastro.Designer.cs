@@ -106,7 +106,7 @@
             this.groupBox1.Location = new System.Drawing.Point(64, 308);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(669, 140);
-            this.groupBox1.TabIndex = 79;
+            this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area profissional";
             // 
@@ -116,7 +116,7 @@
             this.txtPreferencia.MaxLength = 100;
             this.txtPreferencia.Name = "txtPreferencia";
             this.txtPreferencia.Size = new System.Drawing.Size(403, 20);
-            this.txtPreferencia.TabIndex = 17;
+            this.txtPreferencia.TabIndex = 21;
             // 
             // label8
             // 
@@ -135,7 +135,7 @@
             this.txtExperiencia.Multiline = true;
             this.txtExperiencia.Name = "txtExperiencia";
             this.txtExperiencia.Size = new System.Drawing.Size(556, 54);
-            this.txtExperiencia.TabIndex = 18;
+            this.txtExperiencia.TabIndex = 22;
             // 
             // label9
             // 
@@ -160,7 +160,7 @@
             this.groupBox2.Location = new System.Drawing.Point(409, 181);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(324, 106);
-            this.groupBox2.TabIndex = 76;
+            this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Estudo";
             // 
@@ -185,7 +185,7 @@
             this.cboTurno.Location = new System.Drawing.Point(153, 71);
             this.cboTurno.Name = "cboTurno";
             this.cboTurno.Size = new System.Drawing.Size(124, 21);
-            this.cboTurno.TabIndex = 16;
+            this.cboTurno.TabIndex = 19;
             // 
             // label13
             // 
@@ -204,7 +204,7 @@
             this.rdbNao.Location = new System.Drawing.Point(211, 15);
             this.rdbNao.Name = "rdbNao";
             this.rdbNao.Size = new System.Drawing.Size(55, 24);
-            this.rdbNao.TabIndex = 14;
+            this.rdbNao.TabIndex = 17;
             this.rdbNao.TabStop = true;
             this.rdbNao.Text = "Não";
             this.rdbNao.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@
             this.cboSerie.Location = new System.Drawing.Point(153, 42);
             this.cboSerie.Name = "cboSerie";
             this.cboSerie.Size = new System.Drawing.Size(124, 21);
-            this.cboSerie.TabIndex = 15;
+            this.cboSerie.TabIndex = 18;
             // 
             // rdnSim
             // 
@@ -231,7 +231,7 @@
             this.rdnSim.Location = new System.Drawing.Point(153, 15);
             this.rdnSim.Name = "rdnSim";
             this.rdnSim.Size = new System.Drawing.Size(52, 24);
-            this.rdnSim.TabIndex = 13;
+            this.rdnSim.TabIndex = 16;
             this.rdnSim.TabStop = true;
             this.rdnSim.Text = "Sim";
             this.rdnSim.UseVisualStyleBackColor = true;
@@ -261,7 +261,7 @@
             this.groupBox3.Location = new System.Drawing.Point(409, 40);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(324, 140);
-            this.groupBox3.TabIndex = 98;
+            this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Endereço";
             // 
@@ -271,7 +271,7 @@
             this.txtNumero.MaxLength = 5;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(68, 20);
-            this.txtNumero.TabIndex = 12;
+            this.txtNumero.TabIndex = 14;
             // 
             // label4
             // 
@@ -319,7 +319,7 @@
             this.txtEndereco.MaxLength = 150;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(144, 20);
-            this.txtEndereco.TabIndex = 10;
+            this.txtEndereco.TabIndex = 12;
             // 
             // txtBairro
             // 
@@ -327,7 +327,7 @@
             this.txtBairro.MaxLength = 100;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(144, 20);
-            this.txtBairro.TabIndex = 11;
+            this.txtBairro.TabIndex = 13;
             // 
             // mskCEP
             // 
@@ -335,7 +335,7 @@
             this.mskCEP.Mask = "00000-000";
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(68, 20);
-            this.mskCEP.TabIndex = 9;
+            this.mskCEP.TabIndex = 11;
             // 
             // groupBox4
             // 
@@ -359,7 +359,7 @@
             this.groupBox4.Location = new System.Drawing.Point(64, 42);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(324, 260);
-            this.groupBox4.TabIndex = 78;
+            this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Aluno";
             // 
@@ -370,7 +370,7 @@
             this.mtkRG.Mask = "00,000,000-0";
             this.mtkRG.Name = "mtkRG";
             this.mtkRG.Size = new System.Drawing.Size(83, 20);
-            this.mtkRG.TabIndex = 8;
+            this.mtkRG.TabIndex = 9;
             this.mtkRG.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // numericUpDown1
@@ -389,7 +389,7 @@
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(49, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.numericUpDown1.TabIndex = 6;
             this.numericUpDown1.Value = new decimal(new int[] {
             14,
             0,
@@ -412,7 +412,7 @@
             this.mskRecado.Mask = "00000-0000";
             this.mskRecado.Name = "mskRecado";
             this.mskRecado.Size = new System.Drawing.Size(82, 20);
-            this.mskRecado.TabIndex = 7;
+            this.mskRecado.TabIndex = 8;
             // 
             // label1
             // 
@@ -450,7 +450,7 @@
             this.dtpDataNasc.Location = new System.Drawing.Point(169, 118);
             this.dtpDataNasc.Name = "dtpDataNasc";
             this.dtpDataNasc.Size = new System.Drawing.Size(149, 20);
-            this.dtpDataNasc.TabIndex = 4;
+            this.dtpDataNasc.TabIndex = 5;
             // 
             // label5
             // 
@@ -477,7 +477,7 @@
             this.cboCurso.Location = new System.Drawing.Point(169, 53);
             this.cboCurso.Name = "cboCurso";
             this.cboCurso.Size = new System.Drawing.Size(149, 21);
-            this.cboCurso.TabIndex = 2;
+            this.cboCurso.TabIndex = 3;
             this.cboCurso.SelectedIndexChanged += new System.EventHandler(this.cboCurso_SelectedIndexChanged);
             // 
             // label6
@@ -508,7 +508,7 @@
             this.cboAnoEstudou.Location = new System.Drawing.Point(170, 84);
             this.cboAnoEstudou.Name = "cboAnoEstudou";
             this.cboAnoEstudou.Size = new System.Drawing.Size(148, 21);
-            this.cboAnoEstudou.TabIndex = 3;
+            this.cboAnoEstudou.TabIndex = 4;
             // 
             // label11
             // 
@@ -536,7 +536,7 @@
             this.txtNome.MaxLength = 150;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(148, 20);
-            this.txtNome.TabIndex = 1;
+            this.txtNome.TabIndex = 2;
             // 
             // mskRes
             // 
@@ -544,7 +544,7 @@
             this.mskRes.Mask = "0000-0000";
             this.mskRes.Name = "mskRes";
             this.mskRes.Size = new System.Drawing.Size(82, 20);
-            this.mskRes.TabIndex = 6;
+            this.mskRes.TabIndex = 7;
             // 
             // button1
             // 
@@ -555,7 +555,7 @@
             this.button1.Location = new System.Drawing.Point(644, 454);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 32);
-            this.button1.TabIndex = 19;
+            this.button1.TabIndex = 23;
             this.button1.Text = "Salvar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
