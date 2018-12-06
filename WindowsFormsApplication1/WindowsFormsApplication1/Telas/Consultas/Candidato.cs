@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Classes.Classes.Candidato;
 
 namespace WindowsFormsApplication1.Telas.Consultas
 {
@@ -15,11 +16,16 @@ namespace WindowsFormsApplication1.Telas.Consultas
         public Candidato()
         {
             InitializeComponent();
+            AutoCarregar();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void AutoCarregar()
         {
+            CandidatoBusiness buss = new CandidatoBusiness();
+            List<CandidatoView> lista = buss.List();
 
+            dgvAluno.AutoGenerateColumns = false;
+            dgvAluno.DataSource = lista;
         }
     }
 }

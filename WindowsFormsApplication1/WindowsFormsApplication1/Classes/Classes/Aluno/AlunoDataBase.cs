@@ -132,7 +132,6 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                 dto.Turno = reader.GetString("ds_turno");
                 dto.ExpProfissional = reader.GetString("ds_expProfissional");
                 dto.AreaPreferencial = reader.GetString("ds_areaPreferencial");
-                dto.email = reader.GetString("ds_email");
 
                 lista.Add(dto);
             }
