@@ -17,9 +17,9 @@ namespace WindowsFormsApplication1.Telas.Consultas
     {
         public void OpenScreen(UserControl control)
         {
-            if (pnlCentru.Controls.Count == 1)
+            /*if (pnl.Controls.Count == 1)
                 pnlCentru.Controls.RemoveAt(0);
-            pnlCentru.Controls.Add(control);
+            pnlCentru.Controls.Add(control);*/
         }
         public EmpresaConsulta()
         {

@@ -139,7 +139,7 @@ namespace WindowsFormsApplication1.Telas.Cadastros
 
                 dto.Nome = txtNome.Text.Trim();
                 dto.Curso = cboCurso.Text;
-                dto.Idade = Convert.ToInt32(numericUpDown1.Value);
+                dto.Idade = numericUpDown1.Text;
                 dto.AreaPreferencial = txtPreferencia.Text.Trim();
                 dto.Bairro = txtBairro.Text.Trim();
                 dto.Fixo = mskRes.Text.Trim();

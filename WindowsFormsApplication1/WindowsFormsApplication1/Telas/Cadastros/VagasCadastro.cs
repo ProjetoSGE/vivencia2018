@@ -94,5 +94,10 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         {
 
         }
+
+        private void txtArea_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -68,6 +68,15 @@
             // 
             this.cboTurma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTurma.FormattingEnabled = true;
+            this.cboTurma.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"});
             this.cboTurma.Location = new System.Drawing.Point(347, 80);
             this.cboTurma.Name = "cboTurma";
             this.cboTurma.Size = new System.Drawing.Size(98, 21);
@@ -116,7 +125,6 @@
             this.cboVaga.Name = "cboVaga";
             this.cboVaga.Size = new System.Drawing.Size(179, 21);
             this.cboVaga.TabIndex = 5;
-            this.cboVaga.SelectedIndexChanged += new System.EventHandler(this.cboVaga_SelectedIndexChanged);
             // 
             // lblQuantidade
             // 
@@ -174,7 +182,6 @@
             this.cboCurso.Name = "cboCurso";
             this.cboCurso.Size = new System.Drawing.Size(98, 21);
             this.cboCurso.TabIndex = 1;
-            this.cboCurso.SelectedIndexChanged += new System.EventHandler(this.cboCurso_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -248,7 +255,6 @@
             this.cboAluno.Name = "cboAluno";
             this.cboAluno.Size = new System.Drawing.Size(199, 21);
             this.cboAluno.TabIndex = 4;
-            this.cboAluno.SelectedIndexChanged += new System.EventHandler(this.cboAluno_SelectedIndexChanged);
             // 
             // label1
             // 

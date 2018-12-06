@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1.Telas.Alterações
             txtEndereco.Text = aluno.Endereco;
             txtBairro.Text = aluno.Bairro;
             txtNumero.Text = aluno.Numero;
-            numericUpDown1.Value = aluno.Idade;
+            numericUpDown1.Value = Convert.ToInt32(aluno.Idade);
             mskRes.Text = aluno.Fixo;
             mskRecado.Text = aluno.Celular;
             rdbSim.Checked = aluno.SeEstuda;
@@ -111,7 +111,7 @@ namespace WindowsFormsApplication1.Telas.Alterações
 
                 this.alunos.Nome = txtNome.Text;
                 this.alunos.Curso = cboCurso.Text;
-                this.alunos.Idade = Convert.ToInt32(numericUpDown1.Value);
+                this.alunos.Idade = numericUpDown1.Text;
                 this.alunos.AreaPreferencial = txtPreferencia.Text.Trim();
                 this.alunos.Bairro = txtBairro.Text.Trim();
                 this.alunos.Fixo = mskRes.Text.Trim();

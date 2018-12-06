@@ -207,6 +207,7 @@
             this.txtArea.Name = "txtArea";
             this.txtArea.Size = new System.Drawing.Size(100, 25);
             this.txtArea.TabIndex = 26;
+            this.txtArea.TextChanged += new System.EventHandler(this.txtArea_TextChanged);
             // 
             // btnsalvar
             // 
@@ -388,7 +389,7 @@
             this.chkPacoteOffice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPacoteOffice.Location = new System.Drawing.Point(134, 29);
             this.chkPacoteOffice.Name = "chkPacoteOffice";
-            this.chkPacoteOffice.Size = new System.Drawing.Size(117, 25);
+            this.chkPacoteOffice.Size = new System.Drawing.Size(116, 25);
             this.chkPacoteOffice.TabIndex = 10;
             this.chkPacoteOffice.Text = "Pacote office";
             this.chkPacoteOffice.UseVisualStyleBackColor = true;
@@ -472,7 +473,7 @@
             this.chkValeRef.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkValeRef.Location = new System.Drawing.Point(6, 81);
             this.chkValeRef.Name = "chkValeRef";
-            this.chkValeRef.Size = new System.Drawing.Size(122, 25);
+            this.chkValeRef.Size = new System.Drawing.Size(121, 25);
             this.chkValeRef.TabIndex = 16;
             this.chkValeRef.Text = "Vale Refeição";
             this.chkValeRef.UseVisualStyleBackColor = true;
@@ -547,7 +548,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(54, 346);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 21);
+            this.label11.Size = new System.Drawing.Size(58, 21);
             this.label11.TabIndex = 85;
             this.label11.Text = "Tarefas";
             // 

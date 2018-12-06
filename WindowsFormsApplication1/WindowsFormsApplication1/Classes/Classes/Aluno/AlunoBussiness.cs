@@ -30,10 +30,10 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                 throw new ArgumentException("Ano de estudo é obrigatório");
             }
 
-            if (dto.Idade <= 13)
+            /*if (dto.Idade <= 13)
             {
                 throw new ArgumentException("Idade deve ser maior que 13");
-            }
+            }*/
 
             if (dto.Endereco == string.Empty)
             {
@@ -94,10 +94,10 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
                 throw new ArgumentException("Ano de estudo é obrigatório");
             }
 
-            if (dto.Idade <= 13)
+            /*if (dto.Idade <= 13)
             {
                 throw new ArgumentException("Idade deve ser maior que 13");
-            }
+            }*/
 
             if (dto.Endereco == string.Empty)
             {
