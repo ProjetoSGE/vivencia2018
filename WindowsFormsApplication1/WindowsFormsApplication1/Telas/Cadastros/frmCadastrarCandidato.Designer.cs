@@ -221,6 +221,7 @@
             this.cboAluno.Name = "cboAluno";
             this.cboAluno.Size = new System.Drawing.Size(296, 25);
             this.cboAluno.TabIndex = 8;
+            this.cboAluno.SelectedIndexChanged += new System.EventHandler(this.cboAluno_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -263,6 +264,7 @@
             this.cboVaga.Name = "cboVaga";
             this.cboVaga.Size = new System.Drawing.Size(212, 25);
             this.cboVaga.TabIndex = 9;
+            this.cboVaga.SelectedIndexChanged += new System.EventHandler(this.cboVaga_SelectedIndexChanged);
             // 
             // btnSalvar
             // 
@@ -277,6 +279,7 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmCadastrarCandidato
             // 
