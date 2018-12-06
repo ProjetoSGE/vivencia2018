@@ -110,7 +110,8 @@ namespace WindowsFormsApplication1
 
         private void candidatoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         
+            CadastrarCandidato tela = new CadastrarCandidato();
+            OpenScreen(tela);
         }
 
         private void alunoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,7 +146,7 @@ namespace WindowsFormsApplication1
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            Application.Exit();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -194,6 +195,11 @@ namespace WindowsFormsApplication1
         }
 
         private void alunoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }
