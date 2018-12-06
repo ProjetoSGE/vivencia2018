@@ -64,5 +64,53 @@ namespace WindowsFormsApplication1.Telas.Cadastros
             dto.IdVaga = dto2.Id;
             dto.Status = null;
         }
+
+        private void cboTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboAluno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*AlunoDTO aluno = cboAluno.SelectedItem as AlunoDTO;
+
+            lblNomeCompleto.Text = aluno.Nome;
+            lblIdade.Text = aluno.Idade;
+            lblNumero.Text = aluno.Numero;
+            lblTelefone.Text = aluno.Fixo;*/
+
+        }
+
+        private void cboVaga_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            EmpresaDTO empresa = new EmpresaDTO();
+
+            VagasDTO vaga = cboVaga.SelectedItem as VagasDTO;
+
+
+            lblTipo.Text = vaga.NomeArea;
+            lblNomeEmpresa.Text = empresa.Nome;
+            lblQuantidade.Text = Convert.ToString(vaga.QuantidadeDeVaga);
+            lblArea.Text = vaga.NomeArea;
+
+
+        }
+
+        private void cboCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            AlunoDTO alunos = cboAluno.SelectedItem as AlunoDTO;
+
+            if (cboCurso.Text == alunos.QualCurso)
+            {
+                AlunoDTO aluno = cboAluno.SelectedItem as AlunoDTO;
+
+                lblNomeCompleto.Text = aluno.Nome;
+                lblIdade.Text = aluno.Idade;
+                lblNumero.Text = aluno.Numero;
+                lblTelefone.Text = aluno.Fixo;
+            }
+        }
     }
 }

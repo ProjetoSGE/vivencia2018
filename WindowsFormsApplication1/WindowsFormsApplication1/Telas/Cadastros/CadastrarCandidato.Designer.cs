@@ -116,6 +116,7 @@
             this.cboVaga.Name = "cboVaga";
             this.cboVaga.Size = new System.Drawing.Size(179, 21);
             this.cboVaga.TabIndex = 5;
+            this.cboVaga.SelectedIndexChanged += new System.EventHandler(this.cboVaga_SelectedIndexChanged);
             // 
             // lblQuantidade
             // 
@@ -133,7 +134,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 21);
+            this.label6.Size = new System.Drawing.Size(44, 21);
             this.label6.TabIndex = 44;
             this.label6.Text = "Vaga";
             // 
@@ -173,6 +174,7 @@
             this.cboCurso.Name = "cboCurso";
             this.cboCurso.Size = new System.Drawing.Size(98, 21);
             this.cboCurso.TabIndex = 1;
+            this.cboCurso.SelectedIndexChanged += new System.EventHandler(this.cboCurso_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -246,6 +248,7 @@
             this.cboAluno.Name = "cboAluno";
             this.cboAluno.Size = new System.Drawing.Size(199, 21);
             this.cboAluno.TabIndex = 4;
+            this.cboAluno.SelectedIndexChanged += new System.EventHandler(this.cboAluno_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -265,6 +268,7 @@
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(98, 21);
             this.cboTipo.TabIndex = 3;
+            this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
             // 
             // label5
             // 

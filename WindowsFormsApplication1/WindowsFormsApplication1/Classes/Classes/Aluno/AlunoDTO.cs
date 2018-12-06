@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1.Classes.Classes.Aluno
         public string Rg { get; set; }
         public string AnoDeEstudo { get; set; }
         public DateTime Nascimento { get; set; }
-        public int Idade { get; set; }
+        public string Idade { get; set; }
         public string Endereco { get; set; }
         public string Numero { get; set; }
         public string Bairro { get; set; }
