@@ -1,0 +1,146 @@
+﻿-- DROP DATABASE SGEdb;
+CREATE DATABASE SGEdb;
+USE SGEdb;
+
+
+CREATE TABLE `tb_alunos` (
+	`id_aluno` INT NOT NULL AUTO_INCREMENT,
+	`nm_aluno` varchar(150) NOT NULL,
+	`nm_curso` varchar(100) NOT NULL,
+    `ds_rg` varchar(15) NOT NULL UNIQUE,
+	`ds_anoEstudo` varchar(4) NOT NULL,
+	`dt_nascimento` DATE NOT NULL,
+	`ds_idade` int NOT NULL,
+	`ds_endereco` varchar(150) NOT NULL,
+	`ds_numero` varchar(5) NOT NULL,
+	`ds_bairro` varchar(100) NOT NULL,
+	`ds_cep` varchar(9) NOT NULL,
+	`nr_fixo` varchar(13),
+	`nr_celular` varchar(14) NOT NULL,
+	`ds_seEstuda` varchar(3),
+	`ds_qualCurso` varchar(50),
+	`ds_turno` varchar(7),
+	`ds_expProfissional` TEXT,
+	`ds_areaPreferencial` varchar(100) NOT NULL,
+	PRIMARY KEY (`id_aluno`)
+);
+
+select * from tb_alunos;
+
+CREATE TABLE `tb_empresas` (
+	`id_empresa` INT NOT NULL AUTO_INCREMENT,
+	`nm_fantasia` varchar(150) NOT NULL,
+    `nm_razaoSocial` varchar(300) UNIQUE,
+    `ds_cnpj` varchar(20),
+    `nr_codEstadual` varchar(15),
+	`nr_telefone` varchar(14) NOT NULL,
+	`ds_email` varchar(100) NOT NULL UNIQUE,
+	`ds_cep` varchar(9) NOT NULL,
+	`ds_bairro` varchar(50) NOT NULL,
+	`ds_endereco` varchar(150) NOT NULL,
+	`ds_pontoReferencia` varchar(100),
+	PRIMARY KEY (`id_empresa`)
+);
+
+
+CREATE TABLE `tb_vagas` (
+	`id_vaga` INT NOT NULL AUTO_INCREMENT,
+	`nm_vaga` varchar(150) NOT NULL,
+	`nm_area` varchar(100) NOT NULL,
+	`qtd_vaga` INT NOT NULL,
+	`dt_inicioEstagio` DATE NOT NULL,
+	`ds_sexo` varchar(9) NOT NULL,
+	`id_empresa` INT NOT NULL,
+	`ds_horarioEntrada` TIME NOT NULL,
+    `ds_horarioSaida` TIME NOT NULL,
+	`ds_intervalo` TIME NOT NULL,
+	`op_seguroDeVida` BOOLEAN,
+	`op_auxTransporte` BOOLEAN,
+	`op_recRemunerado` BOOLEAN,
+	`op_valeRefeicao` BOOLEAN,
+	`op_cestaBasica` BOOLEAN,
+	`op_refLocal` BOOLEAN,
+	`op_assisMedica` BOOLEAN,
+	`nvl_ingles` varchar(13) NOT NULL,
+	`op_infoOffice` BOOLEAN,
+	`op_infoAutoCAD` BOOLEAN,
+	`op_infoCorel` BOOLEAN,
+	`op_infoPhotoShop` BOOLEAN,
+	`op_infoProgramacao` BOOLEAN,
+	`ds_outros` varchar(150),
+	`ds_observacao` varchar(250),
+	`ds_compPessoal` TEXT,
+	`ds_tarefas` TEXT,
+	PRIMARY KEY (`id_vaga`),
+	FOREIGN KEY (`id_empresa`)
+	REFERENCES tb_empresas(`id_empresa`)
+);
+
+select * from tb_vagas;
+
+CREATE TABLE `tb_candidato` (
+	`id_candidato` INT NOT NULL AUTO_INCREMENT,
+	`id_aluno` INT NOT NULL,
+	`id_vaga` INT NOT NULL,
+	`ds_status` varchar(150) NOT NULL,
+	PRIMARY KEY (`id_candidato`),
+	FOREIGN KEY (`id_aluno`)
+	REFERENCES tb_alunos(`id_aluno`),
+	FOREIGN KEY (`id_vaga`)    
+	REFERENCES tb_vagas(`id_vaga`)
+);
+
+
+-- ============================== VIEWs ==============================
+
+
+CREATE VIEW vw_vagas AS
+	SELECT v.id_vaga,
+		   v.nm_vaga,
+           v.nm_area,
+           v.qtd_vaga,
+           v.dt_inicioEstagio,
+           v.ds_sexo,
+           e.nm_fantasia,
+           v.ds_horarioEntrada,
+           v.ds_horarioSaida,
+           v.ds_intervalo,
+           v.op_seguroDeVida,
+           v.op_auxTransporte,
+           v.op_recRemunerado,
+           v.op_valeRefeicao,
+           v.op_cestaBasica,
+           v.op_refLocal,
+           v.op_assisMedica,
+           v.nvl_ingles,
+           v.op_infoOffice,
+           v.op_infoAutoCAD,
+           v.op_infoCorel,
+           v.op_infoPhotoShop,
+           v.op_infoProgramacao,
+           v.ds_outros,
+           v.ds_observacao,
+           v.ds_compPessoal,
+           v.ds_tarefas
+	FROM tb_vagas 								    v
+    JOIN tb_empresas								e
+	  ON v.id_empresa = e.id_empresa;
+
+           
+SELECT * FROM vw_vagas;
+
+
+CREATE VIEW vw_candidato AS
+	SELECT c.id_candidato,
+		   a.nm_aluno,
+           a.nm_curso,
+           v.nm_vaga,
+           c.ds_status
+	FROM tb_candidato								c
+    JOIN tb_alunos									a
+      ON c.id_aluno = a.id_aluno
+	JOIN tb_vagas									v
+      ON c.id_vaga = v.id_vaga;
+
+
+SELECT * FROM vw_candidato;

@@ -304,6 +304,7 @@
       <DependentUpon>Estagio.edmx</DependentUpon>
       <LastGenOutput>Estagio.cs</LastGenOutput>
     </Content>
+    <Content Include="SCRIPT.txt" />
     <None Include="Resources\icons8-delete-26.png" />
     <None Include="Resources\icons8-excluir-48.png" />
     <None Include="Resources\icons8-save-261.png" />
