@@ -104,6 +104,12 @@
     <Compile Include="Telas\Adicionais\emailempresa.Designer.cs">
       <DependentUpon>emailempresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Cadastros\frmCadastrarCandidato.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastros\frmCadastrarCandidato.Designer.cs">
+      <DependentUpon>frmCadastrarCandidato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,12 +153,6 @@
     </Compile>
     <Compile Include="Telas\Cadastros\AlunosCadastro.Designer.cs">
       <DependentUpon>AlunosCadastro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Cadastros\CadastrarCandidato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Cadastros\CadastrarCandidato.Designer.cs">
-      <DependentUpon>CadastrarCandidato.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Cadastros\EmpresaCadastro.cs">
       <SubType>UserControl</SubType>
@@ -208,6 +208,9 @@
     <EmbeddedResource Include="Telas\Adicionais\emailempresa.resx">
       <DependentUpon>emailempresa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastros\frmCadastrarCandidato.resx">
+      <DependentUpon>frmCadastrarCandidato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Cadastros\AlunosCadastro.resx">
       <DependentUpon>AlunosCadastro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Cadastros\CadastrarCandidato.resx">
-      <DependentUpon>CadastrarCandidato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Cadastros\EmpresaCadastro.resx">
       <DependentUpon>EmpresaCadastro.cs</DependentUpon>
