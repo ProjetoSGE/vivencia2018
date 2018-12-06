@@ -146,8 +146,8 @@ namespace WindowsFormsApplication1.Telas.Cadastros
                 dto.Endereco = txtEndereco.Text.Trim();
                 dto.ExpProfissional = txtExperiencia.Text.Trim();
                 dto.Nascimento = dtpDataNasc.Value;
-                dto.QualCurso = cboSerie.Text;
-                dto.Turno = cboTurno.Text;
+                dto.QualCurso = txtCurso.Text;
+                dto.Turno = txtTurno.Text;
                 dto.SeEstuda = rdnSim.Checked;
                 dto.Numero = txtNumero.Text.Trim();
                 dto.AnoDeEstudo = cboAnoEstudou.Text.Trim();
@@ -186,15 +186,15 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         }
         private void rdnSim_CheckedChanged(object sender, EventArgs e)
         {
-            cboSerie.Enabled = true;
-            cboTurno.Enabled = true;
+            txtCurso.Enabled = true;
+            txtTurno.Enabled = true;
                
         }
 
         private void rdbNao_CheckedChanged(object sender, EventArgs e)
         {
-            cboSerie.Enabled = false;
-            cboTurno.Enabled = false;
+            txtCurso.Enabled = false;
+            txtTurno.Enabled = false;
         }
 
         private void mskCEP_Validated(object sender, EventArgs e)

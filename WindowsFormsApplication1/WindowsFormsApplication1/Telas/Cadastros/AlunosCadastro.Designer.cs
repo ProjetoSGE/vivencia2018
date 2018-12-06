@@ -71,9 +71,9 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.mskRes = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCurso = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTurno = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -173,8 +173,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtTurno);
+            this.groupBox2.Controls.Add(this.txtCurso);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.rdbNao);
@@ -558,24 +558,24 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtCurso
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 73;
+            this.txtCurso.Location = new System.Drawing.Point(148, 42);
+            this.txtCurso.Name = "txtCurso";
+            this.txtCurso.Size = new System.Drawing.Size(100, 20);
+            this.txtCurso.TabIndex = 73;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // textBox2
+            // txtTurno
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 74;
+            this.txtTurno.Location = new System.Drawing.Point(148, 74);
+            this.txtTurno.Name = "txtTurno";
+            this.txtTurno.Size = new System.Drawing.Size(100, 20);
+            this.txtTurno.TabIndex = 74;
             // 
             // AlunosCadastro
             // 
@@ -648,8 +648,8 @@
         private System.Windows.Forms.MaskedTextBox mtkRG;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTurno;
+        private System.Windows.Forms.TextBox txtCurso;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
