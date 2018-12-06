@@ -8,22 +8,22 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
 {
     public class CandidatoBusiness
     {
-        public int Salvar(CandidatoDTO dto)
+        public int Save(CandidatoDTO dto)
         {
-            CandidatoDataBase db = new CandidatoDataBase();
-            return db.Salvar(dto);
+            CandidatoDB db = new CandidatoDB();
+            return db.Save(dto);
         }
 
-        public List<CandidatoDTO> Listar()
+        public List<CandidatoView> List()
         {
-            CandidatoDataBase db = new CandidatoDataBase();
-            return db.Listar();
+            CandidatoDB db = new CandidatoDB();
+            return db.ListView();
         }
 
-        public List<CandidatoView> ListarView()
+        public List<CandidatoView> SearchView(string aluno, string vaga)
         {
-            CandidatoDataBase db = new CandidatoDataBase();
-            return db.ListarView();
+            CandidatoDB db = new CandidatoDB();
+            return db.SearchView(aluno, vaga);
         }
     }
 }

@@ -69,6 +69,9 @@ namespace WindowsFormsApplication1.Telas.Cadastros
             dto.Status = "Em Espera";
 
             CandidatoBusiness buss = new CandidatoBusiness();
+            buss.Save(dto);
+
+            MessageBox.Show("Candidato cadastrado com sucesso!");
         }
     }
 }
