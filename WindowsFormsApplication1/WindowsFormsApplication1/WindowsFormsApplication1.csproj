@@ -262,6 +262,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Estagio.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Docs\Parte_escrita.docx" />
+    <None Include="Docs\TESTE.docx" />
     <None Include="Estagio.edmx.diagram">
       <DependentUpon>Estagio.edmx</DependentUpon>
     </None>
@@ -312,9 +314,7 @@
     <None Include="Resources\icons8-save-26.png" />
     <None Include="Resources\icons8-info-48.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Docs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
