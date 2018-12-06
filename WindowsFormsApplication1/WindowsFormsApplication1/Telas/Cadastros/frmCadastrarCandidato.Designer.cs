@@ -62,7 +62,7 @@
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.ReadOnly = true;
             this.txtEmpresa.Size = new System.Drawing.Size(210, 25);
-            this.txtEmpresa.TabIndex = 42;
+            this.txtEmpresa.TabIndex = 11;
             // 
             // label9
             // 
@@ -81,7 +81,7 @@
             this.txtAreaVaga.Name = "txtAreaVaga";
             this.txtAreaVaga.ReadOnly = true;
             this.txtAreaVaga.Size = new System.Drawing.Size(165, 25);
-            this.txtAreaVaga.TabIndex = 40;
+            this.txtAreaVaga.TabIndex = 10;
             // 
             // txtAno
             // 
@@ -90,7 +90,7 @@
             this.txtAno.Name = "txtAno";
             this.txtAno.ReadOnly = true;
             this.txtAno.Size = new System.Drawing.Size(76, 25);
-            this.txtAno.TabIndex = 39;
+            this.txtAno.TabIndex = 4;
             // 
             // txtAreaPreferencial
             // 
@@ -99,7 +99,7 @@
             this.txtAreaPreferencial.Name = "txtAreaPreferencial";
             this.txtAreaPreferencial.ReadOnly = true;
             this.txtAreaPreferencial.Size = new System.Drawing.Size(163, 25);
-            this.txtAreaPreferencial.TabIndex = 38;
+            this.txtAreaPreferencial.TabIndex = 7;
             // 
             // label8
             // 
@@ -118,7 +118,7 @@
             this.txtNasci.Name = "txtNasci";
             this.txtNasci.ReadOnly = true;
             this.txtNasci.Size = new System.Drawing.Size(105, 25);
-            this.txtNasci.TabIndex = 36;
+            this.txtNasci.TabIndex = 6;
             // 
             // label7
             // 
@@ -167,7 +167,7 @@
             this.txtRG.Name = "txtRG";
             this.txtRG.ReadOnly = true;
             this.txtRG.Size = new System.Drawing.Size(109, 25);
-            this.txtRG.TabIndex = 31;
+            this.txtRG.TabIndex = 5;
             // 
             // label3
             // 
@@ -186,7 +186,7 @@
             this.txtCurso.Name = "txtCurso";
             this.txtCurso.ReadOnly = true;
             this.txtCurso.Size = new System.Drawing.Size(109, 25);
-            this.txtCurso.TabIndex = 29;
+            this.txtCurso.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -208,7 +208,7 @@
             this.groupBox2.Location = new System.Drawing.Point(31, 32);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(664, 183);
-            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Seleção de Alunos";
             // 
@@ -220,7 +220,7 @@
             this.cboAluno.Location = new System.Drawing.Point(115, 39);
             this.cboAluno.Name = "cboAluno";
             this.cboAluno.Size = new System.Drawing.Size(296, 25);
-            this.cboAluno.TabIndex = 8;
+            this.cboAluno.TabIndex = 2;
             this.cboAluno.SelectedIndexChanged += new System.EventHandler(this.cboAluno_SelectedIndexChanged);
             // 
             // label1
@@ -241,7 +241,7 @@
             this.groupBox3.Location = new System.Drawing.Point(31, 238);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(664, 163);
-            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Seleção de Vagas";
             // 
@@ -275,7 +275,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(12, 444);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(89, 45);
-            this.btnSalvar.TabIndex = 28;
+            this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;

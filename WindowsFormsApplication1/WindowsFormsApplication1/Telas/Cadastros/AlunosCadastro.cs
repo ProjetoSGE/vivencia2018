@@ -146,12 +146,12 @@ namespace WindowsFormsApplication1.Telas.Cadastros
                 dto.Endereco = txtEndereco.Text.Trim();
                 dto.ExpProfissional = txtExperiencia.Text.Trim();
                 dto.Nascimento = dtpDataNasc.Value;
-                dto.QualCurso = txtCurso.Text;
-                dto.Turno = txtTurno.Text;
+                dto.QualCurso = txtCurso.Text.Trim();
+                dto.Turno = txtTurno.Text.Trim();
                 dto.SeEstuda = rdnSim.Checked;
                 dto.Numero = txtNumero.Text.Trim();
                 dto.AnoDeEstudo = cboAnoEstudou.Text.Trim();
-                dto.email = txtEmail.Text;
+                dto.email = txtEmail.Text.Trim();
 
                 AlunoBussiness business = new AlunoBussiness();
                 business.Salvar(dto);

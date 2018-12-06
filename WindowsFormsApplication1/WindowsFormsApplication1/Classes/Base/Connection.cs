@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1.Classes.Base
     {
         public MySqlConnection Create()
         {
-            string connectionString = "server=Localhost; database=SGEdb; uid=root; password=1234; SslMode=none";
+            string connectionString = "server=70.37.57.127; database=SGEdb; uid=nsf; password=nsf@2018; SslMode=none";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             return connection;

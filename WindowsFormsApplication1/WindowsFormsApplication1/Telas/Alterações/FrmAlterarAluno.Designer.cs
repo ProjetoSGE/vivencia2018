@@ -84,7 +84,7 @@
             this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(30, 10);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(224, 25);
+            this.label17.Size = new System.Drawing.Size(225, 25);
             this.label17.TabIndex = 79;
             this.label17.Text = "Alterar Regsitro do Aluno";
             // 
@@ -461,7 +461,7 @@
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(50, 168);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 21);
+            this.label14.Size = new System.Drawing.Size(109, 21);
             this.label14.TabIndex = 52;
             this.label14.Text = "Telefone(RES):";
             // 
@@ -490,7 +490,7 @@
             this.button1.Location = new System.Drawing.Point(627, 471);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 38);
-            this.button1.TabIndex = 23;
+            this.button1.TabIndex = 24;
             this.button1.Text = "Alterar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
@@ -508,7 +508,7 @@
             this.groupBox1.Location = new System.Drawing.Point(47, 312);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(669, 153);
-            this.groupBox1.TabIndex = 80;
+            this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Area profissional";
             // 
@@ -518,7 +518,7 @@
             this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(403, 20);
-            this.txtEmail.TabIndex = 65;
+            this.txtEmail.TabIndex = 21;
             // 
             // label19
             // 
@@ -536,7 +536,7 @@
             this.txtPreferencia.MaxLength = 100;
             this.txtPreferencia.Name = "txtPreferencia";
             this.txtPreferencia.Size = new System.Drawing.Size(403, 20);
-            this.txtPreferencia.TabIndex = 21;
+            this.txtPreferencia.TabIndex = 22;
             // 
             // label8
             // 
@@ -555,7 +555,7 @@
             this.txtExperiencia.Multiline = true;
             this.txtExperiencia.Name = "txtExperiencia";
             this.txtExperiencia.Size = new System.Drawing.Size(556, 54);
-            this.txtExperiencia.TabIndex = 22;
+            this.txtExperiencia.TabIndex = 23;
             // 
             // label9
             // 

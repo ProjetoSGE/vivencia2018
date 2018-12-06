@@ -39,6 +39,8 @@
             this.txtExperiencia = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTurno = new System.Windows.Forms.TextBox();
+            this.txtCurso = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.rdbNao = new System.Windows.Forms.RadioButton();
@@ -71,9 +73,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.mskRes = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtCurso = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txtTurno = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -118,10 +118,10 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(219, 12);
-            this.txtEmail.MaxLength = 100;
+            this.txtEmail.MaxLength = 150;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(403, 20);
-            this.txtEmail.TabIndex = 65;
+            this.txtEmail.TabIndex = 21;
             // 
             // label19
             // 
@@ -139,7 +139,7 @@
             this.txtPreferencia.MaxLength = 100;
             this.txtPreferencia.Name = "txtPreferencia";
             this.txtPreferencia.Size = new System.Drawing.Size(403, 20);
-            this.txtPreferencia.TabIndex = 21;
+            this.txtPreferencia.TabIndex = 22;
             // 
             // label8
             // 
@@ -158,7 +158,7 @@
             this.txtExperiencia.Multiline = true;
             this.txtExperiencia.Name = "txtExperiencia";
             this.txtExperiencia.Size = new System.Drawing.Size(556, 54);
-            this.txtExperiencia.TabIndex = 22;
+            this.txtExperiencia.TabIndex = 23;
             // 
             // label9
             // 
@@ -186,6 +186,20 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Estudo";
+            // 
+            // txtTurno
+            // 
+            this.txtTurno.Location = new System.Drawing.Point(148, 74);
+            this.txtTurno.Name = "txtTurno";
+            this.txtTurno.Size = new System.Drawing.Size(100, 20);
+            this.txtTurno.TabIndex = 19;
+            // 
+            // txtCurso
+            // 
+            this.txtCurso.Location = new System.Drawing.Point(148, 42);
+            this.txtCurso.Name = "txtCurso";
+            this.txtCurso.Size = new System.Drawing.Size(100, 20);
+            this.txtCurso.TabIndex = 18;
             // 
             // label16
             // 
@@ -552,30 +566,16 @@
             this.button1.Location = new System.Drawing.Point(47, 454);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 32);
-            this.button1.TabIndex = 23;
+            this.button1.TabIndex = 24;
             this.button1.Text = "Salvar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtCurso
-            // 
-            this.txtCurso.Location = new System.Drawing.Point(148, 42);
-            this.txtCurso.Name = "txtCurso";
-            this.txtCurso.Size = new System.Drawing.Size(100, 20);
-            this.txtCurso.TabIndex = 73;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // txtTurno
-            // 
-            this.txtTurno.Location = new System.Drawing.Point(148, 74);
-            this.txtTurno.Name = "txtTurno";
-            this.txtTurno.Size = new System.Drawing.Size(100, 20);
-            this.txtTurno.TabIndex = 74;
             // 
             // AlunosCadastro
             // 
