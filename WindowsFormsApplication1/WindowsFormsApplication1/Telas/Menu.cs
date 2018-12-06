@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1
 
         private void candidatoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastrarCandidato tela = new CadastrarCandidato();
+            frmCadastrarCandidato tela = new frmCadastrarCandidato();
             OpenScreen(tela);
         }
 
