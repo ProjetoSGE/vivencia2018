@@ -205,7 +205,7 @@
             this.txtArea.Location = new System.Drawing.Point(530, 20);
             this.txtArea.MaxLength = 100;
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(100, 25);
+            this.txtArea.Size = new System.Drawing.Size(130, 25);
             this.txtArea.TabIndex = 26;
             this.txtArea.TextChanged += new System.EventHandler(this.txtArea_TextChanged);
             // 
@@ -215,7 +215,7 @@
             this.btnsalvar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsalvar.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_save_261;
             this.btnsalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnsalvar.Location = new System.Drawing.Point(615, 3);
+            this.btnsalvar.Location = new System.Drawing.Point(25, 8);
             this.btnsalvar.Name = "btnsalvar";
             this.btnsalvar.Size = new System.Drawing.Size(89, 47);
             this.btnsalvar.TabIndex = 31;
@@ -515,7 +515,7 @@
             // txtCompetecias
             // 
             this.txtCompetecias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCompetecias.Location = new System.Drawing.Point(120, 350);
+            this.txtCompetecias.Location = new System.Drawing.Point(120, 356);
             this.txtCompetecias.MaxLength = 200;
             this.txtCompetecias.Name = "txtCompetecias";
             this.txtCompetecias.Size = new System.Drawing.Size(226, 20);
@@ -524,7 +524,7 @@
             // txtTarefa
             // 
             this.txtTarefa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTarefa.Location = new System.Drawing.Point(475, 350);
+            this.txtTarefa.Location = new System.Drawing.Point(475, 356);
             this.txtTarefa.MaxLength = 200;
             this.txtTarefa.Multiline = true;
             this.txtTarefa.Name = "txtTarefa";
@@ -534,7 +534,7 @@
             // txtObs
             // 
             this.txtObs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtObs.Location = new System.Drawing.Point(120, 376);
+            this.txtObs.Location = new System.Drawing.Point(120, 382);
             this.txtObs.MaxLength = 250;
             this.txtObs.Multiline = true;
             this.txtObs.Name = "txtObs";
@@ -546,7 +546,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(54, 346);
+            this.label11.Location = new System.Drawing.Point(54, 352);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 21);
             this.label11.TabIndex = 85;
@@ -557,7 +557,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(361, 350);
+            this.label8.Location = new System.Drawing.Point(361, 356);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 21);
             this.label8.TabIndex = 83;
@@ -568,7 +568,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(21, 376);
+            this.label10.Location = new System.Drawing.Point(21, 382);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 21);
             this.label10.TabIndex = 84;
@@ -589,7 +589,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(418, 403);
+            this.label12.Location = new System.Drawing.Point(418, 409);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 21);
             this.label12.TabIndex = 96;
@@ -604,7 +604,7 @@
             "Intermediário",
             "Avançado",
             "Indiferente"});
-            this.cboNvlIngles.Location = new System.Drawing.Point(475, 403);
+            this.cboNvlIngles.Location = new System.Drawing.Point(475, 409);
             this.cboNvlIngles.Name = "cboNvlIngles";
             this.cboNvlIngles.Size = new System.Drawing.Size(121, 21);
             this.cboNvlIngles.TabIndex = 30;

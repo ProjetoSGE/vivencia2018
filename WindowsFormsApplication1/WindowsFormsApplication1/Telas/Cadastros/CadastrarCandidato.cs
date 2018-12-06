@@ -69,5 +69,10 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         {
 
         }
+
+        private void CadastrarCandidato_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
