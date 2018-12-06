@@ -34,7 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlTopo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlCentro = new System.Windows.Forms.Panel();
@@ -60,7 +60,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.pnlTopo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -116,18 +116,21 @@
             this.panel5.Size = new System.Drawing.Size(10, 556);
             this.panel5.TabIndex = 13;
             // 
-            // panel6
+            // pnlTopo
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(109)))), ((int)(((byte)(167)))));
-            this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Controls.Add(this.pnlCentro);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(10, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(755, 26);
-            this.panel6.TabIndex = 14;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            this.pnlTopo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(109)))), ((int)(((byte)(167)))));
+            this.pnlTopo.Controls.Add(this.pictureBox2);
+            this.pnlTopo.Controls.Add(this.pictureBox3);
+            this.pnlTopo.Controls.Add(this.pnlCentro);
+            this.pnlTopo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopo.Location = new System.Drawing.Point(10, 0);
+            this.pnlTopo.Name = "pnlTopo";
+            this.pnlTopo.Size = new System.Drawing.Size(755, 26);
+            this.pnlTopo.TabIndex = 14;
+            this.pnlTopo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            this.pnlTopo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
+            this.pnlTopo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseMove);
+            this.pnlTopo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseUp);
             // 
             // pictureBox2
             // 
@@ -355,7 +358,7 @@
             this.ClientSize = new System.Drawing.Size(775, 574);
             this.Controls.Add(this.pnlCentru);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pnlTopo);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox7);
@@ -367,7 +370,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.pnlTopo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -388,7 +391,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlTopo;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel pnlCentro;
         private System.Windows.Forms.MenuStrip menuStrip1;

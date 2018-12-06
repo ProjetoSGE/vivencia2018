@@ -203,5 +203,35 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private bool mover;
+        private int cX, cY;
+
+        private void panel6_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                cX = e.X;
+                cY = e.Y;
+                mover = true;
+            }
+        }
+
+        private void panel6_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mover = false;
+            }
+        }
+
+        private void panel6_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mover)
+            {
+                this.Left += e.X - (cX - pnlTopo.Left);
+                this.Top += e.Y - (cY - pnlTopo.Top);
+            }
+        }
     }
 }
