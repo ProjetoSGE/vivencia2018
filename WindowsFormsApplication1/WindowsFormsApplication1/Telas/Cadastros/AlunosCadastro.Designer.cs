@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -74,11 +73,13 @@
             this.mskRes = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolTip1
@@ -89,16 +90,6 @@
             this.toolTip1.Tag = "";
             this.toolTip1.ToolTipTitle = "CEP";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, -2);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(148, 25);
-            this.label17.TabIndex = 74;
-            this.label17.Text = "Cadastrar Aluno";
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -108,7 +99,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtExperiencia);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(47, 295);
+            this.groupBox1.Location = new System.Drawing.Point(46, 280);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(669, 150);
             this.groupBox1.TabIndex = 20;
@@ -180,9 +171,9 @@
             this.groupBox2.Controls.Add(this.rdbNao);
             this.groupBox2.Controls.Add(this.rdnSim);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(392, 164);
+            this.groupBox2.Location = new System.Drawing.Point(391, 149);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(324, 106);
+            this.groupBox2.Size = new System.Drawing.Size(324, 120);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Estudo";
@@ -268,7 +259,7 @@
             this.groupBox3.Controls.Add(this.txtEndereco);
             this.groupBox3.Controls.Add(this.txtBairro);
             this.groupBox3.Controls.Add(this.mskCEP);
-            this.groupBox3.Location = new System.Drawing.Point(392, 23);
+            this.groupBox3.Location = new System.Drawing.Point(391, 8);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(324, 140);
             this.groupBox3.TabIndex = 10;
@@ -367,7 +358,7 @@
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.txtNome);
             this.groupBox4.Controls.Add(this.mskRes);
-            this.groupBox4.Location = new System.Drawing.Point(47, 24);
+            this.groupBox4.Location = new System.Drawing.Point(46, 9);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(324, 260);
             this.groupBox4.TabIndex = 1;
@@ -563,9 +554,9 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_save_261;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(47, 454);
+            this.button1.Location = new System.Drawing.Point(24, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 32);
+            this.button1.Size = new System.Drawing.Size(89, 40);
             this.button1.TabIndex = 24;
             this.button1.Text = "Salvar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -577,19 +568,28 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 436);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(755, 65);
+            this.panel1.TabIndex = 96;
+            // 
             // AlunosCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.panel1);
             this.Name = "AlunosCadastro";
-            this.Size = new System.Drawing.Size(759, 489);
+            this.Size = new System.Drawing.Size(755, 501);
             this.Load += new System.EventHandler(this.AlunosCadastro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -600,14 +600,13 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtPreferencia;
         private System.Windows.Forms.Label label8;
@@ -651,5 +650,6 @@
         private System.Windows.Forms.TextBox txtTurno;
         private System.Windows.Forms.TextBox txtCurso;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
