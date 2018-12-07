@@ -75,5 +75,11 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
             reader.Close();
             return list;
         }
+
+        public void Update(CandidatoDTO dto)
+        {
+            string script = @"UPDATE tb_canditado SET ds_status = @ds_status
+                                                WHERE id_candidato = @id_candidato";
+        }
     }
 }
