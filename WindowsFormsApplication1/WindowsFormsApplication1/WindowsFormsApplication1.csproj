@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\AppMusica\AppMusica\conexão\MySql.Data.dll</HintPath>
@@ -307,6 +310,7 @@
       <DependentUpon>Estagio.edmx</DependentUpon>
       <LastGenOutput>Estagio.cs</LastGenOutput>
     </Content>
+    <Content Include="favicon %281%29.ico" />
     <Content Include="SCRIPT.txt" />
     <None Include="Resources\icons8-delete-26.png" />
     <None Include="Resources\icons8-excluir-48.png" />
