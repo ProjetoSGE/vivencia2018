@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Pesquisar = new System.Windows.Forms.Label();
@@ -39,26 +38,19 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, -2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 25);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Consultar Aluno";
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(629, 45);
+            this.button1.Location = new System.Drawing.Point(584, 32);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 34);
+            this.button1.Size = new System.Drawing.Size(94, 41);
             this.button1.TabIndex = 2;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
@@ -66,16 +58,17 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 51);
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(75, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(553, 20);
+            this.textBox1.Size = new System.Drawing.Size(481, 23);
             this.textBox1.TabIndex = 1;
             // 
             // Pesquisar
             // 
             this.Pesquisar.AutoSize = true;
             this.Pesquisar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pesquisar.Location = new System.Drawing.Point(11, 49);
+            this.Pesquisar.Location = new System.Drawing.Point(16, 45);
             this.Pesquisar.Name = "Pesquisar";
             this.Pesquisar.Size = new System.Drawing.Size(53, 21);
             this.Pesquisar.TabIndex = 14;
@@ -93,10 +86,10 @@
             this.Column3,
             this.Column5,
             this.Column6});
-            this.dgvAluno.Location = new System.Drawing.Point(15, 84);
+            this.dgvAluno.Location = new System.Drawing.Point(19, 89);
             this.dgvAluno.Name = "dgvAluno";
             this.dgvAluno.ReadOnly = true;
-            this.dgvAluno.Size = new System.Drawing.Size(709, 400);
+            this.dgvAluno.Size = new System.Drawing.Size(716, 385);
             this.dgvAluno.TabIndex = 3;
             this.dgvAluno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAluno_CellContentClick_1);
             // 
@@ -153,27 +146,36 @@
             this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column6.Width = 25;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Pesquisar);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(728, 481);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Consulta de Alunos";
+            // 
             // AlunosConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Pesquisar);
             this.Controls.Add(this.dgvAluno);
+            this.Controls.Add(this.groupBox1);
             this.Name = "AlunosConsulta";
-            this.Size = new System.Drawing.Size(755, 507);
+            this.Size = new System.Drawing.Size(755, 501);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Pesquisar;
@@ -184,5 +186,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewImageColumn Column5;
         private System.Windows.Forms.DataGridViewImageColumn Column6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
