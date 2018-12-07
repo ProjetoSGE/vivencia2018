@@ -96,12 +96,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Estagio.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Adicionais\AlunoEmail.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Telas\Adicionais\AlunoEmail.Designer.cs">
-      <DependentUpon>AlunoEmail.cs</DependentUpon>
-    </Compile>
     <Compile Include="Telas\Adicionais\emailempresa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,9 +206,6 @@
     <Compile Include="vw_vagas.cs">
       <DependentUpon>Estagio.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Telas\Adicionais\AlunoEmail.resx">
-      <DependentUpon>AlunoEmail.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Adicionais\emailempresa.resx">
       <DependentUpon>emailempresa.cs</DependentUpon>
     </EmbeddedResource>
