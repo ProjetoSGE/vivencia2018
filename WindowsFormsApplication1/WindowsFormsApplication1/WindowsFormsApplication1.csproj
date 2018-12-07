@@ -108,6 +108,12 @@
     <Compile Include="Telas\Adicionais\emailempresa.Designer.cs">
       <DependentUpon>emailempresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Alterações\frmAlterarCandidato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Alterações\frmAlterarCandidato.Designer.cs">
+      <DependentUpon>frmAlterarCandidato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Cadastros\frmCadastrarCandidato.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Adicionais\emailempresa.resx">
       <DependentUpon>emailempresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Alterações\frmAlterarCandidato.resx">
+      <DependentUpon>frmAlterarCandidato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Cadastros\frmCadastrarCandidato.resx">
       <DependentUpon>frmCadastrarCandidato.cs</DependentUpon>

@@ -20,10 +20,16 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
             return db.ListView();
         }
 
-        public List<CandidatoView> SearchView(string aluno, string vaga)
+        public List<CandidatoView> Search(string aluno, string vaga)
         {
             CandidatoDB db = new CandidatoDB();
-            return db.SearchView(aluno, vaga);
+            return db.Search(aluno, vaga);
+        }
+
+        public void Update(CandidatoView dto)
+        {
+            CandidatoDB db = new CandidatoDB();
+            db.Update(dto);
         }
     }
 }

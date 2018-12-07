@@ -47,18 +47,19 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
             return list;
         }
 
-        public List<CandidatoView> SearchView(string aluno, string vaga)
+      
+        public List<CandidatoView> Search(string name, string status)
         {
             string script = @"SELECT * FROM vw_candidato 
-                                      WHERE nm_aluno LIKE @nm_aluno 
-                                        AND nm_vaga LIKE @nm_vaga";
+                                      WHERE nm_aluno LIKE @nm_aluno
+                                        AND ds_status LIKE @ds_status";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_aluno", aluno + "%"));
-            parms.Add(new MySqlParameter("nm_vaga", vaga + "%"));
+            parms.Add(new MySqlParameter("nm_aluno", name + "%"));
+            parms.Add(new MySqlParameter("ds_status", status + "%"));
 
             DataBase db = new DataBase();
-            MySqlDataReader reader = db.ExecuteSelectScript(script, null);
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<CandidatoView> list = new List<CandidatoView>();
 
             while (reader.Read())
@@ -76,10 +77,17 @@ namespace WindowsFormsApplication1.Classes.Classes.Candidato
             return list;
         }
 
-        public void Update(CandidatoDTO dto)
+        public void Update(CandidatoView dto)
         {
-            string script = @"UPDATE tb_canditado SET ds_status = @ds_status
+            string script = @"UPDATE tb_candidato SET ds_status = @ds_status
                                                 WHERE id_candidato = @id_candidato";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("ds_status", dto.Status));
+            parms.Add(new MySqlParameter("id_candidato", dto.Id));
+
+            DataBase db = new DataBase();
+            db.ExecuteInsertScript(script, parms);
         }
     }
 }

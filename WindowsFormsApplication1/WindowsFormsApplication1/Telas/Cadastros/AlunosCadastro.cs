@@ -157,11 +157,6 @@ namespace WindowsFormsApplication1.Telas.Cadastros
                 business.Salvar(dto);
 
                 MessageBox.Show("Aluno cadastrado com sucesso", "SGE");
-
-                this.Hide();
-                Menu tela = new Menu();
-                tela.Show();
-
             }
 
             catch (ArgumentException ex)
