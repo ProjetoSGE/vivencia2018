@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1.Telas.Cadastros
         {
             CandidatoDTO dto = new CandidatoDTO();
             AlunoDTO aluno = cboAluno.SelectedItem as AlunoDTO;
-            VagasDTO vagas = cboVaga.SelectedItem as VagasDTO;
+            VagasView vagas = cboVaga.SelectedItem as VagasView;
 
             dto.IdAluno = aluno.Id;
             dto.IdVaga = vagas.Id;
