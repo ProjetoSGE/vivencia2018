@@ -89,15 +89,5 @@ namespace WindowsFormsApplication1.Telas.Cadastros
             Menu tela = new Menu();
             tela.Show();
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtArea_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

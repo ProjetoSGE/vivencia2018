@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -207,7 +204,6 @@
             this.txtArea.Name = "txtArea";
             this.txtArea.Size = new System.Drawing.Size(130, 25);
             this.txtArea.TabIndex = 26;
-            this.txtArea.TextChanged += new System.EventHandler(this.txtArea_TextChanged);
             // 
             // btnsalvar
             // 
@@ -389,7 +385,7 @@
             this.chkPacoteOffice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPacoteOffice.Location = new System.Drawing.Point(134, 29);
             this.chkPacoteOffice.Name = "chkPacoteOffice";
-            this.chkPacoteOffice.Size = new System.Drawing.Size(117, 25);
+            this.chkPacoteOffice.Size = new System.Drawing.Size(116, 25);
             this.chkPacoteOffice.TabIndex = 10;
             this.chkPacoteOffice.Text = "Pacote office";
             this.chkPacoteOffice.UseVisualStyleBackColor = true;
@@ -473,7 +469,7 @@
             this.chkValeRef.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkValeRef.Location = new System.Drawing.Point(6, 81);
             this.chkValeRef.Name = "chkValeRef";
-            this.chkValeRef.Size = new System.Drawing.Size(122, 25);
+            this.chkValeRef.Size = new System.Drawing.Size(121, 25);
             this.chkValeRef.TabIndex = 16;
             this.chkValeRef.Text = "Vale Refeição";
             this.chkValeRef.UseVisualStyleBackColor = true;
@@ -548,7 +544,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(54, 352);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 21);
+            this.label11.Size = new System.Drawing.Size(58, 21);
             this.label11.TabIndex = 85;
             this.label11.Text = "Tarefas";
             // 
@@ -579,9 +575,9 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.btnsalvar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 445);
+            this.panel1.Location = new System.Drawing.Point(0, 437);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(757, 64);
+            this.panel1.Size = new System.Drawing.Size(755, 64);
             this.panel1.TabIndex = 95;
             // 
             // label12
@@ -628,7 +624,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
             this.Name = "VagasCadastro";
-            this.Size = new System.Drawing.Size(757, 509);
+            this.Size = new System.Drawing.Size(755, 501);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtd)).EndInit();
@@ -645,9 +641,6 @@
         }
 
         #endregion
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNome;

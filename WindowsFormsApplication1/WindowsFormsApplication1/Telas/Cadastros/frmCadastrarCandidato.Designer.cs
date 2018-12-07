@@ -50,9 +50,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboVaga = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtEmpresa
@@ -195,7 +197,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(731, 426);
+            this.groupBox1.Size = new System.Drawing.Size(731, 420);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro de Candidato";
@@ -251,7 +253,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(59, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
+            this.label2.Size = new System.Drawing.Size(42, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Vaga";
             // 
@@ -272,7 +274,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnSalvar.Image = global::WindowsFormsApplication1.Properties.Resources.icons8_save_261;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.Location = new System.Drawing.Point(12, 444);
+            this.btnSalvar.Location = new System.Drawing.Point(43, 9);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(89, 45);
             this.btnSalvar.TabIndex = 12;
@@ -280,6 +282,16 @@
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.btnSalvar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 437);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(755, 64);
+            this.panel1.TabIndex = 96;
             // 
             // frmCadastrarCandidato
             // 
@@ -299,8 +311,8 @@
             this.Controls.Add(this.txtRG);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCurso);
-            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel1);
             this.Name = "frmCadastrarCandidato";
             this.Size = new System.Drawing.Size(755, 501);
             this.groupBox1.ResumeLayout(false);
@@ -308,6 +320,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +350,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboVaga;
+        private System.Windows.Forms.Panel panel1;
     }
 }
